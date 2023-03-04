@@ -8,10 +8,9 @@
 import Foundation
 import UIKit
 
-extension UITextField : UITextFieldDelegate{
+extension UITextField {
     
     func loginSignUpTextFieldUI(placeHolder: String) {
-        self.delegate = self
         
         //왼쪽 여백
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: self.frame.height))
@@ -38,7 +37,7 @@ extension UITextField : UITextFieldDelegate{
     }
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        makePlaceHolderGoUp(false)
+        makePlaceHolderGoUp1(false)
         textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.1289084852, green: 0.1131337956, blue: 0.1604926884, alpha: 0)])
     }
     
@@ -54,13 +53,13 @@ extension UITextField : UITextFieldDelegate{
         
         // 텍스트필드가 빈 상태로 리턴될 때
         if textField.text == "" {
-            makePlaceHolderGoUp(true)
+            makePlaceHolderGoUp1(true)
             self.attributedPlaceholder = NSAttributedString(string: textField.placeholder!,
                                                             attributes: placeholderAttributes)
         }
     }
     
-    private func makePlaceHolderGoUp(_ isTextNil: Bool) {
+    func makePlaceHolderGoUp1(_ isTextNil: Bool) {
         let label = UILabel()
         // Add label to text field
         self.addSubview(label)
