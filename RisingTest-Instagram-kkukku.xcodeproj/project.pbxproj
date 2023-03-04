@@ -7,20 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */; };
+		DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529BD29B34F2E0089AD5C /* Constant.swift */; };
+		DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C029B34F7C0089AD5C /* JWTToken.swift */; };
+		DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C729B350980089AD5C /* IndicatorView.swift */; };
+		DD6529CA29B350E90089AD5C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C929B350E90089AD5C /* UIColor.swift */; };
+		DD6529CC29B351530089AD5C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529CB29B351530089AD5C /* Device.swift */; };
+		DD6529D729B3563C0089AD5C /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529D629B3563C0089AD5C /* MainTabBar.storyboard */; };
+		DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529DA29B356A90089AD5C /* HomeStoryboard.storyboard */; };
+		DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */; };
+		DD6529DF29B358AB0089AD5C /* PostStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529DE29B358AB0089AD5C /* PostStoryboard.storyboard */; };
+		DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529E029B358B90089AD5C /* ReelsStoryboard.storyboard */; };
+		DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */; };
 		DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76CB3F29B2E199002C4857 /* AppDelegate.swift */; };
 		DD76CB4229B2E199002C4857 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76CB4129B2E199002C4857 /* SceneDelegate.swift */; };
-		DD76CB4429B2E199002C4857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76CB4329B2E199002C4857 /* ViewController.swift */; };
-		DD76CB4729B2E199002C4857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4529B2E199002C4857 /* Main.storyboard */; };
 		DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4829B2E19A002C4857 /* Assets.xcassets */; };
 		DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
+		DD6529BD29B34F2E0089AD5C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DD6529C029B34F7C0089AD5C /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
+		DD6529C729B350980089AD5C /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		DD6529C929B350E90089AD5C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DD6529CB29B351530089AD5C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		DD6529D629B3563C0089AD5C /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		DD6529DA29B356A90089AD5C /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
+		DD6529DE29B358AB0089AD5C /* PostStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostStoryboard.storyboard; sourceTree = "<group>"; };
+		DD6529E029B358B90089AD5C /* ReelsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsStoryboard.storyboard; sourceTree = "<group>"; };
+		DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		DD76CB3C29B2E199002C4857 /* RisingTest-Instagram-kkukku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RisingTest-Instagram-kkukku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD76CB3F29B2E199002C4857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD76CB4129B2E199002C4857 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD76CB4329B2E199002C4857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD76CB4629B2E199002C4857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD76CB4829B2E19A002C4857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD76CB4B29B2E19A002C4857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD76CB4D29B2E19A002C4857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +57,129 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD6529B829B34EF70089AD5C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529BD29B34F2E0089AD5C /* Constant.swift */,
+				DD6529BF29B34F660089AD5C /* Secret */,
+				DD6529C229B34FB20089AD5C /* Font */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		DD6529BF29B34F660089AD5C /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529C029B34F7C0089AD5C /* JWTToken.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		DD6529C229B34FB20089AD5C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DD6529C529B3506A0089AD5C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529C629B3507F0089AD5C /* Extension */,
+				DD6529C729B350980089AD5C /* IndicatorView.swift */,
+				DD6529CB29B351530089AD5C /* Device.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DD6529C629B3507F0089AD5C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529C929B350E90089AD5C /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DD6529CD29B3541E0089AD5C /* LoginSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */,
+			);
+			path = LoginSignUp;
+			sourceTree = "<group>";
+		};
+		DD6529CE29B3546B0089AD5C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529DA29B356A90089AD5C /* HomeStoryboard.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DD6529D029B354790089AD5C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		DD6529D129B354FA0089AD5C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529DE29B358AB0089AD5C /* PostStoryboard.storyboard */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		DD6529D229B355100089AD5C /* Reels */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529E029B358B90089AD5C /* ReelsStoryboard.storyboard */,
+			);
+			path = Reels;
+			sourceTree = "<group>";
+		};
+		DD6529D329B355180089AD5C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DD6529D429B355300089AD5C /* AppSceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DD76CB3F29B2E199002C4857 /* AppDelegate.swift */,
+				DD76CB4129B2E199002C4857 /* SceneDelegate.swift */,
+			);
+			path = AppSceneDelegate;
+			sourceTree = "<group>";
+		};
+		DD6529D529B355C30089AD5C /* MainTabController&Splash */ = {
+			isa = PBXGroup;
+			children = (
+				DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */,
+				DD6529D629B3563C0089AD5C /* MainTabBar.storyboard */,
+			);
+			path = "MainTabController&Splash";
+			sourceTree = "<group>";
+		};
+		DD6529E429B3607F0089AD5C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529CD29B3541E0089AD5C /* LoginSignUp */,
+				DD6529D529B355C30089AD5C /* MainTabController&Splash */,
+				DD6529CE29B3546B0089AD5C /* Home */,
+				DD6529D029B354790089AD5C /* Search */,
+				DD6529D129B354FA0089AD5C /* Post */,
+				DD6529D229B355100089AD5C /* Reels */,
+				DD6529D329B355180089AD5C /* Profile */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DD76CB3329B2E199002C4857 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +199,11 @@
 		DD76CB3E29B2E199002C4857 /* RisingTest-Instagram-kkukku */ = {
 			isa = PBXGroup;
 			children = (
-				DD76CB3F29B2E199002C4857 /* AppDelegate.swift */,
-				DD76CB4129B2E199002C4857 /* SceneDelegate.swift */,
-				DD76CB4329B2E199002C4857 /* ViewController.swift */,
-				DD76CB4529B2E199002C4857 /* Main.storyboard */,
+				DD6529B829B34EF70089AD5C /* Configuration */,
+				DD6529C529B3506A0089AD5C /* Utilities */,
+				DD6529E429B3607F0089AD5C /* Source */,
+				DD6529D429B355300089AD5C /* AppSceneDelegate */,
 				DD76CB4829B2E19A002C4857 /* Assets.xcassets */,
-				DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */,
 				DD76CB4D29B2E19A002C4857 /* Info.plist */,
 			);
 			path = "RisingTest-Instagram-kkukku";
@@ -125,9 +267,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */,
+				DD6529D729B3563C0089AD5C /* MainTabBar.storyboard in Resources */,
+				DD6529DF29B358AB0089AD5C /* PostStoryboard.storyboard in Resources */,
 				DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */,
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
-				DD76CB4729B2E199002C4857 /* Main.storyboard in Resources */,
+				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
+				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
+				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
+				DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +286,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD76CB4429B2E199002C4857 /* ViewController.swift in Sources */,
+				DD6529CA29B350E90089AD5C /* UIColor.swift in Sources */,
 				DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */,
+				DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */,
 				DD76CB4229B2E199002C4857 /* SceneDelegate.swift in Sources */,
+				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
+				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
+				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DD76CB4529B2E199002C4857 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD76CB4629B2E199002C4857 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,9 +436,10 @@
 				INFOPLIST_FILE = "RisingTest-Instagram-kkukku/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +465,10 @@
 				INFOPLIST_FILE = "RisingTest-Instagram-kkukku/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
