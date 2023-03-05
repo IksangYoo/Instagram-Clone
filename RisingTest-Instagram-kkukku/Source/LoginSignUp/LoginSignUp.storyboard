@@ -30,24 +30,25 @@
                                     <constraint firstAttribute="width" constant="75" id="xZg-iG-3tt"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름, 이메일 주소 또는 휴대폰 번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-MC-Tkh" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-MC-Tkh" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
                                 <rect key="frame" x="18" y="306" width="357" height="65"/>
                                 <color key="backgroundColor" red="0.20746213199999999" green="0.27871689199999999" blue="0.33305671809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="ofN-2C-bhL"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-TR-Tk2" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-TR-Tk2" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
                                 <rect key="frame" x="18" y="384" width="357" height="65"/>
                                 <color key="backgroundColor" red="0.1983610988" green="0.26574081179999998" blue="0.31572726369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="RV5-KS-1ic"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGz-kB-0Ld">
                                 <rect key="frame" x="18" y="462" width="357" height="55"/>
@@ -76,7 +77,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzI-Jo-Gbh">
                                 <rect key="frame" x="18" y="713" width="357" height="40"/>
-                                <color key="backgroundColor" red="0.1176470518" green="0.19607841970000001" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.11032652159465192" green="0.24429663378102909" blue="0.3754663407802582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="etK-2O-8tp"/>
                                 </constraints>
