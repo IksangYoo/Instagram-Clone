@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="75" id="xZg-iG-3tt"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름, 이메일 주소 또는 휴대폰 번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-MC-Tkh">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름, 이메일 주소 또는 휴대폰 번호" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-MC-Tkh" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
                                 <rect key="frame" x="18" y="306" width="357" height="65"/>
                                 <color key="backgroundColor" red="0.20746213199999999" green="0.27871689199999999" blue="0.33305671809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-TR-Tk2">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmd-TR-Tk2" customClass="CustomTextField" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
                                 <rect key="frame" x="18" y="384" width="357" height="65"/>
                                 <color key="backgroundColor" red="0.1983610988" green="0.26574081179999998" blue="0.31572726369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
