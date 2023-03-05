@@ -33,6 +33,7 @@ extension UITextField  {
         
         self.layer.cornerRadius = 4
         
+        self.tintColor = .white
 //        self.leftView = leftView
 //        self.leftViewMode = .always
     }

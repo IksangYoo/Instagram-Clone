@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD126C1729B47C5600DD2659 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD126C1629B47C5600DD2659 /* IQKeyboardManagerSwift */; };
+		DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */; };
+		DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */; };
 		DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */; };
 		DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529BD29B34F2E0089AD5C /* Constant.swift */; };
 		DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C029B34F7C0089AD5C /* JWTToken.swift */; };
@@ -30,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithPhoneViewController.swift; sourceTree = "<group>"; };
+		DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailViewController.swift; sourceTree = "<group>"; };
 		DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 		DD6529BD29B34F2E0089AD5C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD6529C029B34F7C0089AD5C /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD126C1729B47C5600DD2659 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,8 @@
 			children = (
 				DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */,
 				DD6529E529B3680D0089AD5C /* LoginViewController.swift */,
+				DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */,
+				DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */,
 			);
 			path = LoginSignUp;
 			sourceTree = "<group>";
@@ -237,6 +245,9 @@
 			dependencies = (
 			);
 			name = "RisingTest-Instagram-kkukku";
+			packageProductDependencies = (
+				DD126C1629B47C5600DD2659 /* IQKeyboardManagerSwift */,
+			);
 			productName = "RisingTest-Instagram-kkukku";
 			productReference = DD76CB3C29B2E199002C4857 /* RisingTest-Instagram-kkukku.app */;
 			productType = "com.apple.product-type.application";
@@ -265,6 +276,9 @@
 				Base,
 			);
 			mainGroup = DD76CB3329B2E199002C4857;
+			packageReferences = (
+				DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = DD76CB3D29B2E199002C4857 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD6529CA29B350E90089AD5C /* UIColor.swift in Sources */,
+				DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
 				DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */,
 				DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */,
@@ -309,6 +324,7 @@
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
+				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +536,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD126C1629B47C5600DD2659 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD76CB3429B2E199002C4857 /* Project object */;
 }

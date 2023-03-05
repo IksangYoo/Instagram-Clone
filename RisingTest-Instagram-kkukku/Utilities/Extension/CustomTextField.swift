@@ -43,7 +43,7 @@ class CustomTextField: UITextField {
         ])
         
         
-        if self.tag == 1 {
+        if self.tag == 1 || self.tag == 3 {
             button.isHidden = true
             button.setImage(UIImage(named: "xImage"), for: .normal)
             button.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
@@ -75,7 +75,7 @@ class CustomTextField: UITextField {
         if self.text == "" {
             return rect.inset(by: UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 40))
         } else {
-            return rect.inset(by: UIEdgeInsets(top: 25, left: 8, bottom: 10, right: 40))
+            return rect.inset(by: UIEdgeInsets(top: 27, left: 8, bottom: 10, right: 40))
         }
         
     }
@@ -84,9 +84,9 @@ class CustomTextField: UITextField {
         let rect = super.textRect(forBounds: bounds)
         
         if self.text == "" {
-            return rect.inset(by: UIEdgeInsets(top: 18, left: 8, bottom: 10, right: 40))
+            return rect.inset(by: UIEdgeInsets(top: 20, left: 8, bottom: 10, right: 40))
         } else {
-            return rect.inset(by: UIEdgeInsets(top: 25, left: 8, bottom: 10, right: 40))
+            return rect.inset(by: UIEdgeInsets(top: 27, left: 8, bottom: 10, right: 40))
         }
         
     }
@@ -96,7 +96,7 @@ class CustomTextField: UITextField {
 extension CustomTextField: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField.tag == 1 {
+        if textField.tag == 1 || textField.tag == 3{
             if textField.text == "" {
                 button.isHidden = true
             } else {
@@ -108,11 +108,39 @@ extension CustomTextField: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        setBeginEditingUI()
+        if textField.tag == 3 {
+            if textField.layer.borderColor == #colorLiteral(red: 0.5406107903, green: 0.5818449855, blue: 0.624736011, alpha: 1) {
+                textField.layer.borderColor = UIColor.white.cgColor
+            }
+            label.isHidden = false
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.1289084852, green: 0.1131337956, blue: 0.1604926884, alpha: 0)])
+        } else {
+            setBeginEditingUI()
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        setEndEditingUI()
+        if textField.tag == 3 {
+            let font = UIFont(name: "Arial", size: 18)!
+            let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitLooseLeading)!
+            let boldFont = UIFont(descriptor: fontDescriptor, size: 0)
+            let placeholderAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.5416380763, green: 0.5816664696, blue: 0.6238328815, alpha: 1),
+                                         NSAttributedString.Key.font: boldFont]
+            
+            if self.text == "" {
+                label.isHidden = true
+                self.attributedPlaceholder = NSAttributedString(string: self.placeholder!,
+                                                                attributes: placeholderAttributes)
+            }
+            
+            if textField.layer.borderColor == UIColor.white.cgColor {
+                print("asdfasdf")
+                self.layer.borderWidth = 0.7
+                self.layer.borderColor = #colorLiteral(red: 0.5406107903, green: 0.5818449855, blue: 0.624736011, alpha: 1)
+            }
+        } else {
+            setEndEditingUI()
+        }
     }
     
     private func setBeginEditingUI() {

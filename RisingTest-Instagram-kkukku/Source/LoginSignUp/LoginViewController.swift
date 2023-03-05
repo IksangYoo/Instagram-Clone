@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTF: CustomTextField!
@@ -13,6 +14,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if Device.height < 700 {
+            IQKeyboardManager.shared.keyboardDistanceFromTextField = 120
+        }
         setTextField()
     }
 
@@ -25,8 +29,13 @@ class LoginViewController: UIViewController {
 
     }
     
-    func hideButton() {
-       
+    @IBAction func login(_ sender: UIButton) {
     }
+    
+    @IBAction func signUp(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToSignUpWithPhone", sender: nil)
+    }
+    
 }
+    
 
