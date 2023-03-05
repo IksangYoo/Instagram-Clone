@@ -10,7 +10,6 @@ import UIKit
 
 class CustomTextField: UITextField {
     let label = UILabel()
-//    let deleteButton = UIButton()
     let button = UIButton()
     var isUserWantToHide = true
     
@@ -33,7 +32,7 @@ class CustomTextField: UITextField {
         ])
         label.isHidden = true
         
-       
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         
         
@@ -47,7 +46,7 @@ class CustomTextField: UITextField {
             button.isHidden = true
             button.setImage(UIImage(named: "xImage"), for: .normal)
             button.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
-        } else if self.tag == 2 {
+        } else if self.tag == 2 || self.tag == 4 {
             button.isHidden = false
             button.setImage(UIImage(named: "hidePassword"), for: .normal)
             button.addTarget(self, action: #selector(showOrHidePassword), for: .touchUpInside)
@@ -102,13 +101,11 @@ extension CustomTextField: UITextFieldDelegate {
             } else {
                 button.isHidden = false
             }
-        } else if textField.tag == 2 {
-            
         }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.tag == 3 {
+        if textField.tag == 3 || textField.tag == 4 {
             if textField.layer.borderColor == #colorLiteral(red: 0.5406107903, green: 0.5818449855, blue: 0.624736011, alpha: 1) {
                 textField.layer.borderColor = UIColor.white.cgColor
             }
@@ -120,7 +117,7 @@ extension CustomTextField: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.tag == 3 {
+        if textField.tag == 3 || textField.tag == 4 {
             let font = UIFont(name: "Arial", size: 18)!
             let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitLooseLeading)!
             let boldFont = UIFont(descriptor: fontDescriptor, size: 0)
@@ -131,10 +128,11 @@ extension CustomTextField: UITextFieldDelegate {
                 label.isHidden = true
                 self.attributedPlaceholder = NSAttributedString(string: self.placeholder!,
                                                                 attributes: placeholderAttributes)
+                self.layer.borderWidth = 0.7
+                self.layer.borderColor = #colorLiteral(red: 0.5406107903, green: 0.5818449855, blue: 0.624736011, alpha: 1)
             }
             
             if textField.layer.borderColor == UIColor.white.cgColor {
-                print("asdfasdf")
                 self.layer.borderWidth = 0.7
                 self.layer.borderColor = #colorLiteral(red: 0.5406107903, green: 0.5818449855, blue: 0.624736011, alpha: 1)
             }
@@ -143,13 +141,13 @@ extension CustomTextField: UITextFieldDelegate {
         }
     }
     
-    private func setBeginEditingUI() {
+    func setBeginEditingUI() {
         label.isHidden = false
         self.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.1289084852, green: 0.1131337956, blue: 0.1604926884, alpha: 0)])
     }
     
-    private func setEndEditingUI() {
+    func setEndEditingUI() {
         let font = UIFont(name: "Arial", size: 18)!
         let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitLooseLeading)!
         let boldFont = UIFont(descriptor: fontDescriptor, size: 0)

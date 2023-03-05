@@ -10,6 +10,9 @@
 		DD126C1729B47C5600DD2659 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD126C1629B47C5600DD2659 /* IQKeyboardManagerSwift */; };
 		DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */; };
 		DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */; };
+		DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1C29B4A23100DD2659 /* NameViewController.swift */; };
+		DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1E29B4A55D00DD2659 /* PasswordViewController.swift */; };
+		DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */; };
 		DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */; };
 		DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529BD29B34F2E0089AD5C /* Constant.swift */; };
 		DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C029B34F7C0089AD5C /* JWTToken.swift */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithPhoneViewController.swift; sourceTree = "<group>"; };
 		DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailViewController.swift; sourceTree = "<group>"; };
+		DD126C1C29B4A23100DD2659 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		DD126C1E29B4A55D00DD2659 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 		DD6529BD29B34F2E0089AD5C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD6529C029B34F7C0089AD5C /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 				DD6529E529B3680D0089AD5C /* LoginViewController.swift */,
 				DD126C1829B482FE00DD2659 /* SignUpWithPhoneViewController.swift */,
 				DD126C1A29B48CB700DD2659 /* SignUpWithEmailViewController.swift */,
+				DD126C1C29B4A23100DD2659 /* NameViewController.swift */,
+				DD126C1E29B4A55D00DD2659 /* PasswordViewController.swift */,
+				DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */,
 			);
 			path = LoginSignUp;
 			sourceTree = "<group>";
@@ -321,8 +330,11 @@
 				DD6529E629B3680D0089AD5C /* LoginViewController.swift in Sources */,
 				DD6529EA29B372480089AD5C /* UIButton.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
+				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,
+				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
+				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
 			);
