@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				DDCFEA1629B5FB3F00DA87C0 /* View */,
-				DD32EB4329B5CC1000652B1E /* HomeViewController.swift */,
+				DDCFEA1C29B6015300DA87C0 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -289,6 +289,14 @@
 				DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DDCFEA1C29B6015300DA87C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD32EB4329B5CC1000652B1E /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,6 +551,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginSignUp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,6 +581,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginSignUp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

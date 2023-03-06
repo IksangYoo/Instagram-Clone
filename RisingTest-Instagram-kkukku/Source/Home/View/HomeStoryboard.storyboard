@@ -17,18 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w8-8e-TuD">
-                                <rect key="frame" x="157" y="416" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-MO-yFD">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VLJ-0W-OUC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tbl-MO-yFD" firstAttribute="leading" secondItem="VLJ-0W-OUC" secondAttribute="leading" id="Kg7-dx-59Y"/>
+                            <constraint firstItem="tbl-MO-yFD" firstAttribute="top" secondItem="VLJ-0W-OUC" secondAttribute="top" id="Qma-fr-YrB"/>
+                            <constraint firstItem="tbl-MO-yFD" firstAttribute="trailing" secondItem="VLJ-0W-OUC" secondAttribute="trailing" id="TcK-UR-AXB"/>
+                            <constraint firstItem="tbl-MO-yFD" firstAttribute="bottom" secondItem="VLJ-0W-OUC" secondAttribute="bottom" id="hRw-rf-opC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="g6f-eg-MnN"/>
+                    <navigationItem key="navigationItem" id="g6f-eg-MnN">
+                        <rightBarButtonItems>
+                            <barButtonItem id="2bs-L4-fKt"/>
+                            <barButtonItem id="fer-ke-9u3"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dmButtom" destination="2bs-L4-fKt" id="9dz-Df-66d"/>
+                        <outlet property="heartButton" destination="fer-ke-9u3" id="HNM-hb-ehw"/>
+                        <outlet property="tableView" destination="tbl-MO-yFD" id="Uyh-zV-SFa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mg-3f-TZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
