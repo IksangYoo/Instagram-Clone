@@ -12,7 +12,7 @@ class BirthdayViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var birthTF: CustomTextField!
     let label = UILabel()
-    
+    let tryingSignUpUser = TryingSignUpUser.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,9 @@ class BirthdayViewController: UIViewController {
         let birthDate = sender.date
         let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthDate, to: today)
         var age = ageComponents.year ?? 0
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 M월 d일"
+        let birthDateString = formatter.string(from: birthDate)
         
         if let birthMonth = ageComponents.month, let birthDay = ageComponents.day {
             if birthMonth < 0 || (birthMonth == 0 && birthDay < 0) {
@@ -55,7 +58,13 @@ class BirthdayViewController: UIViewController {
             }
         }
         
-        label.text = "생일(\(age)세)"
+        if age <= 0 {
+            label.text = "생일(0세)"
+        } else {
+            label.text = "생일(\(age)세)"
+        }
+        birthTF.text = birthDateString
+        tryingSignUpUser.age = age
     }
 
 }

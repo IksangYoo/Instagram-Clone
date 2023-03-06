@@ -11,6 +11,7 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var passwordTF: CustomTextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var errorLabel: UILabel!
+    let tryingSignUpUser = TryingSignUpUser.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class PasswordViewController: UIViewController {
             topConstraint.constant = 20
             passwordTF.layer.borderWidth = 0.7
             passwordTF.layer.borderColor = UIColor.white.cgColor
+            tryingSignUpUser.password = passwordTF.text
             performSegue(withIdentifier: "goToBirthday", sender: nil)
         }
     }

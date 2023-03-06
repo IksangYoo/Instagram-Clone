@@ -8,8 +8,9 @@
 import UIKit
 
 class NameViewController: UIViewController {
-
+    let tryingSignUpUser = TryingSignUpUser.shared
     @IBOutlet weak var nameTF: CustomTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +23,7 @@ class NameViewController: UIViewController {
     }
     
     @IBAction func goNext(_ sender: UIButton) {
+        tryingSignUpUser.name = nameTF.text
         performSegue(withIdentifier: "goToPassword", sender: nil)
     }
     

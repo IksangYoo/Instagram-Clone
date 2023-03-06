@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("login")
         if Device.height < 700 {
             IQKeyboardManager.shared.keyboardDistanceFromTextField = 120
         }

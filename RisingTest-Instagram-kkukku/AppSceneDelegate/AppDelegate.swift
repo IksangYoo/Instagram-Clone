@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.resignFirstResponder()
         IQKeyboardManager.shared.enableAutoToolbar = false
         
-       
-        
         //런치 스크린 지연
 //        sleep(5)
         return true
