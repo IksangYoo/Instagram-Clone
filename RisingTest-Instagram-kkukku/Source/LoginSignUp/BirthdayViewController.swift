@@ -16,6 +16,7 @@ class BirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.addTarget(self, action: #selector(calculateAge), for: .valueChanged)
         setTextField()
         setDatePicker()
         
@@ -40,6 +41,23 @@ class BirthdayViewController: UIViewController {
         datePicker.backgroundColor = #colorLiteral(red: 0.207462132, green: 0.278716892, blue: 0.3330567181, alpha: 1)
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
+    
+    @objc func calculateAge(sender: UIDatePicker) {
+        let today = Date()
+        let calendar = Calendar.current
+        let birthDate = sender.date
+        let ageComponents = calendar.dateComponents([.year, .month, .day], from: birthDate, to: today)
+        var age = ageComponents.year ?? 0
+        
+        if let birthMonth = ageComponents.month, let birthDay = ageComponents.day {
+            if birthMonth < 0 || (birthMonth == 0 && birthDay < 0) {
+                age -= 1
+            }
+        }
+        
+        label.text = "생일(\(age)세)"
+    }
+
 }
 
 extension BirthdayViewController: UITextFieldDelegate {
