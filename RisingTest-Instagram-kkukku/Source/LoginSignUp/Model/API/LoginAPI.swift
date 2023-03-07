@@ -7,12 +7,13 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 class LoginAPI {
     
     let url = "\(Constant.BASE_URL)\(Constant.LOGIN_URL)"
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String, loginVc: LoginViewController) {
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
         
         let params: Parameters = [
@@ -28,9 +29,11 @@ class LoginAPI {
         .responseDecodable(of: UserResponse.self) { response in
             switch response.result {
             case .success(let response):
-                LoginViewController().didSuccess(response: response)
+                loginVc.didSuccess(response: response)
+                print(response)
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
+                loginVc.didFailure()
             }
         }
 //        .responseJSON { response in

@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
         setNavigation()
     }
     
+    
     func setNavigation() {
         let image1 = UIImage(named: "Instragram")?.withRenderingMode(.alwaysOriginal)
         let image2 = UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal)

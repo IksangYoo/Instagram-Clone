@@ -14,5 +14,5 @@ class CurrentUser {
     
     private init() { }
 
-    var userInfo: Result?
+    var userInfo: UserResult?
 }

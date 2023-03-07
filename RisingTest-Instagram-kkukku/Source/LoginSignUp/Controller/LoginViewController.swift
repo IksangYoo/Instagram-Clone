@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
-        LoginAPI().login(email: emailTF.text!, password: passwordTF.text!)
+        LoginAPI().login(email: emailTF.text!, password: passwordTF.text!, loginVc: self)
     }
     
     @IBAction func signUp(_ sender: UIButton) {
@@ -41,11 +41,30 @@ class LoginViewController: UIViewController {
     }
     
     func didSuccess(response: UserResponse) {
+
         currentUser.userInfo = response.result
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+        guard let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
+        
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = mainVC
+            UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+        }
+//        else {
+//            mainVC.modalPresentationStyle = .overFullScreen
+//            self.present(mainVC, animated: true)
+//        }
     }
     
     func didFailure() {
+        let alert = UIAlertController(title: "로그인 실패", message: "입력된 정보가 올바르지 않습니다\n다시 시도하세요.", preferredStyle: UIAlertController.Style.alert)
+
+        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
         
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
     }
 }
     

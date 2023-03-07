@@ -47,6 +47,7 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
             print("완료")
             tryingSignUpUser.profileImage = profileImagView.image?.pngData()?.base64EncodedString()
             //회원가입 api 호출
+            SignUpAPI().signUp(with: tryingSignUpUser)
             performSegue(withIdentifier: "goToWelcome", sender: nil)
             
         }
@@ -57,6 +58,8 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
             print("건너뛰기")
             //건너뛰기시 기본이미지
             tryingSignUpUser.profileImage = profileImagView.image?.pngData()?.base64EncodedString()
+            //회원가입 api 호출
+            SignUpAPI().signUp(with: tryingSignUpUser)
             performSegue(withIdentifier: "goToWelcome", sender: nil)
         } else {
             guard let optionVC = self.storyboard?.instantiateViewController(identifier: "optionVC") as? OptionViewController else { return }

@@ -6,18 +6,18 @@
 //
 
 import Foundation
-
+// 옵셔널로
 struct UserResponse: Decodable {
-    var code: Int
-    var isSuccess: Bool
-    var message: String
+    var code: Int?
+    var isSuccess: Bool?
+    var message: String?
     
-    var result: Result
+    var result: UserResult?
 }
 
-struct Result: Decodable {
-    var userId : Int
-    var jwt: String
+struct UserResult: Decodable {
+    var userId : Int?
+    var jwt: String?
 //    var name: String
 //    var age: Int
 //    var userName: String

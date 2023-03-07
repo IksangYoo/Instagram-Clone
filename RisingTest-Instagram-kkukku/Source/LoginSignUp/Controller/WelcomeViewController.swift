@@ -16,23 +16,27 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: false)
+      
         setupView()
-        
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 2, delay: 0.5) {
+            self.startButton.alpha = 1
+        }
     }
     
     @IBAction func start(_ sender: UIButton) {
         print(tryingSignUpUser)
-        // TODO - 메인탭바뷰로 넘어가기
-        
+        LoginAPI().login(email: tryingSignUpUser.email!, password: tryingSignUpUser.password!, loginVc: LoginViewController())
     }
     
     func setupView() {
-        startButton.borderColor = UIColor.white.cgColor
+        startButton.alpha = 0
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         welcomeLabel.text = "\(tryingSignUpUser.userName!)님, Instagram에 오신 것을 환영합니다"
         profileImageView.image = UIImage(data: Data(base64Encoded: tryingSignUpUser.profileImage!)!)
-        UIView.animate(withDuration: 2) {
-            self.startButton.alpha = 1
-        }
+       
     }
 }

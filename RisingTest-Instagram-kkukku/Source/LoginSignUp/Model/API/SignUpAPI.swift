@@ -30,10 +30,11 @@ class SignUpAPI {
                    parameters: params,
                    encoding: URLEncoding.default,
                    headers: headers)
-        .response { response in
+        .responseJSON { response in
             switch response.result {
             case .success(let response):
-                print(response!)
+                
+                print(response)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -46,6 +46,7 @@
 		DDE73BCA29B71A3800BF6EF2 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC929B71A3800BF6EF2 /* SignUpAPI.swift */; };
 		DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BCB29B724A400BF6EF2 /* TokenUtilities.swift */; };
 		DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BD229B73F3000BF6EF2 /* UserResponse.swift */; };
+		DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		DDE73BC929B71A3800BF6EF2 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
 		DDE73BCB29B724A400BF6EF2 /* TokenUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtilities.swift; sourceTree = "<group>"; };
 		DDE73BD229B73F3000BF6EF2 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */,
+				DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				DD6529E629B3680D0089AD5C /* LoginViewController.swift in Sources */,
 				DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */,
 				DD6529EA29B372480089AD5C /* UIButton.swift in Sources */,
+				DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
 				DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */,
