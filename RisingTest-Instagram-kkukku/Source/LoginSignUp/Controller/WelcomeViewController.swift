@@ -22,7 +22,6 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func start(_ sender: UIButton) {
         print(tryingSignUpUser)
-        // TODO - 회원가입 API 연결
         // TODO - 메인탭바뷰로 넘어가기
         
     }
@@ -31,7 +30,7 @@ class WelcomeViewController: UIViewController {
         startButton.borderColor = UIColor.white.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         welcomeLabel.text = "\(tryingSignUpUser.userName!)님, Instagram에 오신 것을 환영합니다"
-        profileImageView.image = tryingSignUpUser.profileImage
+        profileImageView.image = UIImage(data: Data(base64Encoded: tryingSignUpUser.profileImage!)!)
         UIView.animate(withDuration: 2) {
             self.startButton.alpha = 1
         }

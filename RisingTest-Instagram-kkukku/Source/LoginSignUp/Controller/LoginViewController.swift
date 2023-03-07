@@ -9,6 +9,8 @@ import UIKit
 import IQKeyboardManagerSwift
 
 class LoginViewController: UIViewController {
+    let currentUser = CurrentUser.shared
+    
     @IBOutlet weak var emailTF: CustomTextField!
     @IBOutlet weak var passwordTF: CustomTextField!
     
@@ -31,12 +33,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
+        LoginAPI().login(email: emailTF.text!, password: passwordTF.text!)
     }
     
     @IBAction func signUp(_ sender: UIButton) {
         performSegue(withIdentifier: "goToSignUpWithPhone", sender: nil)
     }
     
+    func didSuccess(response: UserResponse) {
+        currentUser.userInfo = response.result
+    }
+    
+    func didFailure() {
+        
+    }
 }
     
 

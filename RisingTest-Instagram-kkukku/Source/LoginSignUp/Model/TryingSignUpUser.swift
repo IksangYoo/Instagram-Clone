@@ -16,7 +16,7 @@ class TryingSignUpUser {
     var name: String?
     var age: Int?
     var userName: String?
-    var profileImage: UIImage?
+    var profileImage: String?
     
     private init() { }
 }

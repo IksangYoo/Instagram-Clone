@@ -40,6 +40,12 @@
 		DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4829B2E19A002C4857 /* Assets.xcassets */; };
 		DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */; };
 		DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */; };
+		DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */; };
+		DDE73BC629B7196F00BF6EF2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDE73BC529B7196F00BF6EF2 /* Alamofire */; };
+		DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC729B719A900BF6EF2 /* CurrentUser.swift */; };
+		DDE73BCA29B71A3800BF6EF2 /* SignUpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC929B71A3800BF6EF2 /* SignUpAPI.swift */; };
+		DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BCB29B724A400BF6EF2 /* TokenUtilities.swift */; };
+		DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BD229B73F3000BF6EF2 /* UserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +83,11 @@
 		DD76CB4B29B2E19A002C4857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD76CB4D29B2E19A002C4857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryingSignUpUser.swift; sourceTree = "<group>"; };
+		DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		DDE73BC729B719A900BF6EF2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		DDE73BC929B71A3800BF6EF2 /* SignUpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAPI.swift; sourceTree = "<group>"; };
+		DDE73BCB29B724A400BF6EF2 /* TokenUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtilities.swift; sourceTree = "<group>"; };
+		DDE73BD229B73F3000BF6EF2 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD126C1729B47C5600DD2659 /* IQKeyboardManagerSwift in Frameworks */,
+				DDE73BC629B7196F00BF6EF2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +152,7 @@
 				DD6529C629B3507F0089AD5C /* Extension */,
 				DD6529C729B350980089AD5C /* IndicatorView.swift */,
 				DD6529CB29B351530089AD5C /* Device.swift */,
+				DDE73BCB29B724A400BF6EF2 /* TokenUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -286,7 +299,10 @@
 		DDCFEA1929B5FCAE00DA87C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDE73BD429B73FBC00BF6EF2 /* API */,
 				DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */,
+				DDE73BC729B719A900BF6EF2 /* CurrentUser.swift */,
+				DDE73BD229B73F3000BF6EF2 /* UserResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +313,15 @@
 				DD32EB4329B5CC1000652B1E /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDE73BD429B73FBC00BF6EF2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DDE73BC929B71A3800BF6EF2 /* SignUpAPI.swift */,
+				DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +342,7 @@
 			name = "RisingTest-Instagram-kkukku";
 			packageProductDependencies = (
 				DD126C1629B47C5600DD2659 /* IQKeyboardManagerSwift */,
+				DDE73BC529B7196F00BF6EF2 /* Alamofire */,
 			);
 			productName = "RisingTest-Instagram-kkukku";
 			productReference = DD76CB3C29B2E199002C4857 /* RisingTest-Instagram-kkukku.app */;
@@ -348,6 +374,7 @@
 			mainGroup = DD76CB3329B2E199002C4857;
 			packageReferences = (
 				DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DD76CB3D29B2E199002C4857 /* Products */;
 			projectDirPath = "";
@@ -382,14 +409,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE73BCA29B71A3800BF6EF2 /* SignUpAPI.swift in Sources */,
 				DD6529CA29B350E90089AD5C /* UIColor.swift in Sources */,
 				DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */,
 				DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
+				DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */,
+				DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */,
 				DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */,
 				DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */,
 				DD76CB4229B2E199002C4857 /* SceneDelegate.swift in Sources */,
 				DD6529E629B3680D0089AD5C /* LoginViewController.swift in Sources */,
+				DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */,
 				DD6529EA29B372480089AD5C /* UIButton.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
@@ -398,6 +429,7 @@
 				DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */,
 				DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */,
 				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
+				DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
@@ -628,6 +660,14 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -635,6 +675,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		DDE73BC529B7196F00BF6EF2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
