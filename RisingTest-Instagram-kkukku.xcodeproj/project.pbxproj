@@ -13,6 +13,8 @@
 		DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1C29B4A23100DD2659 /* NameViewController.swift */; };
 		DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C1E29B4A55D00DD2659 /* PasswordViewController.swift */; };
 		DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */; };
+		DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD160F5129B880B900C25F05 /* HomeTableViewCell.swift */; };
+		DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */; };
 		DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */; };
 		DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */; };
 		DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */; };
@@ -55,6 +57,8 @@
 		DD126C1C29B4A23100DD2659 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		DD126C1E29B4A55D00DD2659 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		DD160F5129B880B900C25F05 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				DD6529DA29B356A90089AD5C /* HomeStoryboard.storyboard */,
+				DD160F5129B880B900C25F05 /* HomeTableViewCell.swift */,
+				DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
 				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
+				DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */,
 				DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +425,7 @@
 				DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
 				DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */,
+				DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */,
 				DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */,
 				DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */,
 				DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */,

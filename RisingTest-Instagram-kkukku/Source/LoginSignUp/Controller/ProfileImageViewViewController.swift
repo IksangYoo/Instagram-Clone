@@ -56,8 +56,7 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
     @IBAction func skip(_ sender: UIButton) {
         if sender.currentTitle == "건너뛰기" {
             print("건너뛰기")
-            //건너뛰기시 기본이미지
-            tryingSignUpUser.profileImage = profileImagView.image?.pngData()?.base64EncodedString()
+            tryingSignUpUser.profileImage = nil
             //회원가입 api 호출
             SignUpAPI().signUp(with: tryingSignUpUser)
             performSegue(withIdentifier: "goToWelcome", sender: nil)

@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigation()
+        let cellNib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "homeCell")
     }
     
     
@@ -28,5 +30,19 @@ class HomeViewController: UIViewController {
         dmButtom.image = image3
         heartButton.image = image2
     }
+}
 
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
+        return cell
+    }
+    
+    
 }

@@ -14,9 +14,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userId.text = "\(currentUser.userInfo!.userId)"
-        print(UserDefaults.standard.string(forKey: "email"))
-        print(UserDefaults.standard.string(forKey: "password"))
+//        userId.text = "\(currentUser.userInfo!.userId)"
+//        print(UserDefaults.standard.string(forKey: "email"))
+//        print(UserDefaults.standard.string(forKey: "password"))
         
     }
     @IBAction func logout(_ sender: UIButton) {
