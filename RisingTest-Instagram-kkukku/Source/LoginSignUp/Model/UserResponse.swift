@@ -8,9 +8,9 @@
 import Foundation
 // 옵셔널로
 struct UserResponse: Decodable {
-    var code: Int?
-    var isSuccess: Bool?
-    var message: String?
+    var code: Int
+    var isSuccess: Bool
+    var message: String
     
     var result: UserResult?
 }

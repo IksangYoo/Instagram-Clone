@@ -11,17 +11,21 @@ import IQKeyboardManagerSwift
 class LoginViewController: UIViewController {
     let currentUser = CurrentUser.shared
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var indicator: IndicatorView!
     @IBOutlet weak var emailTF: CustomTextField!
     @IBOutlet weak var passwordTF: CustomTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("login")
         if Device.height < 700 {
             IQKeyboardManager.shared.keyboardDistanceFromTextField = 120
         }
         setTextField()
-        print("\(UserDefaults.standard.string(forKey: "email")), \(UserDefaults.standard.string(forKey: "password"))")
+        indicator.isHidden = true
+        print(UserDefaults.standard.string(forKey: "email"))
+        print(UserDefaults.standard.string(forKey: "password"))
+        
     }
 
     func setTextField() {
@@ -42,30 +46,53 @@ class LoginViewController: UIViewController {
     }
     
     func didSuccess(response: UserResponse) {
+        
+        if response.code <= 1999 {
+            // 성공시
+            currentUser.userInfo = response.result
+            
+            let storyboard : UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+            guard let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
+                
+            if let indicator = indicator {
+                if let button = loginButton {
+                    indicator.stopAnimating()
+                    button.setTitle("로그인", for: .normal)
+                    
+                }
+                
+            }
+            
+            if let window = UIApplication.shared.windows.first {
+                window.rootViewController = mainVC
+                UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+            }
+            
+        } else {
+            
+            if let indicator = indicator {
+                if let button = loginButton {
+                    indicator.stopAnimating()
+                    button.setTitle("로그인", for: .normal)
 
-        currentUser.userInfo = response.result
-        
-        let storyboard : UIStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        guard let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
-        
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = mainVC
-            UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+                }
+                
+            }
+            
+            
+            
+            let alert = UIAlertController(title: "로그인 실패", message: "\(response.message)", preferredStyle: UIAlertController.Style.alert)
+
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true)
         }
-//        else {
-//            mainVC.modalPresentationStyle = .overFullScreen
-//            self.present(mainVC, animated: true)
-//        }
     }
     
     func didFailure() {
-        let alert = UIAlertController(title: "로그인 실패", message: "입력된 정보가 올바르지 않습니다\n다시 시도하세요.", preferredStyle: UIAlertController.Style.alert)
-
-        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
         
-        alert.addAction(okAction)
-        
-        self.present(alert, animated: true)
     }
 }
     

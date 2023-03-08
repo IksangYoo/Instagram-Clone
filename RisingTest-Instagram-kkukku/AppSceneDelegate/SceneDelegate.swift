@@ -9,7 +9,8 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    var isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+//    var isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+//    var isLoggedIn = false
     var window: UIWindow?
     
     
@@ -18,20 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let Loginstoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil) // storyboard 가져오기
         let MainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        
-        if isLoggedIn == false {
-            // 로그인 안된 상태
+
+        if let email = UserDefaults.standard.string(forKey: "email") {
+            if let password = UserDefaults.standard.string(forKey: "password") {
+                LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
+
+                guard let mainVC = MainStoryboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
+                window?.rootViewController = mainVC
+            }
+        } else {
             guard let loginVC = Loginstoryboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
             window?.rootViewController = loginVC
-        } else {
-            // 로그인 된 상태
-            guard let email = UserDefaults.standard.string(forKey: "email") else { return }
-            guard let password = UserDefaults.standard.string(forKey: "password") else { return }
-            LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
-            
-            
-            guard let mainVC = MainStoryboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
-            window?.rootViewController = mainVC
         }
     }
     

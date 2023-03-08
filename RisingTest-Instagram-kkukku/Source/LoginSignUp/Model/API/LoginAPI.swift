@@ -20,6 +20,14 @@ class LoginAPI {
             "username" : email,
             "password" : password
         ]
+        if let indicator = loginVc.indicator {
+            indicator.startAnimating()
+        }
+        
+        if let loginButton = loginVc.loginButton {
+            loginVc.loginButton.setTitle("", for: .normal)
+        }
+        
         
         AF.request(url,
                    method: .post,
@@ -32,11 +40,10 @@ class LoginAPI {
                 loginVc.didSuccess(response: response)
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(password, forKey: "password")
-                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                
                 print(response)
             case .failure(let error):
                 print(error.localizedDescription)
-                loginVc.didFailure()
             }
         }
 //        .responseJSON { response in

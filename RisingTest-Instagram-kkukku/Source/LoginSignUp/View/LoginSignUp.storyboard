@@ -97,13 +97,22 @@
                                     <action selector="signUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="olA-RQ-yHr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VlE-EO-ZxV" customClass="IndicatorView" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+                                <rect key="frame" x="179" y="472" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VlE-EO-ZxV" secondAttribute="height" multiplier="1:1" id="9ay-z8-d1L"/>
+                                    <constraint firstAttribute="height" constant="35" id="DlL-aQ-jtE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.11657250669999999" green="0.1701014042" blue="0.22276127339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JzI-Jo-Gbh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="4eR-7R-evQ"/>
+                            <constraint firstItem="VlE-EO-ZxV" firstAttribute="centerY" secondItem="JGz-kB-0Ld" secondAttribute="centerY" id="6px-6D-wfS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hxa-MC-Tkh" secondAttribute="trailing" constant="18" id="B76-hN-s82"/>
                             <constraint firstItem="JGz-kB-0Ld" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="CVw-1B-M7I"/>
+                            <constraint firstItem="VlE-EO-ZxV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G60-WL-mP0"/>
                             <constraint firstItem="JGz-kB-0Ld" firstAttribute="top" secondItem="Pmd-TR-Tk2" secondAttribute="bottom" constant="13" id="Hfo-9b-TZO"/>
                             <constraint firstItem="PXG-cF-Pyq" firstAttribute="top" secondItem="JGz-kB-0Ld" secondAttribute="bottom" constant="15" id="Mpe-zD-uIq"/>
                             <constraint firstItem="LHg-Tc-Jaq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="45" id="QQu-Rh-COn"/>
@@ -124,6 +133,8 @@
                     <navigationItem key="navigationItem" id="qeq-D8-Phh"/>
                     <connections>
                         <outlet property="emailTF" destination="Hxa-MC-Tkh" id="YnM-nC-TOk"/>
+                        <outlet property="indicator" destination="VlE-EO-ZxV" id="G25-ot-PAl"/>
+                        <outlet property="loginButton" destination="JGz-kB-0Ld" id="HEt-PS-gb1"/>
                         <outlet property="passwordTF" destination="Pmd-TR-Tk2" id="OaB-hQ-8zG"/>
                         <segue destination="riZ-yC-EFy" kind="show" identifier="goToSignUpWithPhone" id="xdZ-uK-g9G"/>
                     </connections>
@@ -1962,6 +1973,11 @@
             <point key="canvasLocation" x="9467.9389312977091" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="VlE-EO-ZxV">
+            <size key="intrinsicContentSize" width="180" height="180"/>
+        </designable>
+    </designables>
     <resources>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="defaultProfileImage" width="1080" height="1080"/>
