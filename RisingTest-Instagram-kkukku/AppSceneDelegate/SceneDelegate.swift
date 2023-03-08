@@ -9,7 +9,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    var isLoggedIn = false
+    var isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
     var window: UIWindow?
     
     
@@ -25,6 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = loginVC
         } else {
             // 로그인 된 상태
+            guard let email = UserDefaults.standard.string(forKey: "email") else { return }
+            guard let password = UserDefaults.standard.string(forKey: "password") else { return }
+            LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
+            
+            
             guard let mainVC = MainStoryboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
             window?.rootViewController = mainVC
         }

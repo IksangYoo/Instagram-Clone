@@ -15,5 +15,21 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         userId.text = "\(currentUser.userInfo!.userId)"
+        print(UserDefaults.standard.string(forKey: "email"))
+        print(UserDefaults.standard.string(forKey: "password"))
     }
+    @IBAction func logout(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "password")
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil)
+        guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
+        
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = loginVC
+            UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+        }
+    }
+    
 }

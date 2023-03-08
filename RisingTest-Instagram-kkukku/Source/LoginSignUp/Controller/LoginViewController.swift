@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
             IQKeyboardManager.shared.keyboardDistanceFromTextField = 120
         }
         setTextField()
+        print("\(UserDefaults.standard.string(forKey: "email")), \(UserDefaults.standard.string(forKey: "password"))")
     }
 
     func setTextField() {

@@ -30,6 +30,9 @@ class LoginAPI {
             switch response.result {
             case .success(let response):
                 loginVc.didSuccess(response: response)
+                UserDefaults.standard.set(email, forKey: "email")
+                UserDefaults.standard.set(password, forKey: "password")
+                UserDefaults.standard.set(true, forKey: "isLoggedIn")
                 print(response)
             case .failure(let error):
                 print(error.localizedDescription)
