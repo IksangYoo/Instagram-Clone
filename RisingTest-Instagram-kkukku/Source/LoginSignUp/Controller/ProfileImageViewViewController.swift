@@ -11,6 +11,7 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
   
     
     
+    @IBOutlet weak var indicator: IndicatorView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var profileImagView: UIImageView!
@@ -36,6 +37,7 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
         modifyButton.isHidden = true
         shareView.isHidden = true
         shareLabel.isHidden = true
+        indicator.isHidden = true
     }
     
     @IBAction func addImage(_ sender: UIButton) {
@@ -45,10 +47,10 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
             present(optionVC, animated: true, completion: nil)
         } else {
             print("완료")
-            tryingSignUpUser.profileImage = profileImagView.image?.pngData()?.base64EncodedString()
+            tryingSignUpUser.profileImage = profileImagView.image
             //회원가입 api 호출
-            SignUpAPI().signUp(with: tryingSignUpUser)
-            performSegue(withIdentifier: "goToWelcome", sender: nil)
+            SignUpAPI().signUp(with: tryingSignUpUser, vc: self)
+            
             
         }
     }
@@ -58,8 +60,7 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
             print("건너뛰기")
             tryingSignUpUser.profileImage = nil
             //회원가입 api 호출
-            SignUpAPI().signUp(with: tryingSignUpUser)
-            performSegue(withIdentifier: "goToWelcome", sender: nil)
+            SignUpAPI().signUp(with: tryingSignUpUser, vc: self)
         } else {
             guard let optionVC = self.storyboard?.instantiateViewController(identifier: "optionVC") as? OptionViewController else { return }
             optionVC.delegate = self
@@ -91,5 +92,34 @@ class ProfileImageViewViewController: UIViewController, optionVCDelegate {
         modifyButton.isHidden = false
         shareView.isHidden = false
         shareLabel.isHidden = false
+    }
+    
+    func didSuccess() {
+        if let indicator = indicator {
+            if let button = addButton {
+                indicator.stopAnimating()
+                button.setTitle("확인", for: .normal)
+                
+            }
+        }
+        performSegue(withIdentifier: "goToWelcome", sender: nil)
+    }
+    
+    func didFailure() {
+        let alert = UIAlertController(title: "회원가입 실패", message: "회원가입에 실패하였습니다.\n다시 시도하세요.", preferredStyle: UIAlertController.Style.alert)
+
+        let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true)
+        
+        if let indicator = indicator {
+            if let button = addButton {
+                indicator.stopAnimating()
+                button.setTitle("확인", for: .normal)
+                
+            }
+        }
     }
 }

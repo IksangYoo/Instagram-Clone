@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
       
         setupView()
-       
+        print(tryingSignUpUser.profileImage)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +36,13 @@ class WelcomeViewController: UIViewController {
         startButton.alpha = 0
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         welcomeLabel.text = "\(tryingSignUpUser.userName!)님, Instagram에 오신 것을 환영합니다"
-        profileImageView.image = UIImage(data: Data(base64Encoded: tryingSignUpUser.profileImage!)!)
-       
+        profileImageView.image = tryingSignUpUser.profileImage
+        
+        if tryingSignUpUser.profileImage == nil {
+            profileImageView.image = UIImage(named: "defaultProfileImage")
+        } else {
+            profileImageView.image = tryingSignUpUser.profileImage
+        }
+        
     }
 }

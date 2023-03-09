@@ -9,35 +9,40 @@ import Foundation
 import Alamofire
 import UIKit
 
+
 class LoginAPI {
     
     let url = "\(Constant.BASE_URL)\(Constant.LOGIN_URL)"
     
-    func login(email: String, password: String, loginVc: LoginViewController) {
-        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
+    func login(email: String, password: String, loginVc: LoginViewController?) {
+        
+        let headers: HTTPHeaders = ["Content-Type": "application/json"]
         
         let params: Parameters = [
-            "username" : email,
+            "email" : email,
             "password" : password
         ]
-        if let indicator = loginVc.indicator {
+        
+        guard let loginVC = loginVc else { return }
+        
+        if let indicator = loginVC.indicator {
             indicator.startAnimating()
         }
         
-        if let loginButton = loginVc.loginButton {
-            loginVc.loginButton.setTitle("", for: .normal)
+        if let loginButton = loginVC.loginButton {
+            loginButton.setTitle("", for: .normal)
         }
         
         
         AF.request(url,
                    method: .post,
                    parameters: params,
-                   encoding: URLEncoding.default,
+                   encoding: JSONEncoding.default,
                    headers: headers)
         .responseDecodable(of: UserResponse.self) { response in
             switch response.result {
             case .success(let response):
-                loginVc.didSuccess(response: response)
+                loginVC.didSuccess(response: response)
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(password, forKey: "password")
                 

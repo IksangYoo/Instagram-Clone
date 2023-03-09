@@ -60,7 +60,6 @@ class LoginViewController: UIViewController {
                     button.setTitle("로그인", for: .normal)
                     
                 }
-                
             }
             
             if let window = UIApplication.shared.windows.first {

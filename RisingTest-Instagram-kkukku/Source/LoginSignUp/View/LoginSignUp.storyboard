@@ -1666,6 +1666,13 @@
                                     <action selector="addImage:" destination="kmO-ba-Izh" eventType="touchUpInside" id="iTc-D7-37J"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1P-EA-RHW" customClass="IndicatorView" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+                                <rect key="frame" x="179" y="690" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QIO-kN-3XZ"/>
+                                    <constraint firstAttribute="width" secondItem="w1P-EA-RHW" secondAttribute="height" multiplier="1:1" id="kWa-kV-h6a"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSR-cL-CyZ">
                                 <rect key="frame" x="18" y="752" width="357" height="55"/>
                                 <constraints>
@@ -1739,6 +1746,7 @@
                             <constraint firstItem="eXE-8D-4mW" firstAttribute="bottom" secondItem="aSR-cL-CyZ" secondAttribute="bottom" constant="11" id="6ZW-jX-Xgh"/>
                             <constraint firstItem="v9z-t6-m5S" firstAttribute="top" secondItem="eXE-8D-4mW" secondAttribute="top" constant="8" id="7UY-f2-jY9"/>
                             <constraint firstItem="aSR-cL-CyZ" firstAttribute="leading" secondItem="eXE-8D-4mW" secondAttribute="leading" constant="18" id="ERH-TR-frq"/>
+                            <constraint firstItem="w1P-EA-RHW" firstAttribute="width" secondItem="w1P-EA-RHW" secondAttribute="height" multiplier="1:1" id="GMj-jO-lmh"/>
                             <constraint firstItem="SnQ-QK-mbn" firstAttribute="leading" secondItem="eXE-8D-4mW" secondAttribute="leading" constant="18" id="IU4-pT-sUb"/>
                             <constraint firstItem="aSR-cL-CyZ" firstAttribute="top" secondItem="3aP-gN-fbh" secondAttribute="bottom" constant="17" id="Mfi-zU-iFO"/>
                             <constraint firstItem="eXE-8D-4mW" firstAttribute="trailing" secondItem="aSR-cL-CyZ" secondAttribute="trailing" constant="18" id="N3s-Ly-QJd"/>
@@ -1748,6 +1756,8 @@
                             <constraint firstItem="zes-P0-tZy" firstAttribute="top" secondItem="q83-Pm-g07" secondAttribute="bottom" constant="47" id="ab3-cv-N4u"/>
                             <constraint firstItem="q83-Pm-g07" firstAttribute="leading" secondItem="eXE-8D-4mW" secondAttribute="leading" constant="16" id="b6w-T0-CI5"/>
                             <constraint firstItem="JoA-yg-mXg" firstAttribute="centerX" secondItem="VKc-ET-cnl" secondAttribute="centerX" id="bYF-9u-pfA"/>
+                            <constraint firstItem="w1P-EA-RHW" firstAttribute="centerY" secondItem="3aP-gN-fbh" secondAttribute="centerY" id="fh7-W9-qc8"/>
+                            <constraint firstItem="w1P-EA-RHW" firstAttribute="centerX" secondItem="VKc-ET-cnl" secondAttribute="centerX" id="hTd-D6-bLd"/>
                             <constraint firstItem="zes-P0-tZy" firstAttribute="centerX" secondItem="VKc-ET-cnl" secondAttribute="centerX" id="htd-0q-Bau"/>
                             <constraint firstItem="eXE-8D-4mW" firstAttribute="trailing" secondItem="SnQ-QK-mbn" secondAttribute="trailing" constant="15" id="kw1-Cj-Obu"/>
                             <constraint firstItem="q83-Pm-g07" firstAttribute="top" secondItem="v9z-t6-m5S" secondAttribute="bottom" constant="10" id="pU9-Xx-B5k"/>
@@ -1761,6 +1771,7 @@
                     <navigationItem key="navigationItem" id="NZk-IL-2zb"/>
                     <connections>
                         <outlet property="addButton" destination="3aP-gN-fbh" id="LHv-PU-1m2"/>
+                        <outlet property="indicator" destination="w1P-EA-RHW" id="PPu-zm-kOk"/>
                         <outlet property="modifyButton" destination="JoA-yg-mXg" id="xUT-eF-NHg"/>
                         <outlet property="profileImagView" destination="zes-P0-tZy" id="A8l-zy-fqk"/>
                         <outlet property="shareLabel" destination="SnQ-QK-mbn" id="xTy-An-uXg"/>
