@@ -31,6 +31,9 @@
 		DD4F14DD29B9E4AD0008849A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DD4F14DC29B9E4AD0008849A /* FirebaseStorageCombine-Community */; };
 		DD4F14DF29B9E5090008849A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD4F14DE29B9E5090008849A /* GoogleService-Info.plist */; };
 		DD4F14E129B9E6730008849A /* FirebaseUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F14E029B9E6730008849A /* FirebaseUtilities.swift */; };
+		DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F14E529B9F5F90008849A /* PostViewController.swift */; };
+		DD4F14E929B9F9540008849A /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = DD4F14E829B9F9540008849A /* YPImagePicker */; };
+		DD4F14EB29BA0B5B0008849A /* SetPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4F14EA29BA0B5B0008849A /* SetPostViewController.swift */; };
 		DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */; };
 		DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529BD29B34F2E0089AD5C /* Constant.swift */; };
 		DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6529C029B34F7C0089AD5C /* JWTToken.swift */; };
@@ -77,6 +80,8 @@
 		DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DD4F14DE29B9E5090008849A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD4F14E029B9E6730008849A /* FirebaseUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilities.swift; sourceTree = "<group>"; };
+		DD4F14E529B9F5F90008849A /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DD4F14EA29BA0B5B0008849A /* SetPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPostViewController.swift; sourceTree = "<group>"; };
 		DD6529B629B34AF70089AD5C /* LoginSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginSignUp.storyboard; sourceTree = "<group>"; };
 		DD6529BD29B34F2E0089AD5C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		DD6529C029B34F7C0089AD5C /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4F14E929B9F9540008849A /* YPImagePicker in Frameworks */,
 				DD4F14D529B9E4AD0008849A /* FirebaseDatabaseSwift in Frameworks */,
 				DD4F14D329B9E4AD0008849A /* FirebaseDatabase in Frameworks */,
 				DD4F14DD29B9E4AD0008849A /* FirebaseStorageCombine-Community in Frameworks */,
@@ -143,6 +149,30 @@
 				DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */,
 				DD32EB4529B5D32800652B1E /* OptionViewController.swift */,
 				DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD4F14E229B9F5030008849A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529DE29B358AB0089AD5C /* PostStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD4F14E329B9F50F0008849A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD4F14E429B9F5400008849A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F14E529B9F5F90008849A /* PostViewController.swift */,
+				DD4F14EA29BA0B5B0008849A /* SetPostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,7 +255,9 @@
 		DD6529D129B354FA0089AD5C /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				DD6529DE29B358AB0089AD5C /* PostStoryboard.storyboard */,
+				DD4F14E329B9F50F0008849A /* Model */,
+				DD4F14E229B9F5030008849A /* View */,
+				DD4F14E429B9F5400008849A /* Controller */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -382,6 +414,7 @@
 				DD4F14D829B9E4AD0008849A /* FirebaseFirestore */,
 				DD4F14DA29B9E4AD0008849A /* FirebaseStorage */,
 				DD4F14DC29B9E4AD0008849A /* FirebaseStorageCombine-Community */,
+				DD4F14E829B9F9540008849A /* YPImagePicker */,
 			);
 			productName = "RisingTest-Instagram-kkukku";
 			productReference = DD76CB3C29B2E199002C4857 /* RisingTest-Instagram-kkukku.app */;
@@ -415,6 +448,7 @@
 				DD126C1529B47C5600DD2659 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DD4F14CD29B9E4AD0008849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DD4F14E729B9F9540008849A /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = DD76CB3D29B2E199002C4857 /* Products */;
 			projectDirPath = "";
@@ -469,12 +503,14 @@
 				DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
+				DD4F14EB29BA0B5B0008849A /* SetPostViewController.swift in Sources */,
 				DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */,
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,
 				DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */,
 				DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */,
 				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
 				DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */,
+				DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
@@ -623,6 +659,9 @@
 				DEVELOPMENT_TEAM = J83X8YAG93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RisingTest-Instagram-kkukku/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 허용";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 허용";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범 허용";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginSignUp;
@@ -653,6 +692,9 @@
 				DEVELOPMENT_TEAM = J83X8YAG93;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "RisingTest-Instagram-kkukku/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 허용";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 허용";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범 허용";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginSignUp;
@@ -713,6 +755,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		DD4F14E729B9F9540008849A /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -768,6 +818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD4F14CD29B9E4AD0008849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		DD4F14E829B9F9540008849A /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD4F14E729B9F9540008849A /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
 		};
 		DDE73BC529B7196F00BF6EF2 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

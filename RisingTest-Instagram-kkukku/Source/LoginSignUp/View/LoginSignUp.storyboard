@@ -1988,6 +1988,9 @@
         <designable name="VlE-EO-ZxV">
             <size key="intrinsicContentSize" width="180" height="180"/>
         </designable>
+        <designable name="w1P-EA-RHW">
+            <size key="intrinsicContentSize" width="180" height="180"/>
+        </designable>
     </designables>
     <resources>
         <image name="chevron.left" catalog="system" width="97" height="128"/>

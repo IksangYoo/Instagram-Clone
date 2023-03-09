@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: CustomTextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         if Device.height < 700 {
             IQKeyboardManager.shared.keyboardDistanceFromTextField = 120
@@ -78,8 +79,6 @@ class LoginViewController: UIViewController {
                 
             }
             
-            
-            
             let alert = UIAlertController(title: "로그인 실패", message: "\(response.message)", preferredStyle: UIAlertController.Style.alert)
 
             let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
@@ -88,10 +87,6 @@ class LoginViewController: UIViewController {
             
             self.present(alert, animated: true)
         }
-    }
-    
-    func didFailure() {
-        
     }
 }
     

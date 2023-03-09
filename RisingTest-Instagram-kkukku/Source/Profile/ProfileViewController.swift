@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userId.text = "\(currentUser.userInfo!.userId)"
+//        userId.text = "\(currentUser.userInfo!.userId)"
         print(UserDefaults.standard.string(forKey: "email"))
         print(UserDefaults.standard.string(forKey: "password"))
         print(UserDefaults.standard.string(forKey: "jwt"))

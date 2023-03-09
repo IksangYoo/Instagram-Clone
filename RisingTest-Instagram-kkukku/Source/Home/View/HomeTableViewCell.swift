@@ -13,8 +13,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var commentContent: UILabel!
     @IBOutlet weak var seeAllButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var topConst: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
@@ -34,6 +34,6 @@ class HomeTableViewCell: UITableViewCell {
         commentContent.isHidden = true
         seeAllButton.isHidden = true
         
-        topConstraint.constant = 10
+        topConst.constant = 10
     }
 }

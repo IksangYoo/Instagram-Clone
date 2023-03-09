@@ -21,17 +21,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let Loginstoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil) // storyboard 가져오기
         let MainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
 
-        if let email = UserDefaults.standard.string(forKey: "email") {
-            if let password = UserDefaults.standard.string(forKey: "password") {
-                LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
+//        if let email = UserDefaults.standard.string(forKey: "email") {
+//            if let password = UserDefaults.standard.string(forKey: "password") {
+//                LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
 
                 guard let mainVC = MainStoryboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
                 window?.rootViewController = mainVC
-            }
-        } else {
-            guard let loginVC = Loginstoryboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
-            window?.rootViewController = loginVC
-        }
+//            }
+//        } else {
+//            guard let loginVC = Loginstoryboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
+//            window?.rootViewController = loginVC
+//        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2OM-k1-nbL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PostViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w72-sP-Mqs"/>
+                    <connections>
+                        <segue destination="nii-Ue-hbz" kind="push" identifier="goToSetPost" id="KeK-5W-Be0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.7175572519084" y="-34.507042253521128"/>
+        </scene>
+        <!--새 게시물-->
+        <scene sceneID="eoZ-Ep-T8G">
+            <objects>
+                <viewController id="nii-Ue-hbz" customClass="SetPostViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nLK-KS-fW4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Y0-7x-XAE">
+                                <rect key="frame" x="10" y="115" width="70" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="2Rd-Ft-PCq"/>
+                                    <constraint firstAttribute="height" constant="80" id="aw1-5v-fEC"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="문구 입력..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Nn-mn-xwG">
+                                <rect key="frame" x="92" y="123" width="285" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="qd9-nn-T9l"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-03-09 오전 8.26.44" translatesAutoresizingMaskIntoConstraints="NO" id="YK8-mi-F6Z">
+                                <rect key="frame" x="0.0" y="203" width="393" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="370" id="Hbx-bp-FeQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.inset.filled.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Ee-VQ-cIR">
+                                <rect key="frame" x="47" y="122.66666666666667" width="26" height="24.666666666666671"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="9mm-ia-LzK"/>
+                                    <constraint firstAttribute="width" secondItem="9Ee-VQ-cIR" secondAttribute="height" multiplier="1:1" id="gj6-lS-5ul"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8RA-89-JOD"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Ee-VQ-cIR" firstAttribute="trailing" secondItem="5Y0-7x-XAE" secondAttribute="trailing" constant="-7" id="0iD-8U-Spq"/>
+                            <constraint firstItem="YK8-mi-F6Z" firstAttribute="top" secondItem="5Y0-7x-XAE" secondAttribute="bottom" constant="8" symbolic="YES" id="61g-cM-4kU"/>
+                            <constraint firstItem="YK8-mi-F6Z" firstAttribute="leading" secondItem="8RA-89-JOD" secondAttribute="leading" id="8Uq-Rb-cAd"/>
+                            <constraint firstItem="5Y0-7x-XAE" firstAttribute="top" secondItem="8RA-89-JOD" secondAttribute="top" constant="12" id="EX6-ZB-sjM"/>
+                            <constraint firstItem="5Y0-7x-XAE" firstAttribute="leading" secondItem="8RA-89-JOD" secondAttribute="leading" constant="10" id="NUu-u1-4f6"/>
+                            <constraint firstItem="3Nn-mn-xwG" firstAttribute="top" secondItem="8RA-89-JOD" secondAttribute="top" constant="20" id="Vfc-qm-dj0"/>
+                            <constraint firstItem="8RA-89-JOD" firstAttribute="trailing" secondItem="3Nn-mn-xwG" secondAttribute="trailing" constant="16" id="bnF-Ol-tNs"/>
+                            <constraint firstItem="YK8-mi-F6Z" firstAttribute="trailing" secondItem="8RA-89-JOD" secondAttribute="trailing" id="dVM-IR-AUJ"/>
+                            <constraint firstItem="3Nn-mn-xwG" firstAttribute="leading" secondItem="5Y0-7x-XAE" secondAttribute="trailing" constant="12" id="wMH-rB-vYA"/>
+                            <constraint firstItem="9Ee-VQ-cIR" firstAttribute="top" secondItem="5Y0-7x-XAE" secondAttribute="top" constant="7" id="zT5-nm-wtz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 게시물" style="editor" id="4g6-RV-6Ya">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="V2r-5Y-xDK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="공유" id="EhW-z7-FCu">
+                            <connections>
+                                <action selector="share:" destination="nii-Ue-hbz" id="OKf-xj-jUd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="3Nn-mn-xwG" id="Qlt-sW-fni"/>
+                        <outlet property="isPostMoreThanOne" destination="9Ee-VQ-cIR" id="pmR-UI-io9"/>
+                        <outlet property="menuImage" destination="YK8-mi-F6Z" id="ZRe-es-La3"/>
+                        <outlet property="postImageView" destination="5Y0-7x-XAE" id="1WW-zI-CGL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V16-uo-asl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-35.211267605633807"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="58y-1d-aSc">
+            <objects>
+                <navigationController storyboardIdentifier="PostNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="2OM-k1-nbL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Post" id="ScQ-O1-ShX"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U52-eH-wdX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="doF-Wb-taO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJ7-oC-ZC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="rectangle.inset.filled.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="스크린샷 2023-03-09 오전 8.26.44" width="563" height="514"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

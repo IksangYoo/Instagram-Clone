@@ -115,6 +115,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="EYo-UH-UJk" secondAttribute="trailing" constant="-5" id="A7D-n0-uQT"/>
                     <constraint firstItem="Llv-iT-swL" firstAttribute="width" secondItem="Llv-iT-swL" secondAttribute="height" multiplier="1:1" id="ANm-gH-O9k"/>
                     <constraint firstItem="yUK-mD-lkf" firstAttribute="leading" secondItem="pp4-Zf-uKj" secondAttribute="leading" id="Abr-VV-bBk"/>
+                    <constraint firstAttribute="bottom" secondItem="yUK-mD-lkf" secondAttribute="bottom" constant="10" id="EYQ-LO-niK"/>
                     <constraint firstItem="ITe-Ma-746" firstAttribute="leading" secondItem="pp4-Zf-uKj" secondAttribute="leading" id="FoS-rJ-hKs"/>
                     <constraint firstItem="Jhb-H9-9US" firstAttribute="top" secondItem="ITe-Ma-746" secondAttribute="bottom" constant="10" id="L82-aK-VAk"/>
                     <constraint firstItem="O5w-U4-A80" firstAttribute="top" secondItem="Jhb-H9-9US" secondAttribute="bottom" id="NfF-1B-YfE"/>
@@ -130,7 +131,6 @@
                     <constraint firstAttribute="trailing" secondItem="SoN-Dx-BJ1" secondAttribute="trailing" id="jqh-Ld-vj3"/>
                     <constraint firstItem="SoN-Dx-BJ1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kaB-9g-ueK"/>
                     <constraint firstItem="GLz-pX-JwG" firstAttribute="centerY" secondItem="pp4-Zf-uKj" secondAttribute="centerY" constant="2" id="lJE-K4-VZv"/>
-                    <constraint firstAttribute="bottom" secondItem="yUK-mD-lkf" secondAttribute="bottom" constant="10" id="nbw-PN-QSK"/>
                     <constraint firstItem="SoN-Dx-BJ1" firstAttribute="top" secondItem="Jc7-hx-5bC" secondAttribute="bottom" constant="15" id="ook-er-rOH"/>
                     <constraint firstItem="Jc7-hx-5bC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="oxY-6e-Gm0"/>
                     <constraint firstItem="EYo-UH-UJk" firstAttribute="centerY" secondItem="pp4-Zf-uKj" secondAttribute="centerY" id="riZ-FF-EWM"/>
@@ -154,7 +154,7 @@
                 <outlet property="commentUserName" destination="Jhb-H9-9US" id="6aZ-2M-O9r"/>
                 <outlet property="profileImageView" destination="Jc7-hx-5bC" id="pJV-qE-SJ5"/>
                 <outlet property="seeAllButton" destination="O5w-U4-A80" id="GJd-87-XCF"/>
-                <outlet property="topConstraint" destination="iXB-MZ-IGO" id="1FF-v4-hya"/>
+                <outlet property="topConst" destination="iXB-MZ-IGO" id="zEh-Vj-Z7h"/>
                 <outlet property="userNameLabel" destination="Ujv-4h-I0L" id="gkX-yo-CjH"/>
             </connections>
             <point key="canvasLocation" x="232.82442748091603" y="176.05633802816902"/>
