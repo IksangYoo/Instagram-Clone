@@ -18,6 +18,7 @@ struct UserResponse: Decodable {
 struct UserResult: Decodable {
     var userId : Int?
     var jwt: String?
+    var userName: String?
 //    var name: String
 //    var age: Int
 //    var userName: String

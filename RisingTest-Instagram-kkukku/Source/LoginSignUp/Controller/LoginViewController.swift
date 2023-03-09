@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         indicator.isHidden = true
         print(UserDefaults.standard.string(forKey: "email"))
         print(UserDefaults.standard.string(forKey: "password"))
-        
+        print(UserDefaults.standard.string(forKey: "jwt"))
     }
 
     func setTextField() {

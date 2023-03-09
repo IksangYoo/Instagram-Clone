@@ -45,7 +45,7 @@ class LoginAPI {
                 loginVC.didSuccess(response: response)
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(password, forKey: "password")
-                
+                UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
                 print(response)
             case .failure(let error):
                 print(error.localizedDescription)

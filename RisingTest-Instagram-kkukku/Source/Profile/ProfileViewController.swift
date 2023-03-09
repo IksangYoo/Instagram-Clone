@@ -15,9 +15,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         userId.text = "\(currentUser.userInfo!.userId)"
-//        print(UserDefaults.standard.string(forKey: "email"))
-//        print(UserDefaults.standard.string(forKey: "password"))
-        
+        print(UserDefaults.standard.string(forKey: "email"))
+        print(UserDefaults.standard.string(forKey: "password"))
+        print(UserDefaults.standard.string(forKey: "jwt"))
     }
     @IBAction func logout(_ sender: UIButton) {
 //        UserDefaults.standard.removeObject(forKey: "email")
@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
         
         UserDefaults.standard.set(nil, forKey: "email")
         UserDefaults.standard.set(nil, forKey: "password")
+        UserDefaults.standard.set(nil, forKey: "jwt")
         
         let storyboard : UIStoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil)
         guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
