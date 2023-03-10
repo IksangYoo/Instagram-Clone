@@ -17,6 +17,12 @@
 		DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */; };
 		DD1BE3FB29BB1A1800597E62 /* TopSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE3F929BB1A1800597E62 /* TopSectionCollectionViewCell.swift */; };
 		DD1BE3FC29BB1A1800597E62 /* TopSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE3FA29BB1A1800597E62 /* TopSectionCollectionViewCell.xib */; };
+		DD1BE3FF29BB2CAC00597E62 /* MiddleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE3FD29BB2CAC00597E62 /* MiddleCollectionViewCell.swift */; };
+		DD1BE40029BB2CAC00597E62 /* MiddleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE3FE29BB2CAC00597E62 /* MiddleCollectionViewCell.xib */; };
+		DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40129BB2E1000597E62 /* MiddelSectionHeader.swift */; };
+		DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40329BB2E3A00597E62 /* MiddelSectionHeader.xib */; };
+		DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40529BB39E900597E62 /* MiddleCollectionViewSubCell.swift */; };
+		DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40629BB39E900597E62 /* MiddleCollectionViewSubCell.xib */; };
 		DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */; };
 		DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */; };
 		DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */; };
@@ -76,6 +82,12 @@
 		DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		DD1BE3F929BB1A1800597E62 /* TopSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD1BE3FA29BB1A1800597E62 /* TopSectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD1BE3FD29BB2CAC00597E62 /* MiddleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD1BE3FE29BB2CAC00597E62 /* MiddleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD1BE40129BB2E1000597E62 /* MiddelSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddelSectionHeader.swift; sourceTree = "<group>"; };
+		DD1BE40329BB2E3A00597E62 /* MiddelSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddelSectionHeader.xib; sourceTree = "<group>"; };
+		DD1BE40529BB39E900597E62 /* MiddleCollectionViewSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCollectionViewSubCell.swift; sourceTree = "<group>"; };
+		DD1BE40629BB39E900597E62 /* MiddleCollectionViewSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleCollectionViewSubCell.xib; sourceTree = "<group>"; };
 		DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +163,12 @@
 		DD1BE3F729BB19A200597E62 /* MiddelSection */ = {
 			isa = PBXGroup;
 			children = (
+				DD1BE3FD29BB2CAC00597E62 /* MiddleCollectionViewCell.swift */,
+				DD1BE3FE29BB2CAC00597E62 /* MiddleCollectionViewCell.xib */,
+				DD1BE40129BB2E1000597E62 /* MiddelSectionHeader.swift */,
+				DD1BE40329BB2E3A00597E62 /* MiddelSectionHeader.xib */,
+				DD1BE40529BB39E900597E62 /* MiddleCollectionViewSubCell.swift */,
+				DD1BE40629BB39E900597E62 /* MiddleCollectionViewSubCell.xib */,
 			);
 			path = MiddelSection;
 			sourceTree = "<group>";
@@ -521,9 +539,12 @@
 				DD6529B729B34AF70089AD5C /* LoginSignUp.storyboard in Resources */,
 				DD6529D729B3563C0089AD5C /* MainTabBar.storyboard in Resources */,
 				DD6529DF29B358AB0089AD5C /* PostStoryboard.storyboard in Resources */,
+				DD1BE40029BB2CAC00597E62 /* MiddleCollectionViewCell.xib in Resources */,
 				DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */,
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
+				DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */,
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
+				DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
 				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
 				DD1BE3FC29BB1A1800597E62 /* TopSectionCollectionViewCell.xib in Resources */,
@@ -566,12 +587,15 @@
 				DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */,
 				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
 				DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */,
+				DD1BE3FF29BB2CAC00597E62 /* MiddleCollectionViewCell.swift in Sources */,
 				DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
+				DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
 				DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */,
+				DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
 				DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */,
 			);

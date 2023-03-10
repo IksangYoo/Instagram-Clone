@@ -51,6 +51,12 @@ class ProfileViewController: UIViewController {
     func registerXib() {
         let topNib = UINib(nibName: "TopSectionCollectionViewCell", bundle: nil)
         collectionView.register(topNib, forCellWithReuseIdentifier: "topCell")
+        
+        let middleNib = UINib(nibName: "MiddleCollectionViewCell", bundle: nil)
+        collectionView.register(middleNib, forCellWithReuseIdentifier: "middleCell")
+        
+        let middleSectionHeader = UINib(nibName: "MiddelSectionHeader", bundle: nil)
+        collectionView.register(middleSectionHeader, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "MiddelSectionHeader")
     }
 }
 
@@ -67,9 +73,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 5
+            return 1
         } else {
-            return 3
+            return 10
         }
         
     }
@@ -82,7 +88,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             return cell
             
         } else if indexPath.section == 1 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopSectionCollectionViewCell else { return UICollectionViewCell()}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "middleCell", for: indexPath) as? MiddleCollectionViewCell else { return UICollectionViewCell()}
         
             return cell
             
@@ -94,18 +100,79 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
-    
+    // 섹션별 셀 크기
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             
-            return CGSize(width: view.frame.width, height: 200)
+            return CGSize(width: view.frame.width, height: 190)
         } else if indexPath.section == 1 {
-            return CGSize(width: 100, height: 100)
+            return CGSize(width: view.frame.width, height: 240)
         } else {
             return CGSize(width: 200, height: 200)
         }
     }
+    
+    // 섹션별  inset
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        if section == 0 {
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        } else if section == 1 {
+            return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 0)
+        } else {
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        }
+        
+        
+    }
+    
+    // 섹션별 헤더뷰
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+//        if kind == UICollectionView.elementKindSectionHeader {
+//
+//            if indexPath.section == 0 {
+//
+//                return UICollectionReusableView()
+//
+//            } else if indexPath.section == 1 {
+//
+//                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath)
+//
+//                return headerView
+//
+//            } else {
+//                return UICollectionReusableView()
+//            }
+//
+//
+//        } else {
+//            return UICollectionReusableView()
+//        }
+        
+        if indexPath.section == 1 {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath) as! MiddelSectionHeader
+                // 헤더 뷰를 반환합니다.
+                return headerView
+        } else if indexPath.section == 2 {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath) as! MiddelSectionHeader
+                // 헤더 뷰를 반환합니다.
+                return headerView
+        } else {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath)
+                return headerView
+        }
+    }
+    
+    // 섹션별 헤더 크기
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 0 {
+            return CGSize(width: 0, height: 0)
+        } else if section == 1 {
+            return CGSize(width: view.frame.width, height: 40)
+        } else {
+            return CGSize(width: view.frame.width, height: 100)
+        }
+        
+        
     }
 }
