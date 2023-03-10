@@ -15,6 +15,8 @@
 		DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */; };
 		DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD160F5129B880B900C25F05 /* HomeTableViewCell.swift */; };
 		DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */; };
+		DD1BE3FB29BB1A1800597E62 /* TopSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE3F929BB1A1800597E62 /* TopSectionCollectionViewCell.swift */; };
+		DD1BE3FC29BB1A1800597E62 /* TopSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE3FA29BB1A1800597E62 /* TopSectionCollectionViewCell.xib */; };
 		DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */; };
 		DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */; };
 		DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */; };
@@ -72,6 +74,8 @@
 		DD126C2029B4C25E00DD2659 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		DD160F5129B880B900C25F05 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DD160F5229B880B900C25F05 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		DD1BE3F929BB1A1800597E62 /* TopSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD1BE3FA29BB1A1800597E62 /* TopSectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopSectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD1BE3F629BB199500597E62 /* TopSection */ = {
+			isa = PBXGroup;
+			children = (
+				DD1BE3F929BB1A1800597E62 /* TopSectionCollectionViewCell.swift */,
+				DD1BE3FA29BB1A1800597E62 /* TopSectionCollectionViewCell.xib */,
+			);
+			path = TopSection;
+			sourceTree = "<group>";
+		};
+		DD1BE3F729BB19A200597E62 /* MiddelSection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MiddelSection;
+			sourceTree = "<group>";
+		};
+		DD1BE3F829BB19AB00597E62 /* BottonSection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BottonSection;
+			sourceTree = "<group>";
+		};
 		DD32EB4A29B5F97900652B1E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,8 +300,9 @@
 		DD6529D329B355180089AD5C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */,
-				DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */,
+				DD81409C29BB17BD00E172F0 /* Model */,
+				DD81409D29BB17C200E172F0 /* View */,
+				DD81409E29BB17C700E172F0 /* Controller */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -339,6 +367,32 @@
 				DD76CB4D29B2E19A002C4857 /* Info.plist */,
 			);
 			path = "RisingTest-Instagram-kkukku";
+			sourceTree = "<group>";
+		};
+		DD81409C29BB17BD00E172F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD81409D29BB17C200E172F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD1BE3F629BB199500597E62 /* TopSection */,
+				DD1BE3F729BB19A200597E62 /* MiddelSection */,
+				DD1BE3F829BB19AB00597E62 /* BottonSection */,
+				DD6529E229B358C50089AD5C /* ProfileStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD81409E29BB17C700E172F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DDCFEA1629B5FB3F00DA87C0 /* View */ = {
@@ -472,6 +526,7 @@
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
 				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
+				DD1BE3FC29BB1A1800597E62 /* TopSectionCollectionViewCell.xib in Resources */,
 				DD4F14DF29B9E5090008849A /* GoogleService-Info.plist in Resources */,
 				DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */,
 				DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */,
@@ -503,6 +558,7 @@
 				DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
+				DD1BE3FB29BB1A1800597E62 /* TopSectionCollectionViewCell.swift in Sources */,
 				DD4F14EB29BA0B5B0008849A /* SetPostViewController.swift in Sources */,
 				DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */,
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,

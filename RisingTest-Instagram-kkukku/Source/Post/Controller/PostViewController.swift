@@ -16,7 +16,10 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         showImagePicker()
     }
-  
+//    override func viewWillAppear(_ animated: Bool) {
+//        showImagePicker()
+//    }
+    
     func showImagePicker() {
         var config = YPImagePickerConfiguration()
         config.library.maxNumberOfItems = 10
