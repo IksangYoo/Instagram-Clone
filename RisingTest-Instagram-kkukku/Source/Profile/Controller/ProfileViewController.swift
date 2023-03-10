@@ -24,19 +24,14 @@ class ProfileViewController: UIViewController {
         print(UserDefaults.standard.string(forKey: "jwt"))
     }
     
+    
+    @IBAction func optionButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "goToOptions", sender: nil)
+    }
+    
 //    @IBAction func logout(_ sender: UIButton) {
 //
-//        UserDefaults.standard.set(nil, forKey: "email")
-//        UserDefaults.standard.set(nil, forKey: "password")
-//        UserDefaults.standard.set(nil, forKey: "jwt")
-//
-//        let storyboard : UIStoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil)
-//        guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
-//
-//        if let window = UIApplication.shared.windows.first {
-//            window.rootViewController = loginVC
-//            UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
-//        }
+
 //    }
     
     func setupNavigation() {

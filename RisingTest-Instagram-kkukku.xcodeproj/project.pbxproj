@@ -27,6 +27,7 @@
 		DD1BE40E29BB53DE00597E62 /* BottomSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40D29BB53DE00597E62 /* BottomSectionHeader.xib */; };
 		DD1BE41129BB56C400597E62 /* BottomSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40F29BB56C400597E62 /* BottomSectionCollectionViewCell.swift */; };
 		DD1BE41229BB56C400597E62 /* BottomSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE41029BB56C400597E62 /* BottomSectionCollectionViewCell.xib */; };
+		DD1BE41729BB60BC00597E62 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE41629BB60BC00597E62 /* LogoutViewController.swift */; };
 		DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */; };
 		DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */; };
 		DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */; };
@@ -96,6 +97,7 @@
 		DD1BE40D29BB53DE00597E62 /* BottomSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSectionHeader.xib; sourceTree = "<group>"; };
 		DD1BE40F29BB56C400597E62 /* BottomSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD1BE41029BB56C400597E62 /* BottomSectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSectionCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD1BE41629BB60BC00597E62 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */,
+				DD1BE41629BB60BC00597E62 /* LogoutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */,
 				DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
+				DD1BE41729BB60BC00597E62 /* LogoutViewController.swift in Sources */,
 				DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

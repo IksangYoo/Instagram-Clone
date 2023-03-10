@@ -60,6 +60,9 @@
                             <barButtonItem largeContentSizeImage="gear" catalog="system" id="wyZ-a0-pem">
                                 <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="optionButtonPressed:" destination="Y6W-OH-hqX" id="seB-RT-GHg"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem id="XC7-ec-x9b"/>
                         </rightBarButtonItems>
@@ -69,11 +72,73 @@
                         <outlet property="optionButton" destination="wyZ-a0-pem" id="4As-Q8-MWC"/>
                         <outlet property="plusButton" destination="XC7-ec-x9b" id="Ers-vc-fNR"/>
                         <outlet property="usernameButton" destination="HYn-jj-c0F" id="o3k-SJ-GYO"/>
+                        <segue destination="ZZm-bo-ABY" kind="presentation" identifier="goToOptions" id="2dJ-Df-Hwr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026.7175572519084" y="-34.507042253521128"/>
+        </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="RSp-JA-WRM">
+            <objects>
+                <viewController id="ZZm-bo-ABY" customClass="LogoutViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NIz-vl-4XZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zf-hI-raZ">
+                                <rect key="frame" x="0.0" y="143" width="393" height="680"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="options" translatesAutoresizingMaskIntoConstraints="NO" id="gqw-f0-nTO">
+                                        <rect key="frame" x="0.0" y="40" width="393" height="530"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="530" id="dzB-We-hhT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="l2n-0p-BnX">
+                                        <rect key="frame" x="176.66666666666666" y="0.0" width="40" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="iyu-Zw-7Xq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-Jc-DGT">
+                                        <rect key="frame" x="13" y="572" width="123" height="33"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="kkukku 로그아웃"/>
+                                        <connections>
+                                            <action selector="logout:" destination="ZZm-bo-ABY" eventType="touchUpInside" id="bva-Gg-tgI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14509806040000001" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="9HA-Jc-DGT" firstAttribute="leading" secondItem="gqw-f0-nTO" secondAttribute="leading" constant="13" id="1KB-I3-XOO"/>
+                                    <constraint firstAttribute="trailing" secondItem="gqw-f0-nTO" secondAttribute="trailing" id="4Vb-PQ-NZW"/>
+                                    <constraint firstItem="gqw-f0-nTO" firstAttribute="leading" secondItem="9zf-hI-raZ" secondAttribute="leading" id="AW2-T3-ITv"/>
+                                    <constraint firstItem="l2n-0p-BnX" firstAttribute="top" secondItem="9zf-hI-raZ" secondAttribute="top" id="gU4-Wk-JHE"/>
+                                    <constraint firstAttribute="height" constant="680" id="h1J-yN-4Uf"/>
+                                    <constraint firstItem="gqw-f0-nTO" firstAttribute="top" secondItem="9zf-hI-raZ" secondAttribute="top" constant="40" id="kNC-Gn-hcK"/>
+                                    <constraint firstItem="l2n-0p-BnX" firstAttribute="centerX" secondItem="9zf-hI-raZ" secondAttribute="centerX" id="nHe-CQ-gIL"/>
+                                    <constraint firstItem="9HA-Jc-DGT" firstAttribute="top" secondItem="gqw-f0-nTO" secondAttribute="bottom" constant="2" id="wnx-zv-EUY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xzP-7x-PwP"/>
+                        <constraints>
+                            <constraint firstItem="9zf-hI-raZ" firstAttribute="leading" secondItem="xzP-7x-PwP" secondAttribute="leading" id="tTH-Pr-BqB"/>
+                            <constraint firstItem="xzP-7x-PwP" firstAttribute="bottom" secondItem="9zf-hI-raZ" secondAttribute="bottom" constant="-40" id="uls-Sa-XsK"/>
+                            <constraint firstItem="xzP-7x-PwP" firstAttribute="trailing" secondItem="9zf-hI-raZ" secondAttribute="trailing" id="wjK-fp-04G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="optionView" destination="9zf-hI-raZ" id="mhL-Wn-Rz8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Epd-eh-lsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.6564885496182" y="-35.211267605633807"/>
         </scene>
         <!--Profile-->
         <scene sceneID="CpS-hd-Rvz">
@@ -98,7 +163,9 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="line" width="243" height="25"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
+        <image name="options" width="760" height="1068"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
