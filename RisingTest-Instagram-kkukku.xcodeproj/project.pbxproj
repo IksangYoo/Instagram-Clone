@@ -23,6 +23,10 @@
 		DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40329BB2E3A00597E62 /* MiddelSectionHeader.xib */; };
 		DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40529BB39E900597E62 /* MiddleCollectionViewSubCell.swift */; };
 		DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40629BB39E900597E62 /* MiddleCollectionViewSubCell.xib */; };
+		DD1BE40A29BB538700597E62 /* BottomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40929BB538700597E62 /* BottomSectionHeader.swift */; };
+		DD1BE40E29BB53DE00597E62 /* BottomSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE40D29BB53DE00597E62 /* BottomSectionHeader.xib */; };
+		DD1BE41129BB56C400597E62 /* BottomSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BE40F29BB56C400597E62 /* BottomSectionCollectionViewCell.swift */; };
+		DD1BE41229BB56C400597E62 /* BottomSectionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD1BE41029BB56C400597E62 /* BottomSectionCollectionViewCell.xib */; };
 		DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */; };
 		DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */; };
 		DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */; };
@@ -88,6 +92,10 @@
 		DD1BE40329BB2E3A00597E62 /* MiddelSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddelSectionHeader.xib; sourceTree = "<group>"; };
 		DD1BE40529BB39E900597E62 /* MiddleCollectionViewSubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleCollectionViewSubCell.swift; sourceTree = "<group>"; };
 		DD1BE40629BB39E900597E62 /* MiddleCollectionViewSubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleCollectionViewSubCell.xib; sourceTree = "<group>"; };
+		DD1BE40929BB538700597E62 /* BottomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSectionHeader.swift; sourceTree = "<group>"; };
+		DD1BE40D29BB53DE00597E62 /* BottomSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSectionHeader.xib; sourceTree = "<group>"; };
+		DD1BE40F29BB56C400597E62 /* BottomSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD1BE41029BB56C400597E62 /* BottomSectionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSectionCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD32EB3D29B5B54C00652B1E /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		DD32EB3F29B5BB4200652B1E /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		DD32EB4129B5C32700652B1E /* ProfileImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +184,10 @@
 		DD1BE3F829BB19AB00597E62 /* BottonSection */ = {
 			isa = PBXGroup;
 			children = (
+				DD1BE40929BB538700597E62 /* BottomSectionHeader.swift */,
+				DD1BE40D29BB53DE00597E62 /* BottomSectionHeader.xib */,
+				DD1BE40F29BB56C400597E62 /* BottomSectionCollectionViewCell.swift */,
+				DD1BE41029BB56C400597E62 /* BottomSectionCollectionViewCell.xib */,
 			);
 			path = BottonSection;
 			sourceTree = "<group>";
@@ -547,7 +559,9 @@
 				DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
 				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
+				DD1BE40E29BB53DE00597E62 /* BottomSectionHeader.xib in Resources */,
 				DD1BE3FC29BB1A1800597E62 /* TopSectionCollectionViewCell.xib in Resources */,
+				DD1BE41229BB56C400597E62 /* BottomSectionCollectionViewCell.xib in Resources */,
 				DD4F14DF29B9E5090008849A /* GoogleService-Info.plist in Resources */,
 				DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */,
 				DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */,
@@ -566,6 +580,7 @@
 				DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */,
 				DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
+				DD1BE40A29BB538700597E62 /* BottomSectionHeader.swift in Sources */,
 				DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */,
 				DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */,
 				DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */,
@@ -594,6 +609,7 @@
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
 				DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
+				DD1BE41129BB56C400597E62 /* BottomSectionCollectionViewCell.swift in Sources */,
 				DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */,
 				DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,

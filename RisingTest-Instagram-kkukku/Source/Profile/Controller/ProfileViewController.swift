@@ -57,6 +57,12 @@ class ProfileViewController: UIViewController {
         
         let middleSectionHeader = UINib(nibName: "MiddelSectionHeader", bundle: nil)
         collectionView.register(middleSectionHeader, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "MiddelSectionHeader")
+        
+        let bottomSectionHeader = UINib(nibName: "BottomSectionHeader", bundle: nil)
+        collectionView.register(bottomSectionHeader, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "BottomSectionHeader")
+        
+        let bottomNib = UINib(nibName: "BottomSectionCollectionViewCell", bundle: nil)
+        collectionView.register(bottomNib, forCellWithReuseIdentifier: "bottomCell")
     }
 }
 
@@ -93,7 +99,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             return cell
             
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopSectionCollectionViewCell else { return UICollectionViewCell()}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomSectionCollectionViewCell else { return UICollectionViewCell()}
         
             return cell
             
@@ -104,11 +110,14 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             
-            return CGSize(width: view.frame.width, height: 190)
+            return CGSize(width: view.frame.width, height: 200)
         } else if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: 240)
         } else {
-            return CGSize(width: 200, height: 200)
+            let width = collectionView.frame.width / 3
+            let height = width
+            let inset : CGFloat = 1
+            return CGSize(width: width - (inset * 2), height: height)
         }
     }
     
@@ -128,33 +137,12 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     // 섹션별 헤더뷰
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-//        if kind == UICollectionView.elementKindSectionHeader {
-//
-//            if indexPath.section == 0 {
-//
-//                return UICollectionReusableView()
-//
-//            } else if indexPath.section == 1 {
-//
-//                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath)
-//
-//                return headerView
-//
-//            } else {
-//                return UICollectionReusableView()
-//            }
-//
-//
-//        } else {
-//            return UICollectionReusableView()
-//        }
-        
         if indexPath.section == 1 {
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath) as! MiddelSectionHeader
                 // 헤더 뷰를 반환합니다.
                 return headerView
         } else if indexPath.section == 2 {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "MiddelSectionHeader", for: indexPath) as! MiddelSectionHeader
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "BottomSectionHeader", for: indexPath) as! BottomSectionHeader
                 // 헤더 뷰를 반환합니다.
                 return headerView
         } else {
@@ -168,11 +156,28 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         if section == 0 {
             return CGSize(width: 0, height: 0)
         } else if section == 1 {
-            return CGSize(width: view.frame.width, height: 40)
+            return CGSize(width: view.frame.width, height: 30)
         } else {
-            return CGSize(width: view.frame.width, height: 100)
+            return CGSize(width: view.frame.width, height: 43)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        if section == 2 {
+            return 1
+        } else {
+            return 0
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
+        if section == 2 {
+            return 2
+        } else {
+            return 0
+        }
     }
 }
