@@ -19,7 +19,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var topConst: NSLayoutConstraint!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var postScrollView: UIScrollView!
-    
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +47,12 @@ class HomeTableViewCell: UITableViewCell {
     
     func updateCell(post: PostResult) {
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Seoul")
+        let date = dateFormatter.date(from: post.createdAt)
+        
         manageViewWhenNil(post: post)
         fetchImageToScrollView(urls: post.itemImages)
         
@@ -55,6 +61,8 @@ class HomeTableViewCell: UITableViewCell {
         commentUserName.text = post.userName
         commentContent.text = post.itemContent
         likeLabel.text = "좋아요 \(post.stars)개"
+        dateLabel.text = date?.displayTimeAgo(date: date!)
+
     }
     
     private func manageViewWhenNil(post: PostResult) {

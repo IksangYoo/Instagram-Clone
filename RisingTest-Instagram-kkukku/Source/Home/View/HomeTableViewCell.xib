@@ -76,7 +76,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="번역보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMu-Ue-nDe">
-                        <rect key="frame" x="63" y="699.33333333333337" width="48.666666666666657" height="17"/>
+                        <rect key="frame" x="66" y="699.33333333333337" width="48.666666666666657" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                     <constraint firstItem="h7b-sW-fEK" firstAttribute="centerY" secondItem="Jhb-H9-9US" secondAttribute="centerY" id="vMC-6P-1Yz"/>
                     <constraint firstItem="ITe-Ma-746" firstAttribute="top" secondItem="pp4-Zf-uKj" secondAttribute="bottom" constant="10" id="wNl-r0-c5x"/>
                     <constraint firstItem="Ujv-4h-I0L" firstAttribute="leading" secondItem="Jc7-hx-5bC" secondAttribute="trailing" constant="10" id="wpz-Uy-qid"/>
-                    <constraint firstItem="gMu-Ue-nDe" firstAttribute="leading" secondItem="yUK-mD-lkf" secondAttribute="trailing" constant="2" id="x0J-hV-Y7v"/>
+                    <constraint firstItem="gMu-Ue-nDe" firstAttribute="leading" secondItem="yUK-mD-lkf" secondAttribute="trailing" constant="5" id="x0J-hV-Y7v"/>
                     <constraint firstItem="pp4-Zf-uKj" firstAttribute="top" secondItem="xJY-ke-Oot" secondAttribute="bottom" constant="15" id="yDK-eA-Oc1"/>
                 </constraints>
             </tableViewCellContentView>
@@ -167,6 +167,7 @@
                 <outlet property="commentContent" destination="h7b-sW-fEK" id="3OG-DH-7TP"/>
                 <outlet property="commentTopConst" destination="tCs-so-3QI" id="Oyu-EU-vpd"/>
                 <outlet property="commentUserName" destination="Jhb-H9-9US" id="6aZ-2M-O9r"/>
+                <outlet property="dateLabel" destination="yUK-mD-lkf" id="dQZ-y7-zJ1"/>
                 <outlet property="likeLabel" destination="ITe-Ma-746" id="O8W-0V-3VY"/>
                 <outlet property="pageControl" destination="Nxo-9q-0mz" id="Dxf-oP-vBV"/>
                 <outlet property="postScrollView" destination="xJY-ke-Oot" id="5ES-au-K7D"/>
