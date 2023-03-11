@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
@@ -27,6 +28,15 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func updateCell(post: PostResult) {
+        if post.profileImage == nil {
+            profileImageView.image = UIImage(named: "defaultProfileImage")
+        } else {
+            let url = URL(string: post.profileImage!)
+            profileImageView.kf.setImage(with: url)
+        }
+        userNameLabel.text = post.userName
+    }
     
     func removeCommentUI() {
         //TODO - 댓글 없을시 댓글 Ui 없애기

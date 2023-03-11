@@ -70,6 +70,7 @@
 		DD87551929BC692E009C2B0B /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87551829BC692E009C2B0B /* PostAPI.swift */; };
 		DD87551D29BC8E52009C2B0B /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87551C29BC8E52009C2B0B /* PostResponse.swift */; };
 		DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */; };
+		DD87552229BCA5A2009C2B0B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD87552129BCA5A2009C2B0B /* Kingfisher */; };
 		DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */; };
 		DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */; };
 		DDE73BC629B7196F00BF6EF2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDE73BC529B7196F00BF6EF2 /* Alamofire */; };
@@ -150,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD87552229BCA5A2009C2B0B /* Kingfisher in Frameworks */,
 				DD4F14E929B9F9540008849A /* YPImagePicker in Frameworks */,
 				DD4F14D529B9E4AD0008849A /* FirebaseDatabaseSwift in Frameworks */,
 				DD4F14D329B9E4AD0008849A /* FirebaseDatabase in Frameworks */,
@@ -519,6 +521,7 @@
 				DD4F14DA29B9E4AD0008849A /* FirebaseStorage */,
 				DD4F14DC29B9E4AD0008849A /* FirebaseStorageCombine-Community */,
 				DD4F14E829B9F9540008849A /* YPImagePicker */,
+				DD87552129BCA5A2009C2B0B /* Kingfisher */,
 			);
 			productName = "RisingTest-Instagram-kkukku";
 			productReference = DD76CB3C29B2E199002C4857 /* RisingTest-Instagram-kkukku.app */;
@@ -553,6 +556,7 @@
 				DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DD4F14CD29B9E4AD0008849A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				DD4F14E729B9F9540008849A /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				DD87552029BCA5A2009C2B0B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DD76CB3D29B2E199002C4857 /* Products */;
 			projectDirPath = "";
@@ -883,6 +887,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		DD87552029BCA5A2009C2B0B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		DDE73BC429B7196F00BF6EF2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -943,6 +955,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD4F14E729B9F9540008849A /* XCRemoteSwiftPackageReference "YPImagePicker" */;
 			productName = YPImagePicker;
+		};
+		DD87552129BCA5A2009C2B0B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD87552029BCA5A2009C2B0B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		DDE73BC529B7196F00BF6EF2 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -11,17 +11,18 @@ import FirebaseStorage
 
 class PostAPI {
     let currentUser = CurrentUser.shared
-    
+    let headers: HTTPHeaders = ["Content-Type": "application/json"]
     let url = "https://dev.nara2023.shop/postItems"
 
-    func getPost() {
+    func getPost(homeVC: HomeViewController) {
         AF.request(url,
-                   method: .get)
+                   method: .get,
+                   headers: headers)
         .responseDecodable(of: PostResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print("게시물 조회 성공")
-                print(response)
+                homeVC.didSuccess(postResult: response.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }

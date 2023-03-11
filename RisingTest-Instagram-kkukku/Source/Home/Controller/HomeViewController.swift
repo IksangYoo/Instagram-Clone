@@ -11,12 +11,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var heartButton: UIBarButtonItem!
     @IBOutlet weak var dmButtom: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    var posts = [PostResult]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigation()
         let cellNib = UINib(nibName: "HomeTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "homeCell")
+        PostAPI().getPost(homeVC: self)
     }
     
     
@@ -30,17 +32,23 @@ class HomeViewController: UIViewController {
         dmButtom.image = image3
         heartButton.image = image2
     }
+    
+    func didSuccess(postResult: [PostResult]) {
+        posts = postResult
+        tableView.reloadData()
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return posts.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
+        cell.updateCell(post: posts[indexPath.row])
         return cell
     }
     
