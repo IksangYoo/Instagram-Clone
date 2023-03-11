@@ -26,5 +26,5 @@ struct PostResult: Decodable {
     var itemContent: String?
     var stars: Int
     var totalComment: Int
-    var itemImages: [String?]
+    var itemImages: [String]
 }

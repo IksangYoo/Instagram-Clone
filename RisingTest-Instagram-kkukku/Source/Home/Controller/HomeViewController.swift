@@ -35,7 +35,10 @@ class HomeViewController: UIViewController {
     
     func didSuccess(postResult: [PostResult]) {
         posts = postResult
+        
+        
         tableView.reloadData()
+        
     }
 }
 

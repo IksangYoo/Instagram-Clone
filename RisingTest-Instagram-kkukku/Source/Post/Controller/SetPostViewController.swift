@@ -38,15 +38,26 @@ class SetPostViewController: UIViewController {
     
     @IBAction func share(_ sender: UIBarButtonItem) {
         // 업로드 api
-        indicator.startAnimating()
-        Storage.storage().uploadPostDownloadURL(postImages: selectedImage) { urlStrings, error in
-            if let e = error {
-                print(e.localizedDescription)
-                
-            } else {
-                guard let urlArray = urlStrings else { return }
-                
-                PostAPI().uploadPost(urlArray: urlArray, content: self.contentTextView.text, postVC: self)
+        
+        if contentTextView.text == "" || contentTextView.text == "문구 입력..." {
+            let alert = UIAlertController(title: "", message: "문구를 입력하세요.", preferredStyle: UIAlertController.Style.alert)
+
+            let okAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true)
+        } else {
+            indicator.startAnimating()
+            Storage.storage().uploadPostDownloadURL(postImages: selectedImage) { urlStrings, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                    
+                } else {
+                    guard let urlArray = urlStrings else { return }
+                    
+                    PostAPI().uploadPost(urlArray: urlArray, content: self.contentTextView.text, postVC: self)
+                }
             }
         }
     }
