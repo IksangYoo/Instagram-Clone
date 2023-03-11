@@ -67,6 +67,13 @@
                                     <constraint firstAttribute="width" secondItem="9Ee-VQ-cIR" secondAttribute="height" multiplier="1:1" id="gj6-lS-5ul"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-mw-Gsj" customClass="IndicatorView" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+                                <rect key="frame" x="176.66666666666666" y="406" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0PA-mw-Gsj" secondAttribute="height" multiplier="1:1" id="4dt-Ki-Pg2"/>
+                                    <constraint firstAttribute="width" constant="40" id="8fA-Np-ubC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8RA-89-JOD"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +86,8 @@
                             <constraint firstItem="3Nn-mn-xwG" firstAttribute="top" secondItem="8RA-89-JOD" secondAttribute="top" constant="20" id="Vfc-qm-dj0"/>
                             <constraint firstItem="8RA-89-JOD" firstAttribute="trailing" secondItem="3Nn-mn-xwG" secondAttribute="trailing" constant="16" id="bnF-Ol-tNs"/>
                             <constraint firstItem="YK8-mi-F6Z" firstAttribute="trailing" secondItem="8RA-89-JOD" secondAttribute="trailing" id="dVM-IR-AUJ"/>
+                            <constraint firstItem="0PA-mw-Gsj" firstAttribute="centerY" secondItem="nLK-KS-fW4" secondAttribute="centerY" id="dqf-xv-Wc8"/>
+                            <constraint firstItem="0PA-mw-Gsj" firstAttribute="centerX" secondItem="nLK-KS-fW4" secondAttribute="centerX" id="qyg-Vf-Tc7"/>
                             <constraint firstItem="3Nn-mn-xwG" firstAttribute="leading" secondItem="5Y0-7x-XAE" secondAttribute="trailing" constant="12" id="wMH-rB-vYA"/>
                             <constraint firstItem="9Ee-VQ-cIR" firstAttribute="top" secondItem="5Y0-7x-XAE" secondAttribute="top" constant="7" id="zT5-nm-wtz"/>
                         </constraints>
@@ -95,6 +104,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contentTextView" destination="3Nn-mn-xwG" id="Qlt-sW-fni"/>
+                        <outlet property="indicator" destination="0PA-mw-Gsj" id="iVF-Eo-Bad"/>
                         <outlet property="isPostMoreThanOne" destination="9Ee-VQ-cIR" id="pmR-UI-io9"/>
                         <outlet property="menuImage" destination="YK8-mi-F6Z" id="ZRe-es-La3"/>
                         <outlet property="postImageView" destination="5Y0-7x-XAE" id="1WW-zI-CGL"/>

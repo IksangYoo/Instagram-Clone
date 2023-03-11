@@ -28,4 +28,34 @@ extension Storage {
             }
         }
     }
+    
+    func uploadPostDownloadURL(postImages: [UIImage], completion: @escaping ([String]?, Error?) -> ()) {
+        
+        let filename = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child(filename)
+        var urlStrings = [String]()
+        
+        for image in postImages {
+            guard let imageData = image.jpegData(compressionQuality: 0.3) else { return }
+            storageRef.putData(imageData) { result, error in
+                if let e = error {
+                    print(e.localizedDescription)
+                } else {
+                    print("게시물 파이어베이스에 저장 성공")
+                    
+                    storageRef.downloadURL { url, error in
+                        if let e = error { completion(nil, e); return }
+                        
+                        guard let postURLString = url?.absoluteString else { return }
+                        print("게시물 url 가져오기 ----> \(postURLString)")
+                        
+                        urlStrings.append(postURLString)
+                        if postImages.count == urlStrings.count {
+                            completion(urlStrings, nil)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

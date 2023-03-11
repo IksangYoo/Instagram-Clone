@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "goToSignUpWithPhone", sender: nil)
     }
     
-    func didSuccess(response: UserResponse) {
+    func didFinish(response: UserResponse) {
         
         if response.code <= 1999 {
             // 성공시
@@ -62,13 +62,16 @@ class LoginViewController: UIViewController {
                     
                 }
             }
-            
-            if let window = UIApplication.shared.windows.first {
-                window.rootViewController = mainVC
-                UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+            //자동로그인 일 시
+            if UserDefaults.standard.string(forKey: "email") == nil {
+                if let window = UIApplication.shared.windows.first {
+                    window.rootViewController = mainVC
+                    UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
+                }
             }
-            
-        } else {
+        }
+        
+        else {
             
             if let indicator = indicator {
                 if let button = loginButton {

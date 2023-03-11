@@ -42,7 +42,7 @@ class LoginAPI {
         .responseDecodable(of: UserResponse.self) { response in
             switch response.result {
             case .success(let response):
-                loginVC.didSuccess(response: response)
+                loginVC.didFinish(response: response)
                 UserDefaults.standard.set(email, forKey: "email")
                 UserDefaults.standard.set(password, forKey: "password")
                 UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
