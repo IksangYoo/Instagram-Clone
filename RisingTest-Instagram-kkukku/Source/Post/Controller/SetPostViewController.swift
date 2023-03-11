@@ -42,6 +42,7 @@ class SetPostViewController: UIViewController {
         Storage.storage().uploadPostDownloadURL(postImages: selectedImage) { urlStrings, error in
             if let e = error {
                 print(e.localizedDescription)
+                
             } else {
                 guard let urlArray = urlStrings else { return }
                 

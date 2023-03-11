@@ -26,12 +26,13 @@ class PostAPI {
                                     "x-access-token": jwt]
         let params : Parameters = [
             "itemContent": content,
-            "itemImage": urlArray
+            "itemImage": "\(urlArray)"
         ]
         
         AF.request(url,
                    method: .post,
                    parameters: params,
+                   encoding: JSONEncoding.default,
                    headers: headers)
         .responseJSON { response in
             switch response.result {
@@ -41,6 +42,7 @@ class PostAPI {
                 postVC.didUploadPostSuccess()
             case .failure(let error):
                 print(error.localizedDescription)
+                print(urlArray)
                 postVC.didUploadPostFailure()
             }
         }
