@@ -62,13 +62,10 @@ class LoginViewController: UIViewController {
                     
                 }
             }
-            //자동로그인 일 시
-            if UserDefaults.standard.string(forKey: "email") == nil {
                 if let window = UIApplication.shared.windows.first {
                     window.rootViewController = mainVC
                     UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
                 }
-            }
         }
         
         else {

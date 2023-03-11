@@ -68,6 +68,8 @@
 		DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4829B2E19A002C4857 /* Assets.xcassets */; };
 		DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */; };
 		DD87551929BC692E009C2B0B /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87551829BC692E009C2B0B /* PostAPI.swift */; };
+		DD87551D29BC8E52009C2B0B /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87551C29BC8E52009C2B0B /* PostResponse.swift */; };
+		DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */; };
 		DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */; };
 		DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */; };
 		DDE73BC629B7196F00BF6EF2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDE73BC529B7196F00BF6EF2 /* Alamofire */; };
@@ -132,6 +134,8 @@
 		DD76CB4B29B2E19A002C4857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD76CB4D29B2E19A002C4857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD87551829BC692E009C2B0B /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
+		DD87551C29BC8E52009C2B0B /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingLogin.storyboard; sourceTree = "<group>"; };
 		DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryingSignUpUser.swift; sourceTree = "<group>"; };
 		DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		DDE73BC729B719A900BF6EF2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				DD87551829BC692E009C2B0B /* PostAPI.swift */,
+				DD87551C29BC8E52009C2B0B /* PostResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			children = (
 				DD76CB4A29B2E19A002C4857 /* LaunchScreen.storyboard */,
 				DD6529D629B3563C0089AD5C /* MainTabBar.storyboard */,
+				DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */,
 			);
 			path = "MainTabController&Splash";
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 				DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */,
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
 				DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */,
+				DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */,
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
 				DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
@@ -611,6 +618,7 @@
 				DD1BE3FB29BB1A1800597E62 /* TopSectionCollectionViewCell.swift in Sources */,
 				DD4F14EB29BA0B5B0008849A /* SetPostViewController.swift in Sources */,
 				DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */,
+				DD87551D29BC8E52009C2B0B /* PostResponse.swift in Sources */,
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,
 				DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */,
 				DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */,

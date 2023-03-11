@@ -53,7 +53,7 @@ class SetPostViewController: UIViewController {
     
     func didUploadPostSuccess() {
         indicator.stopAnimating()
-        
+        self.tabBarController?.selectedIndex = 0
     }
     
     func didUploadPostFailure() {

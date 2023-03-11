@@ -19,14 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         let Loginstoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil) // storyboard 가져오기
-        let MainStoryboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+        let loadingStoryboard = UIStoryboard(name: "LoadingLogin", bundle: nil)
 
         if let email = UserDefaults.standard.string(forKey: "email") {
             if let password = UserDefaults.standard.string(forKey: "password") {
                 LoginAPI().login(email: email, password: password, loginVc: LoginViewController())
-
-                guard let mainVC = MainStoryboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else { return }
-                window?.rootViewController = mainVC
+                print(UserDefaults.standard.string(forKey: "email"))
+                print("로딩")
+                guard let loadingVC = loadingStoryboard.instantiateViewController(withIdentifier: "loadingVC") as? UIViewController else { return }
+                window?.rootViewController = loadingVC
             }
         } else {
             guard let loginVC = Loginstoryboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }

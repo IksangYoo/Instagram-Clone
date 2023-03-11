@@ -13,8 +13,20 @@ class PostAPI {
     let currentUser = CurrentUser.shared
     
     let url = "https://dev.nara2023.shop/postItems"
-    
+
     func getPost() {
+        AF.request(url,
+                   method: .get)
+        .responseDecodable(of: PostResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("게시물 조회 성공")
+                print(response)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
         
     }
     
