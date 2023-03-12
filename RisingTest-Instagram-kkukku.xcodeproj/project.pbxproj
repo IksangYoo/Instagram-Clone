@@ -34,6 +34,12 @@
 		DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4329B5CC1000652B1E /* HomeViewController.swift */; };
 		DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4529B5D32800652B1E /* OptionViewController.swift */; };
 		DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */; };
+		DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */; };
+		DD3D5CEE29BDD77E00149EDC /* DebounceTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */; };
+		DD3D5CF029BDE9FB00149EDC /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */; };
+		DD3D5CF229BDEA0C00149EDC /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CF129BDEA0C00149EDC /* SearchResponse.swift */; };
+		DD3D5CF529BDFC1800149EDC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CF329BDFC1700149EDC /* SearchTableViewCell.swift */; };
+		DD3D5CF629BDFC1800149EDC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3D5CF429BDFC1700149EDC /* SearchTableViewCell.xib */; };
 		DD4F14CF29B9E4AD0008849A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DD4F14CE29B9E4AD0008849A /* FirebaseAnalytics */; };
 		DD4F14D129B9E4AD0008849A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD4F14D029B9E4AD0008849A /* FirebaseAuth */; };
 		DD4F14D329B9E4AD0008849A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DD4F14D229B9E4AD0008849A /* FirebaseDatabase */; };
@@ -109,6 +115,12 @@
 		DD32EB4329B5CC1000652B1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DD32EB4529B5D32800652B1E /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTextFiled.swift; sourceTree = "<group>"; };
+		DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
+		DD3D5CF129BDEA0C00149EDC /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		DD3D5CF329BDFC1700149EDC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DD3D5CF429BDFC1700149EDC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		DD4F14DE29B9E5090008849A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD4F14E029B9E6730008849A /* FirebaseUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtilities.swift; sourceTree = "<group>"; };
 		DD4F14E529B9F5F90008849A /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +234,33 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		DD3D5CE729BDD45300149EDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */,
+				DD3D5CF129BDEA0C00149EDC /* SearchResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD3D5CE829BDD47500149EDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD3D5CE929BDD48100149EDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */,
+				DD3D5CF329BDFC1700149EDC /* SearchTableViewCell.swift */,
+				DD3D5CF429BDFC1700149EDC /* SearchTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DD4F14E229B9F5030008849A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +332,7 @@
 				DD6529E929B372480089AD5C /* UIButton.swift */,
 				DD6529EB29B380D30089AD5C /* CustomTextField.swift */,
 				DD87552729BCD0CE009C2B0B /* Date.swift */,
+				DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -320,7 +360,9 @@
 		DD6529D029B354790089AD5C /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */,
+				DD3D5CE729BDD45300149EDC /* Model */,
+				DD3D5CE929BDD48100149EDC /* View */,
+				DD3D5CE829BDD47500149EDC /* Controller */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -583,6 +625,7 @@
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
 				DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */,
 				DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */,
+				DD3D5CF629BDFC1800149EDC /* SearchTableViewCell.xib in Resources */,
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
 				DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
@@ -623,6 +666,7 @@
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD87552829BCD0CE009C2B0B /* Date.swift in Sources */,
 				DD126C1D29B4A23100DD2659 /* NameViewController.swift in Sources */,
+				DD3D5CF229BDEA0C00149EDC /* SearchResponse.swift in Sources */,
 				DD1BE3FB29BB1A1800597E62 /* TopSectionCollectionViewCell.swift in Sources */,
 				DD4F14EB29BA0B5B0008849A /* SetPostViewController.swift in Sources */,
 				DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */,
@@ -633,17 +677,21 @@
 				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
 				DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */,
 				DD1BE3FF29BB2CAC00597E62 /* MiddleCollectionViewCell.swift in Sources */,
+				DD3D5CEE29BDD77E00149EDC /* DebounceTextFiled.swift in Sources */,
 				DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
+				DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */,
 				DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,
+				DD3D5CF029BDE9FB00149EDC /* SearchAPI.swift in Sources */,
 				DD1BE41129BB56C400597E62 /* BottomSectionCollectionViewCell.swift in Sources */,
 				DD87551929BC692E009C2B0B /* PostAPI.swift in Sources */,
 				DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */,
 				DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
+				DD3D5CF529BDFC1800149EDC /* SearchTableViewCell.swift in Sources */,
 				DD1BE41729BB60BC00597E62 /* LogoutViewController.swift in Sources */,
 				DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */,
 			);

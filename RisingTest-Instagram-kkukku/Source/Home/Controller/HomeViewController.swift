@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dmButtom: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var posts = [PostResult]()
+    let threshold: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: - TableViewDelegate
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,6 +56,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.updateCell(post: posts[indexPath.row])
         return cell
     }
-    
-    
 }
+
+//MARK: - TabelViewScrollDelegate
+//extension HomeViewController {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//            let currentOffset = scrollView.contentOffset.y
+//            let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+//
+//            // 스크롤뷰의 맨 아래에서 100 떨어진 곳에 도달했는지 확인
+//            if maximumOffset - currentOffset <= threshold {
+//                // 실행할 함수 호출
+//                myFunction()
+//            }
+//        }
+//
+//        func myFunction() {
+//            // 맨 아래에서 100 떨어진 곳에 도달했을 때 실행할 코드 작성
+//            print("스크롤이 맨 아래에서 100 떨어진 곳에 도달했습니다.")
+//        }
+//    }
