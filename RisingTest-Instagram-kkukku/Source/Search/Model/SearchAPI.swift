@@ -8,26 +8,27 @@
 import Foundation
 import Alamofire
 
+
 class SearchAPI {
+    
     let searchURL = "/app/users/?userName="
     
-    func search(searchText: String, searchVC: SearchViewController) {
+    func search(searchText: String, resultVC: SearchResultViewController) {
         let url = "\(Constant.BASE_URL)\(searchURL)\(searchText)"
-        let jwt = UserDefaults.standard.string(forKey: "jwt")
-        let headers: HTTPHeaders = ["x-access-token": jwt!]
+//        let jwt = UserDefaults.standard.string(forKey: "jwt")
+//        let headers: HTTPHeaders = ["x-access-token": jwt!]
         
         AF.request(url,
-                   method: .get,
-                   headers: headers)
+                   method: .get)
         .responseDecodable(of: SearchResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print(response)
+                resultVC.didSuccess(response: response)
             case .failure(let error):
                 print(error)
             }
         }
-        
-        
     }
+ 
 }
