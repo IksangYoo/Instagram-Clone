@@ -133,6 +133,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoutButton" destination="9HA-Jc-DGT" id="Z8t-Gd-cnK"/>
                         <outlet property="optionView" destination="9zf-hI-raZ" id="mhL-Wn-Rz8"/>
                     </connections>
                 </viewController>

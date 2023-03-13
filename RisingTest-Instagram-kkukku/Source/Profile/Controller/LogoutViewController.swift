@@ -10,10 +10,14 @@ import UIKit
 class LogoutViewController: UIViewController {
     
     @IBOutlet weak var optionView: UIView!
+    var userName = ""
+    @IBOutlet weak var logoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         optionView.layer.cornerRadius = 5
+        logoutButton.setTitle("\(userName) 로그아웃", for: .normal)
     }
     
     @IBAction func logout(_ sender: UIButton) {

@@ -8,12 +8,27 @@
 import UIKit
 
 class BottomSectionCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var hasMoreThanOne: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 
-//        profileImage.widthAnchor.constraint(equalToConstant: containerView.frame.width).isActive = true
-//        profileImage.heightAnchor.constraint(equalToConstant: containerView.frame.height).isActive = true
     }
-
+    
+    override func prepareForReuse() {
+        postImageView.image = nil
+    }
+    
+    func updateUI(post: MyPost) {
+        let url = URL(string: post.itemImage)
+        postImageView.kf.setImage(with: url)
+        
+        if post.hasMoreImages {
+            hasMoreThanOne.isHidden = false
+        } else {
+            hasMoreThanOne.isHidden = true
+        }
+    }
 }

@@ -39,6 +39,8 @@
 		DD3C547629BF0055001B0894 /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C547429BF0055001B0894 /* SearchHistoryTableViewCell.xib */; };
 		DD3C547829BF0234001B0894 /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547729BF0234001B0894 /* HistoryTableViewHeader.swift */; };
 		DD3C547A29BF0246001B0894 /* HistoryTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C547929BF0246001B0894 /* HistoryTableViewHeader.xib */; };
+		DD3C547C29BF2366001B0894 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547B29BF2366001B0894 /* ProfileAPI.swift */; };
+		DD3C547E29BF26D2001B0894 /* MyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547D29BF26D2001B0894 /* MyProfileResponse.swift */; };
 		DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */; };
 		DD3D5CEE29BDD77E00149EDC /* DebounceTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */; };
 		DD3D5CF029BDE9FB00149EDC /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */; };
@@ -125,6 +127,8 @@
 		DD3C547429BF0055001B0894 /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		DD3C547729BF0234001B0894 /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
 		DD3C547929BF0246001B0894 /* HistoryTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewHeader.xib; sourceTree = "<group>"; };
+		DD3C547B29BF2366001B0894 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
+		DD3C547D29BF26D2001B0894 /* MyProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileResponse.swift; sourceTree = "<group>"; };
 		DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTextFiled.swift; sourceTree = "<group>"; };
 		DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
@@ -476,6 +480,8 @@
 		DD81409C29BB17BD00E172F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD3C547B29BF2366001B0894 /* ProfileAPI.swift */,
+				DD3C547D29BF26D2001B0894 /* MyProfileResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 				DD6529E629B3680D0089AD5C /* LoginViewController.swift in Sources */,
 				DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */,
 				DD6529EA29B372480089AD5C /* UIButton.swift in Sources */,
+				DD3C547E29BF26D2001B0894 /* MyProfileResponse.swift in Sources */,
 				DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
 				DD87552829BCD0CE009C2B0B /* Date.swift in Sources */,
@@ -701,6 +708,7 @@
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
+				DD3C547C29BF2366001B0894 /* ProfileAPI.swift in Sources */,
 				DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */,
 				DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */,
 				DD6529CC29B351530089AD5C /* Device.swift in Sources */,

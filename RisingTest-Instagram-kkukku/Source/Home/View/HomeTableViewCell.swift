@@ -20,7 +20,6 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var postScrollView: UIScrollView!
     @IBOutlet weak var dateLabel: UILabel!
-    var imageViews = [UIImageView]()
     
     
     override func awakeFromNib() {
@@ -28,6 +27,7 @@ class HomeTableViewCell: UITableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         pageControl.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         postScrollView.delegate = self
+        postScrollView.contentSize.width = contentView.frame.width
 //        removeCommentUI()
     }
 
@@ -43,8 +43,12 @@ class HomeTableViewCell: UITableViewCell {
         commentContent.isHidden = false
         commentTopConst.constant = 28
         postScrollView.backgroundColor = .black
-        postScrollView.contentSize.width = 0
+        
         topConst.constant = 60
+        
+        for subview in postScrollView.subviews {
+                subview.removeFromSuperview()
+            }
     }
     
     func updateCell(post: PostResult) {
@@ -98,17 +102,19 @@ class HomeTableViewCell: UITableViewCell {
     
     func fetchImageToScrollView(urls: [String]) {
         for i in 0..<urls.count {
-            let postImageView = UIImageView()
-            
-            imageViews.append(postImageView)
-            postImageView.contentMode = .scaleToFill
-            let xPos = self.contentView.frame.width * CGFloat(i)
             let url = URL(string: urls[i])
-            postImageView.frame = CGRect(x: xPos, y: 0, width: postScrollView.bounds.width, height: postScrollView.bounds.height)
+            let postImageView = UIImageView()
+            let xPos = self.contentView.frame.width * CGFloat(i)
+            postImageView.image = nil
             postImageView.kf.setImage(with: url)
+            postImageView.contentMode = .scaleToFill
+            
+            postImageView.frame = CGRect(x: xPos, y: 0, width: postScrollView.frame.width, height: postScrollView.frame.height)
             
             postScrollView.addSubview(postImageView)
             postScrollView.contentSize.width = postImageView.frame.width * CGFloat(i + 1)
+            
+            
         }
         
         

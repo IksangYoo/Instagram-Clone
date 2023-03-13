@@ -181,6 +181,9 @@
             </constraints>
             <size key="customSize" width="444" height="256"/>
             <connections>
+                <outlet property="followerLabel" destination="FXm-U7-kP3" id="zYT-NR-tya"/>
+                <outlet property="followingLabel" destination="OvG-59-jvN" id="6AW-8Y-Dnk"/>
+                <outlet property="nameLabel" destination="9WN-jC-V8W" id="z7a-YN-WOg"/>
                 <outlet property="profileImageView" destination="3av-qh-vRM" id="HXt-9j-84F"/>
             </connections>
             <point key="canvasLocation" x="430.53435114503816" y="61.267605633802823"/>

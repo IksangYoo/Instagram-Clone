@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var usernameButton: UIButton!
+    var userInfo : MyProfileResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +23,14 @@ class ProfileViewController: UIViewController {
         print(UserDefaults.standard.string(forKey: "email"))
         print(UserDefaults.standard.string(forKey: "password"))
         print(UserDefaults.standard.string(forKey: "jwt"))
+        
+        ProfileAPI().getMyProfile(profileVC: self)
     }
     
     
     @IBAction func optionButtonPressed(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "goToOptions", sender: nil)
     }
-    
-//    @IBAction func logout(_ sender: UIButton) {
-//
-
-//    }
     
     func setupNavigation() {
         let image1 = UIImage(named: "plus")?.withRenderingMode(.alwaysOriginal)
@@ -59,6 +57,18 @@ class ProfileViewController: UIViewController {
         let bottomNib = UINib(nibName: "BottomSectionCollectionViewCell", bundle: nil)
         collectionView.register(bottomNib, forCellWithReuseIdentifier: "bottomCell")
     }
+    
+    func didSuccess(response: MyProfileResult) {
+        userInfo = response
+        collectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToOptions" {
+               let destinationVC = segue.destination as! LogoutViewController
+            destinationVC.userName = userInfo?.userName ?? ""
+           }
+    }
 }
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -78,25 +88,34 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else {
             return 10
         }
-        
     }
     
     // 각 섹션의 셀
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopSectionCollectionViewCell else { return UICollectionViewCell()}
-        
-            return cell
+            guard let topCell = collectionView.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopSectionCollectionViewCell else { return UICollectionViewCell()}
+                
+            if let myInfo = userInfo {
+                topCell.updateUI(userInfo: myInfo)
+            }
+            
+            return topCell
             
         } else if indexPath.section == 1 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "middleCell", for: indexPath) as? MiddleCollectionViewCell else { return UICollectionViewCell()}
+            guard let middleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "middleCell", for: indexPath) as? MiddleCollectionViewCell else { return UICollectionViewCell()}
         
-            return cell
+            
+            
+            return middleCell
             
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomSectionCollectionViewCell else { return UICollectionViewCell()}
+            guard let bottomCell = collectionView.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomSectionCollectionViewCell else { return UICollectionViewCell()}
         
-            return cell
+            if let posts = userInfo?.posts {
+                bottomCell.updateUI(post: posts[indexPath.row])
+            }
+            
+            return bottomCell
             
         }
     }
