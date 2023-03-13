@@ -8,11 +8,21 @@
 import UIKit
 
 class UserProfileViewController: UIViewController {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    var userProfileResult: UserProfileResult?
+    var userID : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // api
+        
+        ProfileAPI().getUserProfile(userID: userID ?? 0, userProfileVC: self)
     }
     
     func setCollectionView() {
@@ -24,6 +34,16 @@ class UserProfileViewController: UIViewController {
         
         let bottomSectionHeader = UINib(nibName: "PostHearder", bundle: nil)
         collectionView.register(bottomSectionHeader, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "PostHearder")
+    }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func didSuccess(response: UserProfileResponse) {
+        userProfileResult = response.result
+        collectionView.reloadData()
+        print(userProfileResult?.userName)
     }
 }
 
@@ -37,16 +57,27 @@ extension UserProfileViewController: UICollectionViewDelegate, UICollectionViewD
         if section == 0 {
             return 1
         } else {
-            return 3
+            return userProfileResult?.posts?.count ?? 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             guard let profileCell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as? ProfileCollectionViewCell else { return UICollectionViewCell() }
+            
+            if let result = userProfileResult {
+                profileCell.updateUI(with: result)
+            }
             return profileCell
         } else {
             guard let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as? PostCollectionViewCell else { return UICollectionViewCell() }
+            
+            if let posts = userProfileResult?.posts {
+                let post = posts[indexPath.row]
+                postCell.updateUI(with: post)
+            }
+            
+            
             return postCell
         }
         

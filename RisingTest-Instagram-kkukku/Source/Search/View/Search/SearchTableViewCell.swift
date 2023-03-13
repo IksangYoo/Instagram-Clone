@@ -24,10 +24,10 @@ class SearchTableViewCell: UITableViewCell {
     }
     
     func updateUI(with searchResult: SearchUserResult) {
-        if searchResult.profileImage == nil || searchResult.profileImage == "null" {
+        if searchResult.profileImage == nil || searchResult.profileImage == "nil" {
             profileImage.image = UIImage(named: "defaultProfileImage")
         } else {
-            let url = URL(string: searchResult.profileImage!)
+            guard let url = URL(string: searchResult.profileImage!)  else { return }
             profileImage.kf.setImage(with: url)
         }
         nameLabel.text = searchResult.name

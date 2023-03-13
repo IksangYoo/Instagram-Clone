@@ -38,6 +38,10 @@
                 <constraint firstItem="FYh-yp-mM6" firstAttribute="width" secondItem="FYh-yp-mM6" secondAttribute="height" multiplier="1:1" id="vGG-eu-lnd"/>
             </constraints>
             <size key="customSize" width="185" height="171"/>
+            <connections>
+                <outlet property="hasMoreThanOne" destination="FYh-yp-mM6" id="5rd-E6-qmf"/>
+                <outlet property="postImageView" destination="RxQ-XX-8nB" id="RTB-vR-0bR"/>
+            </connections>
             <point key="canvasLocation" x="112.21374045801527" y="31.338028169014088"/>
         </collectionViewCell>
     </objects>

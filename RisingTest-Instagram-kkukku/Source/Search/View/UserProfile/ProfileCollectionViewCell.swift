@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
@@ -20,5 +21,21 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
     }
-
+    
+    
+    func updateUI(with userInfo: UserProfileResult) {
+        
+        nameLabel.text = userInfo.name
+        followingLabel.text = String(userInfo.following)
+        followersLabel.text = String(userInfo.followers)
+        postCountLabel.text = "\(userInfo.posts?.count ?? 0)"
+        
+        if userInfo.profileImage == nil || userInfo.profileImage == "nil" {
+            profileImageView.image = UIImage(named: "defaultProfileImage")
+        } else {
+            guard let url = URL(string: userInfo.profileImage!)  else { return }
+            profileImageView.kf.setImage(with: url)
+        }
+        
+    }
 }

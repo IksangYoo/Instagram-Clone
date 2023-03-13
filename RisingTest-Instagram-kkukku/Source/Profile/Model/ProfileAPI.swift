@@ -29,4 +29,23 @@ class ProfileAPI {
             }
         }
     }
+    
+    func getUserProfile(userID: Int, userProfileVC: UserProfileViewController) {
+        let userProfilrURL = "/app/users/\(userID)"
+        let url = Constant.BASE_URL+userProfilrURL
+        
+        print("Url -------------> \(url)")
+        AF.request(url,
+                   method: .get)
+        .responseDecodable(of: UserProfileResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("게시물 조회 성공")
+                userProfileVC.didSuccess(response: response)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

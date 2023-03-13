@@ -16,13 +16,11 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var historyView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var searchTextFiled: DebounceTextFiled!
-    
+    var userID = 0
     
     override func viewDidLoad() {
         setTextField()
         setTableView()
-        print("search")
-        
     }
     
     func setTableView() {
@@ -62,6 +60,13 @@ class SearchViewController: UIViewController {
         cancelButton.setTitle("", for: .normal)
         historyView.isHidden = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToUserProfile" {
+            let destinationVC = segue.destination as! UserProfileViewController
+            destinationVC.userID = userID
+        }
+    }
 }
 
 //MARK: - UITextFieldDelegate
@@ -99,7 +104,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(searchedUser[indexPath.row]?.userId!)
-        performSegue(withIdentifier: "goToUserProfile", sender: nil)
+        userID = (searchedUser[indexPath.row]?.userId)!
+        performSegue(withIdentifier: "goToUserProfile", sender: self)
     }
 }
