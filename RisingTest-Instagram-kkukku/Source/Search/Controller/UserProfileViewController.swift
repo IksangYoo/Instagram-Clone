@@ -9,6 +9,7 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var userProfileResult: UserProfileResult?
     var userID : Int?
@@ -21,7 +22,6 @@ class UserProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // api
-        
         ProfileAPI().getUserProfile(userID: userID ?? 0, userProfileVC: self)
     }
     
@@ -43,6 +43,7 @@ class UserProfileViewController: UIViewController {
     func didSuccess(response: UserProfileResponse) {
         userProfileResult = response.result
         collectionView.reloadData()
+        usernameLabel.text = userProfileResult?.userName
         print(userProfileResult?.userName)
     }
 }

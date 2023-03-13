@@ -118,8 +118,8 @@
                                             <action selector="goBack:" destination="FDo-GT-l6E" eventType="touchUpInside" id="aNE-Ld-lrB"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kkukku" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-1T-ZGS">
-                                        <rect key="frame" x="166.66666666666666" y="14.999999999999998" width="59.666666666666657" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-1T-ZGS">
+                                        <rect key="frame" x="194.66666666666666" y="14.999999999999998" width="4" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -183,6 +183,7 @@
                     <navigationItem key="navigationItem" id="o6f-dI-pZb"/>
                     <connections>
                         <outlet property="collectionView" destination="X73-Ki-ZUg" id="5h6-eM-7r7"/>
+                        <outlet property="usernameLabel" destination="rbn-1T-ZGS" id="0aV-Tc-cuL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQC-4t-knB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
