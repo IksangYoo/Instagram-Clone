@@ -11,10 +11,10 @@ class ProfileViewController: UIViewController {
     let currentUser = CurrentUser.shared
     @IBOutlet weak var optionButton: UIBarButtonItem!
     @IBOutlet weak var plusButton: UIBarButtonItem!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var usernameButton: UIButton!
     var userInfo : MyProfileResult?
+    var randomUsers : [RandomUserResult]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
         print(UserDefaults.standard.string(forKey: "jwt"))
         
         ProfileAPI().getMyProfile(profileVC: self)
+        ProfileAPI().getRandomUser(myProfileVC: self)
     }
     
     
@@ -62,6 +63,14 @@ class ProfileViewController: UIViewController {
         userInfo = response
         usernameButton.setTitle(userInfo?.userName, for: .normal)
         collectionView.reloadData()
+    }
+    
+    func didRandomUserSuccess(randomUsers: [RandomUserResult]) {
+        let section = 1
+        let indexSet = IndexSet(integer: section)
+        self.randomUsers = randomUsers
+        print(randomUsers)
+        collectionView.reloadSections(indexSet)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,7 +113,11 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             
         } else if indexPath.section == 1 {
             guard let middleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "middleCell", for: indexPath) as? MiddleCollectionViewCell else { return UICollectionViewCell()}
-        
+            
+            if let users = randomUsers {
+                middleCell.setRandomUser(users)
+            }
+            
             
             
             return middleCell

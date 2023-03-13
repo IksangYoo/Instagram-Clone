@@ -92,6 +92,7 @@
                 <outlet property="containerView" destination="fbU-Ug-9ap" id="ths-4P-fNy"/>
                 <outlet property="followButton" destination="GjW-pT-QQI" id="ejZ-Ef-MQX"/>
                 <outlet property="profileImageView" destination="69e-Iy-xFj" id="ibR-NH-J0t"/>
+                <outlet property="usernameLabel" destination="e47-3C-O0V" id="eFe-cJ-aZL"/>
             </connections>
             <point key="canvasLocation" x="63.358778625954194" y="64.08450704225352"/>
         </collectionViewCell>

@@ -8,7 +8,9 @@
 import UIKit
 
 class MiddleCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    var randomUsers : [RandomUserResult]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +20,15 @@ class MiddleCollectionViewCell: UICollectionViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    func setRandomUser( _ randomUsers : [RandomUserResult]) {
+        
+        print("---------------------------- set randomUser")
+        self.randomUsers = randomUsers
+        collectionView.reloadData()
+}
+
+
 }
 
 extension MiddleCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -28,6 +39,11 @@ extension MiddleCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "subCell", for: indexPath) as! MiddleCollectionViewSubCell
+        
+        if let users = randomUsers {
+            cell.updateUI(userInfo: users[indexPath.row])
+        }
+        
         
         return cell
     }

@@ -48,4 +48,21 @@ class ProfileAPI {
             }
         }
     }
+    
+    func getRandomUser(myProfileVC: ProfileViewController) {
+        
+        let url = "\(Constant.BASE_URL)/users"
+        
+        AF.request(url,
+                   method: .get)
+        .responseDecodable(of: RandomUserResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("랜덤 유저 가져오기 성공")
+                myProfileVC.didRandomUserSuccess(randomUsers: response.result!)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
