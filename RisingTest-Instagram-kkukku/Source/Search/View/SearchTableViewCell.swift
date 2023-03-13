@@ -23,4 +23,14 @@ class SearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func updateUI(with searchResult: SearchUserResult) {
+        if searchResult.profileImage == nil || searchResult.profileImage == "null" {
+            profileImage.image = UIImage(named: "defaultProfileImage")
+        } else {
+            let url = URL(string: searchResult.profileImage!)
+            profileImage.kf.setImage(with: url)
+        }
+        nameLabel.text = searchResult.name
+        usernameLabel.text = searchResult.userName
+    }
 }

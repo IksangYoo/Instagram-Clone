@@ -20,4 +20,5 @@ struct SearchUserResult: Codable {
     var profileImage: String?
     var userName: String?
     var status: String?
+    var name: String?
 }

@@ -11,10 +11,11 @@ import Alamofire
 
 class SearchAPI {
     
-    let searchURL = "/app/users/?userName="
+    let searchURL = "/users?userName="
     
-    func search(searchText: String, resultVC: SearchResultViewController) {
+    func search(searchText: String, searchVC: SearchViewController) {
         let url = "\(Constant.BASE_URL)\(searchURL)\(searchText)"
+        print(url)
 //        let jwt = UserDefaults.standard.string(forKey: "jwt")
 //        let headers: HTTPHeaders = ["x-access-token": jwt!]
         
@@ -24,7 +25,7 @@ class SearchAPI {
             switch response.result {
             case .success(let response):
                 print(response)
-                resultVC.didSuccess(response: response)
+                searchVC.didSuccess(response: response)
             case .failure(let error):
                 print(error)
             }

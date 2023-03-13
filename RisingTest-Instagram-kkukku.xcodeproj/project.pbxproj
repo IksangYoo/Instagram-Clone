@@ -34,6 +34,11 @@
 		DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4329B5CC1000652B1E /* HomeViewController.swift */; };
 		DD32EB4629B5D32800652B1E /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4529B5D32800652B1E /* OptionViewController.swift */; };
 		DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */; };
+		DD3C547229BEFFF7001B0894 /* SearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547129BEFFF7001B0894 /* SearchHistoryViewController.swift */; };
+		DD3C547529BF0055001B0894 /* SearchHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547329BF0055001B0894 /* SearchHistoryTableViewCell.swift */; };
+		DD3C547629BF0055001B0894 /* SearchHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C547429BF0055001B0894 /* SearchHistoryTableViewCell.xib */; };
+		DD3C547829BF0234001B0894 /* HistoryTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3C547729BF0234001B0894 /* HistoryTableViewHeader.swift */; };
+		DD3C547A29BF0246001B0894 /* HistoryTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3C547929BF0246001B0894 /* HistoryTableViewHeader.xib */; };
 		DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */; };
 		DD3D5CEE29BDD77E00149EDC /* DebounceTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */; };
 		DD3D5CF029BDE9FB00149EDC /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */; };
@@ -78,9 +83,6 @@
 		DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */; };
 		DD87552229BCA5A2009C2B0B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD87552129BCA5A2009C2B0B /* Kingfisher */; };
 		DD87552829BCD0CE009C2B0B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87552729BCD0CE009C2B0B /* Date.swift */; };
-		DDCB049029BE0F0B0063E4CC /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB048F29BE0F0B0063E4CC /* SearchResultViewController.swift */; };
-		DDCB049529BE0FAB0063E4CC /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB049329BE0FAB0063E4CC /* SearchResultTableViewCell.swift */; };
-		DDCB049629BE0FAB0063E4CC /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCB049429BE0FAB0063E4CC /* SearchResultTableViewCell.xib */; };
 		DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */; };
 		DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */; };
 		DDE73BC629B7196F00BF6EF2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDE73BC529B7196F00BF6EF2 /* Alamofire */; };
@@ -118,6 +120,11 @@
 		DD32EB4329B5CC1000652B1E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DD32EB4529B5D32800652B1E /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		DD32EB4729B5F4EA00652B1E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DD3C547129BEFFF7001B0894 /* SearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewController.swift; sourceTree = "<group>"; };
+		DD3C547329BF0055001B0894 /* SearchHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		DD3C547429BF0055001B0894 /* SearchHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		DD3C547729BF0234001B0894 /* HistoryTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewHeader.swift; sourceTree = "<group>"; };
+		DD3C547929BF0246001B0894 /* HistoryTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewHeader.xib; sourceTree = "<group>"; };
 		DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DD3D5CED29BDD77E00149EDC /* DebounceTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceTextFiled.swift; sourceTree = "<group>"; };
 		DD3D5CEF29BDE9FB00149EDC /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
@@ -154,9 +161,6 @@
 		DD87551C29BC8E52009C2B0B /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingLogin.storyboard; sourceTree = "<group>"; };
 		DD87552729BCD0CE009C2B0B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		DDCB048F29BE0F0B0063E4CC /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
-		DDCB049329BE0FAB0063E4CC /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
-		DDCB049429BE0FAB0063E4CC /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		DDCFEA1A29B5FCD300DA87C0 /* TryingSignUpUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryingSignUpUser.swift; sourceTree = "<group>"; };
 		DDE73BC229B717AA00BF6EF2 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		DDE73BC729B719A900BF6EF2 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -253,7 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3D5CEB29BDD4AD00149EDC /* SearchViewController.swift */,
-				DDCB048F29BE0F0B0063E4CC /* SearchResultViewController.swift */,
+				DD3C547129BEFFF7001B0894 /* SearchHistoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,8 +268,10 @@
 				DD6529DC29B358A00089AD5C /* SearchStoryboard.storyboard */,
 				DD3D5CF329BDFC1700149EDC /* SearchTableViewCell.swift */,
 				DD3D5CF429BDFC1700149EDC /* SearchTableViewCell.xib */,
-				DDCB049329BE0FAB0063E4CC /* SearchResultTableViewCell.swift */,
-				DDCB049429BE0FAB0063E4CC /* SearchResultTableViewCell.xib */,
+				DD3C547329BF0055001B0894 /* SearchHistoryTableViewCell.swift */,
+				DD3C547429BF0055001B0894 /* SearchHistoryTableViewCell.xib */,
+				DD3C547729BF0234001B0894 /* HistoryTableViewHeader.swift */,
+				DD3C547929BF0246001B0894 /* HistoryTableViewHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -632,12 +638,12 @@
 				DD1BE40029BB2CAC00597E62 /* MiddleCollectionViewCell.xib in Resources */,
 				DD76CB4C29B2E19A002C4857 /* LaunchScreen.storyboard in Resources */,
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
-				DDCB049629BE0FAB0063E4CC /* SearchResultTableViewCell.xib in Resources */,
 				DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */,
 				DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */,
 				DD3D5CF629BDFC1800149EDC /* SearchTableViewCell.xib in Resources */,
 				DD6529E129B358B90089AD5C /* ReelsStoryboard.storyboard in Resources */,
 				DD1BE40429BB2E3A00597E62 /* MiddelSectionHeader.xib in Resources */,
+				DD3C547629BF0055001B0894 /* SearchHistoryTableViewCell.xib in Resources */,
 				DD6529E329B358C50089AD5C /* ProfileStoryboard.storyboard in Resources */,
 				DD6529DB29B356A90089AD5C /* HomeStoryboard.storyboard in Resources */,
 				DD1BE40E29BB53DE00597E62 /* BottomSectionHeader.xib in Resources */,
@@ -645,6 +651,7 @@
 				DD1BE41229BB56C400597E62 /* BottomSectionCollectionViewCell.xib in Resources */,
 				DD4F14DF29B9E5090008849A /* GoogleService-Info.plist in Resources */,
 				DD160F5429B880B900C25F05 /* HomeTableViewCell.xib in Resources */,
+				DD3C547A29BF0246001B0894 /* HistoryTableViewHeader.xib in Resources */,
 				DD6529DD29B358A00089AD5C /* SearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,7 +669,6 @@
 				DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
 				DD1BE40A29BB538700597E62 /* BottomSectionHeader.swift in Sources */,
-				DDCB049529BE0FAB0063E4CC /* SearchResultTableViewCell.swift in Sources */,
 				DDE73BC329B717AA00BF6EF2 /* LoginAPI.swift in Sources */,
 				DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */,
 				DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */,
@@ -672,7 +678,6 @@
 				DD76CB4229B2E199002C4857 /* SceneDelegate.swift in Sources */,
 				DD6529E629B3680D0089AD5C /* LoginViewController.swift in Sources */,
 				DDE73BD329B73F3000BF6EF2 /* UserResponse.swift in Sources */,
-				DDCB049029BE0F0B0063E4CC /* SearchResultViewController.swift in Sources */,
 				DD6529EA29B372480089AD5C /* UIButton.swift in Sources */,
 				DDE73BD629B75AAB00BF6EF2 /* ProfileViewController.swift in Sources */,
 				DD6529C829B350980089AD5C /* IndicatorView.swift in Sources */,
@@ -685,11 +690,13 @@
 				DD87551D29BC8E52009C2B0B /* PostResponse.swift in Sources */,
 				DD6529E829B36E520089AD5C /* UITextField.swift in Sources */,
 				DD32EB4829B5F4EA00652B1E /* WelcomeViewController.swift in Sources */,
+				DD3C547829BF0234001B0894 /* HistoryTableViewHeader.swift in Sources */,
 				DDCFEA1B29B5FCD300DA87C0 /* TryingSignUpUser.swift in Sources */,
 				DD126C1F29B4A55D00DD2659 /* PasswordViewController.swift in Sources */,
 				DDE73BCC29B724A400BF6EF2 /* TokenUtilities.swift in Sources */,
 				DD1BE3FF29BB2CAC00597E62 /* MiddleCollectionViewCell.swift in Sources */,
 				DD3D5CEE29BDD77E00149EDC /* DebounceTextFiled.swift in Sources */,
+				DD3C547229BEFFF7001B0894 /* SearchHistoryViewController.swift in Sources */,
 				DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
@@ -703,6 +710,7 @@
 				DD32EB4029B5BB4200652B1E /* AgreementViewController.swift in Sources */,
 				DD1BE40229BB2E1000597E62 /* MiddelSectionHeader.swift in Sources */,
 				DD126C1B29B48CB700DD2659 /* SignUpWithEmailViewController.swift in Sources */,
+				DD3C547529BF0055001B0894 /* SearchHistoryTableViewCell.swift in Sources */,
 				DD3D5CF529BDFC1800149EDC /* SearchTableViewCell.swift in Sources */,
 				DD1BE41729BB60BC00597E62 /* LogoutViewController.swift in Sources */,
 				DD32EB3E29B5B54C00652B1E /* UserNameViewController.swift in Sources */,

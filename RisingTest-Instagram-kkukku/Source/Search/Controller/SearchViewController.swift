@@ -7,25 +7,22 @@
 
 import UIKit
 
-protocol updateTableViewProtocol {
-    func updateTableView()
-}
 
 class SearchViewController: UIViewController {
 
-    @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var cancelButton: UIButton!
-
+    var searchedUser = [SearchUserResult?]()
+    
+    @IBOutlet weak var historyView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var searchTextFiled: DebounceTextFiled!
     
-    var delegate : updateTableViewProtocol?
     
     override func viewDidLoad() {
         setTextField()
         setTableView()
         print("search")
-        secondView.isHidden = true
+        
     }
     
     func setTableView() {
@@ -34,7 +31,7 @@ class SearchViewController: UIViewController {
     }
     
     func setTextField() {
-        let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "resultVC") as! SearchResultViewController
+        
       
         searchTextFiled.delegate = self
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
@@ -49,16 +46,21 @@ class SearchViewController: UIViewController {
         )
         
         searchTextFiled.debounce(delay: 1) { text in
-            SearchAPI().search(searchText: text!, resultVC: resultVC)
-            self.delegate?.updateTableView()
+            SearchAPI().search(searchText: text!, searchVC: self)
+            print("debounce")
         }
+    }
+    
+    func didSuccess(response: SearchResponse) {
+        searchedUser = response.result
+        tableView.reloadData()
     }
     
     @IBAction func cancelSearch(_ sender: UIButton) {
         searchTextFiled.text = ""
         cancelButton.setImage(UIImage(named: "add2"), for: .normal)
         cancelButton.setTitle("", for: .normal)
-        secondView.isHidden = true
+        historyView.isHidden = false
     }
 }
 
@@ -67,7 +69,7 @@ extension SearchViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.setImage(nil, for: .normal)
-        secondView.isHidden = false
+        historyView.isHidden = true
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -80,13 +82,13 @@ extension SearchViewController: UITextFieldDelegate {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return searchedUser.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         
-        
+        cell.updateUI(with: searchedUser[indexPath.row]!)
         
         return cell
     }

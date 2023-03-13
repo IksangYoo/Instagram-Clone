@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryTableViewHeader" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HistoryTableViewHeader" id="iN0-l3-epB" customClass="HistoryTableViewHeader" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="638" height="89"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X31-zn-bYF">
+                    <rect key="frame" x="0.0" y="33.666666666666664" width="66.666666666666671" height="21.666666666666664"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O84-47-SyJ">
+                    <rect key="frame" x="575" y="28" width="63" height="33"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="모두 보기"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="O84-47-SyJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="39n-av-6RJ"/>
+                <constraint firstItem="X31-zn-bYF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="A0u-Rc-brX"/>
+                <constraint firstItem="X31-zn-bYF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KFM-qG-Wes"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="O84-47-SyJ" secondAttribute="trailing" id="XYX-2m-FaX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="135.87786259541986" y="-279.92957746478874"/>
+        </view>
+    </objects>
+</document>
