@@ -75,6 +75,7 @@ extension SearchViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         cancelButton.setTitle("취소", for: .normal)
         cancelButton.setImage(nil, for: .normal)
+        historyView.isHidden = true
     }
 }
 

@@ -11,25 +11,55 @@ import FirebaseStorage
 
 class PostAPI {
     let currentUser = CurrentUser.shared
-    let headers: HTTPHeaders = ["Content-Type": "application/json"]
-    let url = "https://dev.nara2023.shop/postItems"
-
+    let baseuURL = "\(Constant.BASE_URL)/postItems"
+    
+    
     func getPost(homeVC: HomeViewController) {
-        AF.request(url,
+        let params: Parameters = [
+            "size" : "5",
+            "page" : "1"
+        ]
+        let headers: HTTPHeaders = ["Content-Type": "application/json"]
+        
+        AF.request(baseuURL,
                    method: .get,
+                   parameters: params,
                    headers: headers)
         .responseDecodable(of: PostResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print("게시물 조회 성공")
-                homeVC.didSuccess(postResult: response.result!)
+                homeVC.didSuccessGetDefaultPost(postResult: response.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        
-        
     }
+    
+    func getMorePost(page: Int, homeVC: HomeViewController) {
+        
+        let params: Parameters = [
+            "size" : "5",
+            "page" : String(page)
+        ]
+        let headers: HTTPHeaders = ["Content-Type": "application/json"]
+        
+        AF.request(baseuURL,
+                   method: .get,
+                   parameters: params,
+                   headers: headers)
+        .responseDecodable(of: PostResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("페이지네이션 성공")
+                homeVC.didSuccessGetMorePost(result: response.result!)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    
     
     func uploadPost(urlArray: [String], content: String?, postVC: SetPostViewController) {
         
@@ -42,7 +72,7 @@ class PostAPI {
             "itemImage": "\(urlArray)"
         ]
         
-        AF.request(url,
+        AF.request(baseuURL,
                    method: .post,
                    parameters: params,
                    encoding: JSONEncoding.default,

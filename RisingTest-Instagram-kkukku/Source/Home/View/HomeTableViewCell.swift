@@ -20,6 +20,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var postScrollView: UIScrollView!
     @IBOutlet weak var dateLabel: UILabel!
+    var imageViews = [UIImageView]()
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -97,16 +99,19 @@ class HomeTableViewCell: UITableViewCell {
     func fetchImageToScrollView(urls: [String]) {
         for i in 0..<urls.count {
             let postImageView = UIImageView()
+            
+            imageViews.append(postImageView)
             postImageView.contentMode = .scaleToFill
             let xPos = self.contentView.frame.width * CGFloat(i)
             let url = URL(string: urls[i])
             postImageView.frame = CGRect(x: xPos, y: 0, width: postScrollView.bounds.width, height: postScrollView.bounds.height)
             postImageView.kf.setImage(with: url)
+            
             postScrollView.addSubview(postImageView)
             postScrollView.contentSize.width = postImageView.frame.width * CGFloat(i + 1)
         }
-        let lastImageView = UIImageView()
-        postScrollView.addSubview(lastImageView)
+        
+        
         pageControl.numberOfPages = urls.count
     }
 }

@@ -12,16 +12,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dmButtom: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var posts = [PostResult]()
-    let threshold: CGFloat = 100
+    var page = 1
+    var isLoadingPost = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigation()
-        let cellNib = UINib(nibName: "HomeTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "homeCell")
+        setTableView()
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.addTarget(self, action: #selector(refreshPost), for: .valueChanged)
+        
         PostAPI().getPost(homeVC: self)
     }
     
+    @objc func refreshPost() {
+        PostAPI().getPost(homeVC: self)
+        page = 1
+    }
+    
+    
+    func setTableView() {
+        let cellNib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "homeCell")
+    }
     
     func setNavigation() {
         let image1 = UIImage(named: "Instragram")?.withRenderingMode(.alwaysOriginal)
@@ -34,12 +47,22 @@ class HomeViewController: UIViewController {
         heartButton.image = image2
     }
     
-    func didSuccess(postResult: [PostResult]) {
+    func didSuccessGetDefaultPost(postResult: [PostResult]) {
         posts = postResult
-        
+        tableView.refreshControl?.endRefreshing()
         
         tableView.reloadData()
         
+    }
+    
+    func didSuccessGetMorePost(result: [PostResult]) {
+        for post in result {
+            posts.append(post)
+        }
+        
+        isLoadingPost = false
+        
+        tableView.reloadData()
     }
 }
 
@@ -59,20 +82,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 //MARK: - TabelViewScrollDelegate
-//extension HomeViewController {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//            let currentOffset = scrollView.contentOffset.y
-//            let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-//
-//            // 스크롤뷰의 맨 아래에서 100 떨어진 곳에 도달했는지 확인
-//            if maximumOffset - currentOffset <= threshold {
-//                // 실행할 함수 호출
-//                myFunction()
-//            }
-//        }
-//
-//        func myFunction() {
-//            // 맨 아래에서 100 떨어진 곳에 도달했을 때 실행할 코드 작성
-//            print("스크롤이 맨 아래에서 100 떨어진 곳에 도달했습니다.")
-//        }
-//    }
+extension HomeViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height, !isLoadingPost {
+            isLoadingPost = true
+            page += 1
+            print("함수호충")
+            print(page)
+            //함수 호출
+            PostAPI().getMorePost(page: page, homeVC: self)
+        }
+    }
+}
