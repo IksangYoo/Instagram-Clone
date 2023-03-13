@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController {
         
         plusButton.image = image1
         optionButton.image = image2
-        usernameButton.setTitle("kkukku", for: .normal)
+        usernameButton.setTitle("", for: .normal)
     }
     
     func registerXib() {
@@ -60,6 +60,7 @@ class ProfileViewController: UIViewController {
     
     func didSuccess(response: MyProfileResult) {
         userInfo = response
+        usernameButton.setTitle(userInfo?.userName, for: .normal)
         collectionView.reloadData()
     }
     
@@ -86,7 +87,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else if section == 1 {
             return 1
         } else {
-            return 10
+            return userInfo?.posts?.count ?? 0
         }
     }
     

@@ -98,4 +98,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return 70
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(searchedUser[indexPath.row]?.userId!)
+        performSegue(withIdentifier: "goToUserProfile", sender: nil)
+    }
 }

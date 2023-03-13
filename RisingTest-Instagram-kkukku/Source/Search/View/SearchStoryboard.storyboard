@@ -58,7 +58,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="IVy-sY-kPe">
-                                <rect key="frame" x="10" y="117" width="361" height="652"/>
+                                <rect key="frame" x="8" y="116" width="376" height="652"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="e8f-3i-iOf" kind="embed" id="n0I-nK-QZP"/>
@@ -89,28 +89,102 @@
                         <outlet property="historyView" destination="IVy-sY-kPe" id="DmN-K8-SIu"/>
                         <outlet property="searchTextFiled" destination="TIR-fo-GFJ" id="fHa-oj-njK"/>
                         <outlet property="tableView" destination="rg6-Dp-qGF" id="xhu-WR-zPZ"/>
-                        <segue destination="FDo-GT-l6E" kind="show" id="Y0d-gJ-ZYq"/>
+                        <segue destination="FDo-GT-l6E" kind="show" identifier="goToUserProfile" id="Y0d-gJ-ZYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="-19"/>
+            <point key="canvasLocation" x="858.77862595419845" y="-19.014084507042256"/>
         </scene>
-        <!--View Controller-->
+        <!--User Profile View Controller-->
         <scene sceneID="Cuc-xN-RzC">
             <objects>
-                <viewController id="FDo-GT-l6E" sceneMemberID="viewController">
+                <viewController id="FDo-GT-l6E" customClass="UserProfileViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2t-m2-W9a">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5n-GK-4Pt">
+                                <rect key="frame" x="0.0" y="40" width="393" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-Zs-23l">
+                                        <rect key="frame" x="8" y="10" width="21" height="30"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="29"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kkukku" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-1T-ZGS">
+                                        <rect key="frame" x="166.66666666666666" y="14.999999999999998" width="59.666666666666657" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" translatesAutoresizingMaskIntoConstraints="NO" id="BN6-q8-wI4">
+                                        <rect key="frame" x="351" y="15" width="20" height="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="OOH-Pn-tr3"/>
+                                            <constraint firstAttribute="height" constant="20" id="YD8-UW-sEd"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="bold"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mh2-Sc-bku">
+                                        <rect key="frame" x="296" y="10.33333333333333" width="30" height="29.666666666666668"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" weight="regular"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Rd-na-JiC"/>
+                                    <constraint firstItem="rbn-1T-ZGS" firstAttribute="centerY" secondItem="xvm-Zs-23l" secondAttribute="centerY" id="LaH-ay-Naz"/>
+                                    <constraint firstItem="xvm-Zs-23l" firstAttribute="leading" secondItem="w5n-GK-4Pt" secondAttribute="leading" constant="8" id="M3t-1B-DiJ"/>
+                                    <constraint firstItem="BN6-q8-wI4" firstAttribute="leading" secondItem="Mh2-Sc-bku" secondAttribute="trailing" constant="25" id="M5c-oz-3Ys"/>
+                                    <constraint firstItem="BN6-q8-wI4" firstAttribute="centerY" secondItem="xvm-Zs-23l" secondAttribute="centerY" id="UkT-Nj-DM7"/>
+                                    <constraint firstAttribute="trailing" secondItem="BN6-q8-wI4" secondAttribute="trailing" constant="22" id="WIj-lB-m9v"/>
+                                    <constraint firstItem="rbn-1T-ZGS" firstAttribute="centerX" secondItem="w5n-GK-4Pt" secondAttribute="centerX" id="cVH-fA-rcZ"/>
+                                    <constraint firstItem="Mh2-Sc-bku" firstAttribute="centerY" secondItem="xvm-Zs-23l" secondAttribute="centerY" id="u2d-8e-VmJ"/>
+                                    <constraint firstItem="xvm-Zs-23l" firstAttribute="centerY" secondItem="w5n-GK-4Pt" secondAttribute="centerY" id="upF-6i-gZJ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X73-Ki-ZUg">
+                                <rect key="frame" x="0.0" y="90" width="393" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N31-Xs-7W1">
+                                    <size key="itemSize" width="125" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FDo-GT-l6E" id="L6q-ZJ-zga"/>
+                                    <outlet property="delegate" destination="FDo-GT-l6E" id="Rer-68-6kE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="b1b-5Q-4Cl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X73-Ki-ZUg" firstAttribute="leading" secondItem="b1b-5Q-4Cl" secondAttribute="leading" id="GH1-m1-dZB"/>
+                            <constraint firstItem="w5n-GK-4Pt" firstAttribute="top" secondItem="i2t-m2-W9a" secondAttribute="top" constant="40" id="Nhg-aj-boB"/>
+                            <constraint firstItem="b1b-5Q-4Cl" firstAttribute="trailing" secondItem="X73-Ki-ZUg" secondAttribute="trailing" id="QI4-80-mrE"/>
+                            <constraint firstItem="b1b-5Q-4Cl" firstAttribute="bottom" secondItem="X73-Ki-ZUg" secondAttribute="bottom" id="RgZ-Oi-oUj"/>
+                            <constraint firstItem="X73-Ki-ZUg" firstAttribute="top" secondItem="w5n-GK-4Pt" secondAttribute="bottom" id="ZMv-yy-1L5"/>
+                            <constraint firstItem="w5n-GK-4Pt" firstAttribute="leading" secondItem="b1b-5Q-4Cl" secondAttribute="leading" id="iSX-bV-3lj"/>
+                            <constraint firstItem="w5n-GK-4Pt" firstAttribute="trailing" secondItem="b1b-5Q-4Cl" secondAttribute="trailing" id="kY5-dY-60b"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o6f-dI-pZb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="X73-Ki-ZUg" id="5h6-eM-7r7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQC-4t-knB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776" y="-19"/>
+            <point key="canvasLocation" x="1774.8091603053435" y="-19.014084507042256"/>
         </scene>
         <!--Search-->
         <scene sceneID="eYJ-55-esu">
@@ -137,11 +211,11 @@
             <objects>
                 <viewController id="e8f-3i-iOf" customClass="SearchHistoryViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1T2-Vo-Qa6">
-                        <rect key="frame" x="0.0" y="0.0" width="361" height="652"/>
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="652"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PPh-YB-hq9">
-                                <rect key="frame" x="0.0" y="0.0" width="361" height="652"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="652"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="e8f-3i-iOf" id="iJH-ns-shj"/>
@@ -149,6 +223,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="otd-dd-L3J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PPh-YB-hq9" firstAttribute="leading" secondItem="1T2-Vo-Qa6" secondAttribute="leading" id="F9o-kY-CeL"/>
@@ -168,7 +243,10 @@
     </scenes>
     <resources>
         <image name="add2" width="33" height="28"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="menu" width="20" height="9"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

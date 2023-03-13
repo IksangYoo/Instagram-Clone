@@ -12,6 +12,7 @@ class TopSectionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var postCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +23,8 @@ class TopSectionCollectionViewCell: UICollectionViewCell {
         let url = URL(string: userInfo.profileImage!)
         profileImageView.kf.setImage(with: url!)
         nameLabel.text = userInfo.name
-        followerLabel.text = String( userInfo.followers)
+        followerLabel.text = String(userInfo.followers)
         followingLabel.text = String(userInfo.following)
+        postCountLabel.text = "\(userInfo.posts?.count ?? 0)"
     }
 }
