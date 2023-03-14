@@ -14,19 +14,19 @@ extension Date {
 
         if let week = components.weekOfYear, week > 0 {
             // 주 단위
-            return ("\(week)주 전")
+            return ("\(week)주")
         } else if let day = components.day, day > 0 {
             // 일 단위
-            return ("\(day)일 전")
+            return ("\(day)일")
         } else if let hour = components.hour, hour > 0 {
             // 시간 단위
-            return ("\(hour)시간 전")
+            return ("\(hour)시간")
         } else if let minute = components.minute, minute > 0 {
             // 분 단위
-            return ("\(minute)분 전")
+            return ("\(minute)분")
         } else {
             // 초 단위
-            return ("\(components.second ?? 0)초 전")
+            return ("\(components.second ?? 0)초")
         }
     }
 }

@@ -90,4 +90,23 @@ class PostAPI {
             }
         }
     }
+    
+    func getPostByID(postID: Int, postDetailVC: PostDetailViewController) {
+//        let getPostUrl = "/postItems/\(postID)"
+        let url = "\(baseuURL)/\(postID)"
+        print(url)
+        AF.request(url,
+                   method: .get)
+        .responseDecodable(of: PostDetailReponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("게시물 상세보기 조회 성공")
+                postDetailVC.didGetPostSuccess(result: response.result)
+                CommentAPI().getComment(postID: postID, page: 1, postDetailVC: postDetailVC)
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

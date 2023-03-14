@@ -13,15 +13,11 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var userProfileResult: UserProfileResult?
     var userID : Int?
+    var postID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // api
         ProfileAPI().getUserProfile(userID: userID ?? 0, userProfileVC: self)
     }
     
@@ -45,6 +41,13 @@ class UserProfileViewController: UIViewController {
         collectionView.reloadData()
         usernameLabel.text = userProfileResult?.userName
         print(userProfileResult?.userName)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPostDetail" {
+            let postDetailVC = segue.destination as! PostDetailViewController
+            postDetailVC.postId = postID
+        }
     }
 }
 
@@ -81,7 +84,13 @@ extension UserProfileViewController: UICollectionViewDelegate, UICollectionViewD
             
             return postCell
         }
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            postID = (userProfileResult?.posts![indexPath.row].itemId)!
+            performSegue(withIdentifier: "goToPostDetail", sender: self)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

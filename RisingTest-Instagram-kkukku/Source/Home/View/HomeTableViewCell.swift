@@ -67,7 +67,7 @@ class HomeTableViewCell: UITableViewCell {
         commentUserName.text = post.userName
         commentContent.text = post.itemContent
         likeLabel.text = "좋아요 \(post.stars)개"
-        dateLabel.text = date?.displayTimeAgo(date: date!)
+        dateLabel.text = "\(date?.displayTimeAgo(date: date!) ?? "") 전"
 
     }
     

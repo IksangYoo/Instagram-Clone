@@ -45,8 +45,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Ie-OA-uFC">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="P5Q-VI-eck">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HYn-jj-c0F">
-                                <rect key="frame" x="16" y="1.6666666666666679" width="87" height="41"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HYn-jj-c0F">
+                                <rect key="frame" x="16" y="1.6666666666666665" width="200" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
