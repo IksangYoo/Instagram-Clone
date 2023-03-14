@@ -19,8 +19,9 @@ struct UserResult: Decodable {
     var userId : Int?
     var jwt: String?
     var userName: String?
+    var profileImage: String?
 //    var name: String
 //    var age: Int
 //    var userName: String
-//    var profileImageUrlString: String?
+
 }

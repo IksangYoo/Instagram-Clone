@@ -249,28 +249,76 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gn0-v9-0XI">
-                                <rect key="frame" x="0.0" y="90" width="393" height="679"/>
+                                <rect key="frame" x="0.0" y="90" width="393" height="629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="svW-yF-ggy" id="lRP-Ge-0RR"/>
                                     <outlet property="delegate" destination="svW-yF-ggy" id="U1v-8d-ECU"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGx-kf-naX">
+                                <rect key="frame" x="0.0" y="719" width="393" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-if-twR">
+                                        <rect key="frame" x="8" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pgg-if-twR" secondAttribute="height" multiplier="1:1" id="8qy-mt-hk9"/>
+                                            <constraint firstAttribute="height" constant="40" id="Mpt-3P-Y0N"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="댓글 달기..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ia6-fZ-DeU">
+                                        <rect key="frame" x="56" y="5" width="327" height="40"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="J0N-7P-Xgw"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rye-4V-6qS">
+                                        <rect key="frame" x="343" y="10" width="30" height="30"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="게시"/>
+                                        <connections>
+                                            <action selector="postComment:" destination="svW-yF-ggy" eventType="touchUpInside" id="xmY-Ml-Roy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="21o-fP-X6l"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ia6-fZ-DeU" secondAttribute="trailing" constant="10" id="5kN-GG-nS9"/>
+                                    <constraint firstItem="Pgg-if-twR" firstAttribute="centerY" secondItem="HGx-kf-naX" secondAttribute="centerY" id="NVc-lV-WcS"/>
+                                    <constraint firstItem="Pgg-if-twR" firstAttribute="leading" secondItem="HGx-kf-naX" secondAttribute="leading" constant="8" id="S2C-nW-iTC"/>
+                                    <constraint firstAttribute="trailing" secondItem="rye-4V-6qS" secondAttribute="trailing" constant="20" id="TN1-yl-rU0"/>
+                                    <constraint firstItem="Ia6-fZ-DeU" firstAttribute="centerY" secondItem="HGx-kf-naX" secondAttribute="centerY" id="a5I-fN-6xA"/>
+                                    <constraint firstItem="Ia6-fZ-DeU" firstAttribute="leading" secondItem="Pgg-if-twR" secondAttribute="trailing" constant="8" symbolic="YES" id="y6Z-1L-iVh"/>
+                                    <constraint firstItem="rye-4V-6qS" firstAttribute="centerY" secondItem="Ia6-fZ-DeU" secondAttribute="centerY" id="zR6-Kr-Qub"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zxg-XF-bSK"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HGx-kf-naX" firstAttribute="trailing" secondItem="Zxg-XF-bSK" secondAttribute="trailing" id="2aG-VD-sAJ"/>
                             <constraint firstItem="qR4-0N-EQL" firstAttribute="trailing" secondItem="Zxg-XF-bSK" secondAttribute="trailing" id="DZh-47-snW"/>
                             <constraint firstItem="qR4-0N-EQL" firstAttribute="leading" secondItem="Zxg-XF-bSK" secondAttribute="leading" id="F1t-tF-akz"/>
                             <constraint firstItem="Gn0-v9-0XI" firstAttribute="top" secondItem="qR4-0N-EQL" secondAttribute="bottom" id="Fgj-Yf-spd"/>
+                            <constraint firstItem="HGx-kf-naX" firstAttribute="leading" secondItem="Zxg-XF-bSK" secondAttribute="leading" id="JPn-Xk-FHZ"/>
                             <constraint firstItem="Gn0-v9-0XI" firstAttribute="leading" secondItem="Zxg-XF-bSK" secondAttribute="leading" id="NlP-Tl-uuF"/>
                             <constraint firstItem="Gn0-v9-0XI" firstAttribute="trailing" secondItem="Zxg-XF-bSK" secondAttribute="trailing" id="Plu-xs-xpi"/>
-                            <constraint firstItem="Gn0-v9-0XI" firstAttribute="bottom" secondItem="Zxg-XF-bSK" secondAttribute="bottom" id="hlQ-ta-pQL"/>
+                            <constraint firstItem="HGx-kf-naX" firstAttribute="top" secondItem="Gn0-v9-0XI" secondAttribute="bottom" id="ZxP-CZ-1ok"/>
+                            <constraint firstItem="HGx-kf-naX" firstAttribute="bottom" secondItem="Zxg-XF-bSK" secondAttribute="bottom" id="iXD-Jd-XQD"/>
                             <constraint firstItem="qR4-0N-EQL" firstAttribute="top" secondItem="gQO-2T-FOz" secondAttribute="top" constant="40" id="rug-uA-ywB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="icr-QL-GQJ"/>
                     <connections>
+                        <outlet property="commentTextField" destination="Ia6-fZ-DeU" id="e7c-Ep-71g"/>
+                        <outlet property="postCommentButton" destination="rye-4V-6qS" id="hem-bE-L2n"/>
+                        <outlet property="profileImageView" destination="Pgg-if-twR" id="npe-ZE-OgW"/>
                         <outlet property="tableView" destination="Gn0-v9-0XI" id="w8T-ec-ZrQ"/>
                     </connections>
                 </viewController>
@@ -337,10 +385,14 @@
         <image name="add2" width="33" height="28"/>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="defaultProfileImage" width="1080" height="1080"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="menu" width="20" height="9"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

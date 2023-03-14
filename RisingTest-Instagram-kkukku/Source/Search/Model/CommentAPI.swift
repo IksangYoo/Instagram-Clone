@@ -24,4 +24,26 @@ class CommentAPI {
             }
         }
     }
+    
+    func postComment(postID: Int, content: String, postDetailVC: PostDetailViewController) {
+        let postCommentUrl = "/postItems/\(postID)/comments"
+        let url = Constant.BASE_URL+postCommentUrl
+        let jwt = UserDefaults.standard.string(forKey: "jwt")
+        let headers : HTTPHeaders = ["x-access-token": jwt!]
+        let params : Parameters = ["commentContent": content]
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: params,
+                   headers: headers)
+        .responseJSON { response in
+            switch response.result {
+            case .success(let response):
+                print("댓글 올리기 성공")
+                postDetailVC.didPostCommentSuccesss()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
