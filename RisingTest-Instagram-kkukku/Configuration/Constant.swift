@@ -10,7 +10,7 @@ import Foundation
 struct Constant {
     static let kSecAttrService =  "RisingTest_InstagramC"
     static let kSecAttrAccount = "token"
-    static let BASE_URL = "https://dev.nara2023.shop"
+    static let BASE_URL = "https://prod.nara2023.shop"
     static let LOGIN_URL = "/app/login"
     static let SIGNUP_URL = "/app/users"
     
