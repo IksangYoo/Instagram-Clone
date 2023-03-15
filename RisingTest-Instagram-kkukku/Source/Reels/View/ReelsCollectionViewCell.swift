@@ -11,7 +11,11 @@ import SnapKit
 
 class ReelsCollectionViewCell: UICollectionViewCell {
     
+    var player = AVPlayer()
     // 릴스
+    
+    var playerLayer : AVPlayerLayer?
+    
     let cellTitleLabel = UILabel()
     
     // 카메라
@@ -46,17 +50,25 @@ class ReelsCollectionViewCell: UICollectionViewCell {
     func updateCell(with reels: ReelsModel) {
         let videoURL = Bundle.main.url(forResource: reels.fileName, withExtension: "mp4")
         
-        let player = AVPlayer(url: videoURL!)
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = CGRect(x: 0, y: 0, width: contentView.frame.width, height: contentView.frame.height)
-        playerLayer.videoGravity = .resizeAspectFill
-        contentView.layer.addSublayer(playerLayer)
+        player = AVPlayer(url: videoURL!)
+        playerLayer = AVPlayerLayer()
+        playerLayer!.player = player
+        playerLayer!.frame = CGRect(x: 0, y: 0, width: contentView.frame.width, height: contentView.frame.height)
+        playerLayer!.videoGravity = .resizeAspectFill
+        contentView.layer.addSublayer(playerLayer!)
         
         setupAttribute()
         setupLayout()
         setUpLabelText(with: reels)
         player.play()
+    }
+    
+    func removePlayer() {
+        playerLayer?.player?.pause()
+        playerLayer?.removeFromSuperlayer()
+        for subview in self.contentView.subviews {
+                subview.removeFromSuperview()
+            }
     }
     
     private func setupAttribute() {
@@ -129,13 +141,13 @@ class ReelsCollectionViewCell: UICollectionViewCell {
         }
         
         shareImageView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-60)
             make.trailing.equalToSuperview().offset(-20)
             make.width.height.equalTo(30)
         }
         
         contentLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-60)
             make.leading.equalToSuperview().offset(20)
         }
     }

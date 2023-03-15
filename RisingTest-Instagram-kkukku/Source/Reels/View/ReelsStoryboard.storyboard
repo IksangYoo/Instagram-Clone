@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sbR-4z-Cya">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <rect key="frame" x="0.0" y="-30" width="393" height="799"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="S9d-oa-0Af"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="yYE-EC-kX0"/>
@@ -37,7 +37,7 @@
                             <constraint firstItem="sbR-4z-Cya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2cG-Yc-MOT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sbR-4z-Cya" secondAttribute="trailing" id="4tV-E0-UkA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sbR-4z-Cya" secondAttribute="bottom" id="Zvc-mo-U2i"/>
-                            <constraint firstItem="sbR-4z-Cya" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="sTB-wt-aa6"/>
+                            <constraint firstItem="sbR-4z-Cya" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-30" id="sTB-wt-aa6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Reels" id="Out-sS-oeb"/>

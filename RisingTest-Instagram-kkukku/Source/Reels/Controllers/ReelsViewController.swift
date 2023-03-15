@@ -12,7 +12,7 @@ class ReelsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var reelsDummy = [ReelsModel]()
-    
+    var currentPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class ReelsViewController: UIViewController {
     func didSuccess(result: [ReelsModel]) {
         reelsDummy = result
         collectionView.reloadData()
+        startVideo(reels: reelsDummy)
     }
     
     func setCollectionView() {
@@ -31,19 +32,32 @@ class ReelsViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     }
     
-    func setVideo() {
-        let videoURL = Bundle.main.url(forResource: "dummyVideo02", withExtension: "mp4")
+    private func startVideo(reels: [ReelsModel]) {
+        let videoURL = Bundle.main.url(forResource: reels[currentPage].fileName, withExtension: "mp4")
+        let asset = AVURLAsset(url: videoURL!)
+        let durationInSeconds = asset.duration.seconds
         
-        let player = AVPlayer(url: videoURL!)
+        let _ = Timer.scheduledTimer(withTimeInterval: durationInSeconds, repeats: false) { _ in
+            self.moveNextPage()
+            self.startVideo(reels: reels)
+        }
+    }
+    
+    private func moveNextPage() {
         
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = view.bounds
+        currentPage += 1
+        if (currentPage >= reelsDummy.count) {
+            // 마지막페이지
+            currentPage = 0
+        }
         
-        view.layer.addSublayer(playerLayer)
-        
-        player.play()
+        collectionView.scrollToItem(
+            at: IndexPath(item: currentPage, section: 0),
+            at: .centeredVertically,
+            animated: true)
     }
 }
 
@@ -57,6 +71,13 @@ extension ReelsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reelsCell", for: indexPath) as? ReelsCollectionViewCell else { return UICollectionViewCell() }
         cell.updateCell(with: reelsDummy[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? ReelsCollectionViewCell {
+            cell.removePlayer()
+        }
     }
 }
 
