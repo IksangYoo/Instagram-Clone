@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, settingsProtocol {
+
     let currentUser = CurrentUser.shared
     @IBOutlet weak var optionButton: UIBarButtonItem!
     @IBOutlet weak var plusButton: UIBarButtonItem!
@@ -28,10 +29,18 @@ class ProfileViewController: UIViewController {
         ProfileAPI().getRandomUser(myProfileVC: self)
     }
     
+    func goToSettingVC() {
+        print("delegate")
+        performSegue(withIdentifier: "goToSettings", sender: nil)
+    }
     
     @IBAction func optionButtonPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "goToOptions", sender: nil)
+        let logoutVC = self.storyboard?.instantiateViewController(identifier: "logoutVC") as! LogoutViewController
+        logoutVC.delegate = self
+        
+        present(logoutVC, animated: true)
     }
+    
     
     func setupNavigation() {
         let image1 = UIImage(named: "plus")?.withRenderingMode(.alwaysOriginal)
@@ -71,13 +80,6 @@ class ProfileViewController: UIViewController {
         self.randomUsers = randomUsers
         print(randomUsers)
         collectionView.reloadSections(indexSet)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToOptions" {
-               let destinationVC = segue.destination as! LogoutViewController
-            destinationVC.userName = userInfo?.userName ?? ""
-           }
     }
 }
 

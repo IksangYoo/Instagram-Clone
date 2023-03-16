@@ -6,31 +6,33 @@
 //
 
 import UIKit
+protocol settingsProtocol {
+    func goToSettingVC()
+}
 
 class LogoutViewController: UIViewController {
     
+    @IBOutlet var settingImageView: UIImageView!
     @IBOutlet weak var optionView: UIView!
-    var userName = ""
-    @IBOutlet weak var logoutButton: UIButton!
+    var delegate : settingsProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         optionView.layer.cornerRadius = 5
-        logoutButton.setTitle("\(userName) 로그아웃", for: .normal)
+        addClickEvent()
     }
     
-    @IBAction func logout(_ sender: UIButton) {
-        UserDefaults.standard.set(nil, forKey: "email")
-        UserDefaults.standard.set(nil, forKey: "password")
-        UserDefaults.standard.set(nil, forKey: "jwt")
-        
-        let storyboard : UIStoryboard = UIStoryboard(name: "LoginSignUp", bundle: nil)
-        guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? UINavigationController else { return }
-        
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = loginVC
-            UIView.transition(with: window, duration: 1, options: .transitionCrossDissolve ,animations: nil)
-        }
+    
+    func addClickEvent() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        settingImageView.addGestureRecognizer(tapGesture)
+        settingImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func imageTapped() {
+        delegate?.goToSettingVC()
+        dismiss(animated: true)
+        print("imageTapped")
     }
 }

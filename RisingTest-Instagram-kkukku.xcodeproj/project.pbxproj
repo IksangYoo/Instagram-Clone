@@ -95,6 +95,12 @@
 		DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */; };
 		DD87552229BCA5A2009C2B0B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD87552129BCA5A2009C2B0B /* Kingfisher */; };
 		DD87552829BCD0CE009C2B0B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD87552729BCD0CE009C2B0B /* Date.swift */; };
+		DD95F5D929C34EDB004EF582 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5D829C34EDB004EF582 /* SettingViewController.swift */; };
+		DD95F5DD29C3519D004EF582 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5DB29C3519D004EF582 /* SettingsTableViewCell.swift */; };
+		DD95F5DE29C3519D004EF582 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD95F5DC29C3519D004EF582 /* SettingsTableViewCell.xib */; };
+		DD95F5E029C35760004EF582 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5DF29C35760004EF582 /* AccountViewController.swift */; };
+		DD95F5E229C359B8004EF582 /* DeleteAccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E129C359B8004EF582 /* DeleteAccountAPI.swift */; };
+		DD95F5E429C35B95004EF582 /* DeleteAccoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E329C35B95004EF582 /* DeleteAccoutViewController.swift */; };
 		DDC6303E29BF36CA001FF91C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC6303D29BF36CA001FF91C /* UserProfileViewController.swift */; };
 		DDC6304229BF4174001FF91C /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC6304029BF4174001FF91C /* ProfileCollectionViewCell.swift */; };
 		DDC6304329BF4174001FF91C /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC6304129BF4174001FF91C /* ProfileCollectionViewCell.xib */; };
@@ -201,6 +207,12 @@
 		DD87551C29BC8E52009C2B0B /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		DD87551E29BC92C8009C2B0B /* LoadingLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingLogin.storyboard; sourceTree = "<group>"; };
 		DD87552729BCD0CE009C2B0B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		DD95F5D829C34EDB004EF582 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DD95F5DB29C3519D004EF582 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		DD95F5DC29C3519D004EF582 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		DD95F5DF29C35760004EF582 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		DD95F5E129C359B8004EF582 /* DeleteAccountAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountAPI.swift; sourceTree = "<group>"; };
+		DD95F5E329C35B95004EF582 /* DeleteAccoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccoutViewController.swift; sourceTree = "<group>"; };
 		DDC6303D29BF36CA001FF91C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DDC6304029BF4174001FF91C /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDC6304129BF4174001FF91C /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -378,8 +390,8 @@
 		DD6529B829B34EF70089AD5C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				DD76D07229C1CC9B00507DDD /* Video */,
 				DD6529BD29B34F2E0089AD5C /* Constant.swift */,
+				DD76D07229C1CC9B00507DDD /* Video */,
 				DD6529BF29B34F660089AD5C /* Secret */,
 				DD6529C229B34FB20089AD5C /* Font */,
 			);
@@ -594,6 +606,7 @@
 				DD3C547D29BF26D2001B0894 /* MyProfileResponse.swift */,
 				DDC6304C29BF55E8001FF91C /* UserProfileResponse.swift */,
 				DDC6304E29BF67F7001FF91C /* RandomUserResponse.swift */,
+				DD95F5E129C359B8004EF582 /* DeleteAccountAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,6 +614,7 @@
 		DD81409D29BB17C200E172F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD95F5DA29C3517D004EF582 /* Settings */,
 				DD1BE3F629BB199500597E62 /* TopSection */,
 				DD1BE3F729BB19A200597E62 /* MiddelSection */,
 				DD1BE3F829BB19AB00597E62 /* BottonSection */,
@@ -614,6 +628,9 @@
 			children = (
 				DDE73BD529B75AAB00BF6EF2 /* ProfileViewController.swift */,
 				DD1BE41629BB60BC00597E62 /* LogoutViewController.swift */,
+				DD95F5D829C34EDB004EF582 /* SettingViewController.swift */,
+				DD95F5DF29C35760004EF582 /* AccountViewController.swift */,
+				DD95F5E329C35B95004EF582 /* DeleteAccoutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -623,6 +640,15 @@
 			children = (
 			);
 			path = "\U0010Model";
+			sourceTree = "<group>";
+		};
+		DD95F5DA29C3517D004EF582 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DD95F5DB29C3519D004EF582 /* SettingsTableViewCell.swift */,
+				DD95F5DC29C3519D004EF582 /* SettingsTableViewCell.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DDC6303F29BF36D6001FF91C /* Search */ = {
@@ -787,6 +813,7 @@
 				DD76CB4929B2E19A002C4857 /* Assets.xcassets in Resources */,
 				DD1BE40829BB39E900597E62 /* MiddleCollectionViewSubCell.xib in Resources */,
 				DD76D07929C1D5F900507DDD /* dummyVideo.mp4 in Resources */,
+				DD95F5DE29C3519D004EF582 /* SettingsTableViewCell.xib in Resources */,
 				DD87551F29BC92C8009C2B0B /* LoadingLogin.storyboard in Resources */,
 				DD3D5CF629BDFC1800149EDC /* SearchTableViewCell.xib in Resources */,
 				DDC6304B29BF4653001FF91C /* PostHearder.xib in Resources */,
@@ -818,6 +845,7 @@
 			files = (
 				DDE73BCA29B71A3800BF6EF2 /* SignUpAPI.swift in Sources */,
 				DD6529CA29B350E90089AD5C /* UIColor.swift in Sources */,
+				DD95F5DD29C3519D004EF582 /* SettingsTableViewCell.swift in Sources */,
 				DD126C1929B482FE00DD2659 /* SignUpWithPhoneViewController.swift in Sources */,
 				DD32EB4229B5C32700652B1E /* ProfileImageViewViewController.swift in Sources */,
 				DD6529EC29B380D30089AD5C /* CustomTextField.swift in Sources */,
@@ -826,7 +854,10 @@
 				DD76D07D29C1DC3700507DDD /* ReelsModel.swift in Sources */,
 				DD160F5329B880B900C25F05 /* HomeTableViewCell.swift in Sources */,
 				DDE73BC829B719A900BF6EF2 /* CurrentUser.swift in Sources */,
+				DD95F5E029C35760004EF582 /* AccountViewController.swift in Sources */,
 				DD76CB4029B2E199002C4857 /* AppDelegate.swift in Sources */,
+				DD95F5E229C359B8004EF582 /* DeleteAccountAPI.swift in Sources */,
+				DD95F5E429C35B95004EF582 /* DeleteAccoutViewController.swift in Sources */,
 				DD4F14E129B9E6730008849A /* FirebaseUtilities.swift in Sources */,
 				DD6529C129B34F7C0089AD5C /* JWTToken.swift in Sources */,
 				DDC6304629BF418F001FF91C /* PostCollectionViewCell.swift in Sources */,
@@ -868,6 +899,7 @@
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
 				DD3C547C29BF2366001B0894 /* ProfileAPI.swift in Sources */,
+				DD95F5D929C34EDB004EF582 /* SettingViewController.swift in Sources */,
 				DD3D5CEC29BDD4AD00149EDC /* SearchViewController.swift in Sources */,
 				DD1BE40729BB39E900597E62 /* MiddleCollectionViewSubCell.swift in Sources */,
 				DDE0AFD029C0606C00CEFBAE /* PostDetailTableViewCell.swift in Sources */,

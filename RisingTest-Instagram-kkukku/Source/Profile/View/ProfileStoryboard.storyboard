@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" id="0Ie-OA-uFC">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="P5Q-VI-eck">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HYn-jj-c0F">
-                                <rect key="frame" x="16" y="1.6666666666666665" width="200" height="41"/>
+                                <rect key="frame" x="16" y="1.6666666666666679" width="200" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -72,7 +72,7 @@
                         <outlet property="optionButton" destination="wyZ-a0-pem" id="4As-Q8-MWC"/>
                         <outlet property="plusButton" destination="XC7-ec-x9b" id="Ers-vc-fNR"/>
                         <outlet property="usernameButton" destination="HYn-jj-c0F" id="o3k-SJ-GYO"/>
-                        <segue destination="ZZm-bo-ABY" kind="presentation" identifier="goToOptions" id="2dJ-Df-Hwr"/>
+                        <segue destination="viJ-5l-Wus" kind="show" identifier="goToSettings" id="UhJ-Fo-mB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -82,13 +82,13 @@
         <!--Logout View Controller-->
         <scene sceneID="RSp-JA-WRM">
             <objects>
-                <viewController id="ZZm-bo-ABY" customClass="LogoutViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logoutVC" modalPresentationStyle="pageSheet" id="ZZm-bo-ABY" customClass="LogoutViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIz-vl-4XZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zf-hI-raZ">
-                                <rect key="frame" x="0.0" y="143" width="393" height="680"/>
+                                <rect key="frame" x="0.0" y="178" width="393" height="680"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="options" translatesAutoresizingMaskIntoConstraints="NO" id="gqw-f0-nTO">
                                         <rect key="frame" x="0.0" y="40" width="393" height="530"/>
@@ -102,26 +102,15 @@
                                             <constraint firstAttribute="width" constant="40" id="iyu-Zw-7Xq"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HA-Jc-DGT">
-                                        <rect key="frame" x="13" y="572" width="123" height="33"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="kkukku 로그아웃"/>
-                                        <connections>
-                                            <action selector="logout:" destination="ZZm-bo-ABY" eventType="touchUpInside" id="bva-Gg-tgI"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14509806040000001" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="9HA-Jc-DGT" firstAttribute="leading" secondItem="gqw-f0-nTO" secondAttribute="leading" constant="13" id="1KB-I3-XOO"/>
                                     <constraint firstAttribute="trailing" secondItem="gqw-f0-nTO" secondAttribute="trailing" id="4Vb-PQ-NZW"/>
                                     <constraint firstItem="gqw-f0-nTO" firstAttribute="leading" secondItem="9zf-hI-raZ" secondAttribute="leading" id="AW2-T3-ITv"/>
                                     <constraint firstItem="l2n-0p-BnX" firstAttribute="top" secondItem="9zf-hI-raZ" secondAttribute="top" id="gU4-Wk-JHE"/>
                                     <constraint firstAttribute="height" constant="680" id="h1J-yN-4Uf"/>
                                     <constraint firstItem="gqw-f0-nTO" firstAttribute="top" secondItem="9zf-hI-raZ" secondAttribute="top" constant="40" id="kNC-Gn-hcK"/>
                                     <constraint firstItem="l2n-0p-BnX" firstAttribute="centerX" secondItem="9zf-hI-raZ" secondAttribute="centerX" id="nHe-CQ-gIL"/>
-                                    <constraint firstItem="9HA-Jc-DGT" firstAttribute="top" secondItem="gqw-f0-nTO" secondAttribute="bottom" constant="2" id="wnx-zv-EUY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -132,14 +121,211 @@
                             <constraint firstItem="xzP-7x-PwP" firstAttribute="trailing" secondItem="9zf-hI-raZ" secondAttribute="trailing" id="wjK-fp-04G"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2bW-3l-sQn"/>
                     <connections>
-                        <outlet property="logoutButton" destination="9HA-Jc-DGT" id="Z8t-Gd-cnK"/>
                         <outlet property="optionView" destination="9zf-hI-raZ" id="mhL-Wn-Rz8"/>
+                        <outlet property="settingImageView" destination="gqw-f0-nTO" id="QTK-TM-fr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epd-eh-lsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794.6564885496182" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="1827" y="-11"/>
+        </scene>
+        <!--설정-->
+        <scene sceneID="XHM-ip-6qQ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="viJ-5l-Wus" customClass="SettingViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJg-vh-658">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="buI-kO-VB5">
+                                <rect key="frame" x="0.0" y="103" width="393" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="cVM-t7-KwG"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="viJ-5l-Wus" id="hx1-gh-2FN"/>
+                                    <outlet property="delegate" destination="viJ-5l-Wus" id="iql-zk-49H"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goL-Sd-TKn">
+                                <rect key="frame" x="18" y="517" width="47" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaR-Zd-WND">
+                                <rect key="frame" x="18" y="549" width="56" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="계정 추가"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZS-x6-QOt">
+                                <rect key="frame" x="18" y="584" width="52" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logout:" destination="viJ-5l-Wus" eventType="touchUpInside" id="aVn-To-HIj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N8w-lD-QGh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="goL-Sd-TKn" firstAttribute="leading" secondItem="N8w-lD-QGh" secondAttribute="leading" constant="18" id="4rw-78-7B0"/>
+                            <constraint firstItem="buI-kO-VB5" firstAttribute="leading" secondItem="N8w-lD-QGh" secondAttribute="leading" id="NWZ-hC-sL8"/>
+                            <constraint firstItem="N8w-lD-QGh" firstAttribute="trailing" secondItem="buI-kO-VB5" secondAttribute="trailing" id="NZK-cN-fnJ"/>
+                            <constraint firstItem="buI-kO-VB5" firstAttribute="top" secondItem="N8w-lD-QGh" secondAttribute="top" id="PRu-76-v5k"/>
+                            <constraint firstItem="goL-Sd-TKn" firstAttribute="top" secondItem="buI-kO-VB5" secondAttribute="bottom" constant="14" id="Twc-g4-Uak"/>
+                            <constraint firstItem="rZS-x6-QOt" firstAttribute="top" secondItem="NaR-Zd-WND" secondAttribute="bottom" constant="5" id="ckj-PD-Js0"/>
+                            <constraint firstItem="NaR-Zd-WND" firstAttribute="leading" secondItem="goL-Sd-TKn" secondAttribute="leading" id="kYF-5U-JLP"/>
+                            <constraint firstItem="rZS-x6-QOt" firstAttribute="leading" secondItem="goL-Sd-TKn" secondAttribute="leading" id="qLf-RN-zfa"/>
+                            <constraint firstItem="NaR-Zd-WND" firstAttribute="top" secondItem="goL-Sd-TKn" secondAttribute="bottom" constant="10" id="qQi-OO-uyG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="설정" id="egE-CY-Auc">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="wnE-B3-cei">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="goBack:" destination="viJ-5l-Wus" id="1pV-Q7-c0W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="logoutButton" destination="rZS-x6-QOt" id="EX9-af-rBr"/>
+                        <outlet property="tableView" destination="buI-kO-VB5" id="7VE-7V-X16"/>
+                        <segue destination="fJv-6M-oNG" kind="show" identifier="goToAccout" id="8Dt-g1-D0W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dev-IL-zjs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608" y="-35"/>
+        </scene>
+        <!--계정-->
+        <scene sceneID="HHK-SH-fPv">
+            <objects>
+                <viewController id="fJv-6M-oNG" customClass="AccountViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0T3-Qh-DrB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-vB-XZT">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fJv-6M-oNG" id="e1X-Qo-jre"/>
+                                    <outlet property="delegate" destination="fJv-6M-oNG" id="wtn-RO-pPq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qu5-3V-UWQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qu5-3V-UWQ" firstAttribute="bottom" secondItem="c7k-vB-XZT" secondAttribute="bottom" id="8wd-vG-hoT"/>
+                            <constraint firstItem="c7k-vB-XZT" firstAttribute="leading" secondItem="qu5-3V-UWQ" secondAttribute="leading" id="S4C-0p-IZT"/>
+                            <constraint firstItem="c7k-vB-XZT" firstAttribute="top" secondItem="qu5-3V-UWQ" secondAttribute="top" id="j28-8w-fnm"/>
+                            <constraint firstItem="qu5-3V-UWQ" firstAttribute="trailing" secondItem="c7k-vB-XZT" secondAttribute="trailing" id="weg-k6-wnB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="계정" id="Rvl-IZ-tSK">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="SXk-ns-bo5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="goBack:" destination="fJv-6M-oNG" id="rSo-qw-C6G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="c7k-vB-XZT" id="N3O-1e-Kfu"/>
+                        <segue destination="Mhk-xg-HfB" kind="show" identifier="goToDelete" id="ub9-Fm-JQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pap-L4-qrc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3434" y="-35"/>
+        </scene>
+        <!--계정 삭제-->
+        <scene sceneID="kA7-8D-tqZ">
+            <objects>
+                <viewController id="Mhk-xg-HfB" customClass="DeleteAccoutViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUt-J7-CgY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8zg-SM-pAw">
+                                <rect key="frame" x="146.66666666666666" y="130" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="heF-an-4Oq"/>
+                                    <constraint firstAttribute="width" secondItem="8zg-SM-pAw" secondAttribute="height" multiplier="1:1" id="qr3-mM-b1p"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-03-16 오전 10.16.47" translatesAutoresizingMaskIntoConstraints="NO" id="0w1-se-cHu">
+                                <rect key="frame" x="0.0" y="253" width="393" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="Bi2-xM-np5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vH-lm-kyP">
+                                <rect key="frame" x="165" y="716" width="63" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="계정 삭제"/>
+                                <connections>
+                                    <action selector="deleteAccout:" destination="Mhk-xg-HfB" eventType="touchUpInside" id="fM8-VY-u4E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-Wo-85V">
+                                <rect key="frame" x="16" y="657" width="361" height="49"/>
+                                <color key="backgroundColor" red="0.0039215688589999999" green="0.58823531870000001" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="fy6-dw-ljg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="계정 비활성화">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hHk-eD-UwU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1vH-lm-kyP" firstAttribute="top" secondItem="4IM-Wo-85V" secondAttribute="bottom" constant="10" id="DM7-MP-HLY"/>
+                            <constraint firstItem="0w1-se-cHu" firstAttribute="top" secondItem="8zg-SM-pAw" secondAttribute="bottom" constant="23" id="L7V-Zk-BLy"/>
+                            <constraint firstItem="1vH-lm-kyP" firstAttribute="centerX" secondItem="EUt-J7-CgY" secondAttribute="centerX" id="QsU-8V-bOx"/>
+                            <constraint firstItem="0w1-se-cHu" firstAttribute="leading" secondItem="hHk-eD-UwU" secondAttribute="leading" id="VUM-pZ-Ggg"/>
+                            <constraint firstItem="8zg-SM-pAw" firstAttribute="centerX" secondItem="EUt-J7-CgY" secondAttribute="centerX" id="Wdp-Dq-eCC"/>
+                            <constraint firstItem="0w1-se-cHu" firstAttribute="trailing" secondItem="hHk-eD-UwU" secondAttribute="trailing" id="a3M-sO-Rdn"/>
+                            <constraint firstItem="hHk-eD-UwU" firstAttribute="trailing" secondItem="4IM-Wo-85V" secondAttribute="trailing" constant="16" id="edb-9C-zmk"/>
+                            <constraint firstItem="hHk-eD-UwU" firstAttribute="bottom" secondItem="1vH-lm-kyP" secondAttribute="bottom" constant="20" id="gqW-sm-drL"/>
+                            <constraint firstItem="8zg-SM-pAw" firstAttribute="top" secondItem="hHk-eD-UwU" secondAttribute="top" constant="27" id="ly0-Gw-eqt"/>
+                            <constraint firstItem="4IM-Wo-85V" firstAttribute="leading" secondItem="hHk-eD-UwU" secondAttribute="leading" constant="16" id="sdt-nz-iq9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="계정 삭제" id="B0v-lI-NJV">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="DJS-Sz-tbo">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="goBack:" destination="Mhk-xg-HfB" id="sIq-IN-Kcy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileImageView" destination="8zg-SM-pAw" id="ZS9-P2-rXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kb8-P8-EPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4249.6183206106871" y="-35.211267605633807"/>
         </scene>
         <!--Profile-->
         <scene sceneID="CpS-hd-Rvz">
@@ -163,10 +349,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="line" width="243" height="25"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="options" width="760" height="1068"/>
+        <image name="스크린샷 2023-03-16 오전 10.16.47" width="409" height="231"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
