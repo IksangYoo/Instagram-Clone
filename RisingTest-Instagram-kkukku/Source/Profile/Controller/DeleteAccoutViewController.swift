@@ -16,7 +16,7 @@ class DeleteAccoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let urlSting = userInfo?.profileImage {
-            guard let url = URL(string: (userInfo?.profileImage)!) else { return }
+            guard let url = URL(string: urlSting) else { return }
             profileImageView.kf.setImage(with: url)
         } else {
             profileImageView.image = UIImage(named: "defaultProfileImage")

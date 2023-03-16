@@ -101,7 +101,6 @@
 		DD95F5E029C35760004EF582 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5DF29C35760004EF582 /* AccountViewController.swift */; };
 		DD95F5E229C359B8004EF582 /* DeleteAccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E129C359B8004EF582 /* DeleteAccountAPI.swift */; };
 		DD95F5E429C35B95004EF582 /* DeleteAccoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E329C35B95004EF582 /* DeleteAccoutViewController.swift */; };
-		DD95F5E729C36389004EF582 /* SearchHistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E529C36389004EF582 /* SearchHistoryModel.xcdatamodeld */; };
 		DD95F5E929C36BB2004EF582 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95F5E829C36BB2004EF582 /* MainTabBarController.swift */; };
 		DDC6303E29BF36CA001FF91C /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC6303D29BF36CA001FF91C /* UserProfileViewController.swift */; };
 		DDC6304229BF4174001FF91C /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC6304029BF4174001FF91C /* ProfileCollectionViewCell.swift */; };
@@ -215,7 +214,6 @@
 		DD95F5DF29C35760004EF582 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		DD95F5E129C359B8004EF582 /* DeleteAccountAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountAPI.swift; sourceTree = "<group>"; };
 		DD95F5E329C35B95004EF582 /* DeleteAccoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccoutViewController.swift; sourceTree = "<group>"; };
-		DD95F5E629C36389004EF582 /* SearchHistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SearchHistoryModel.xcdatamodel; sourceTree = "<group>"; };
 		DD95F5E829C36BB2004EF582 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DDC6303D29BF36CA001FF91C /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DDC6304029BF4174001FF91C /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -533,7 +531,6 @@
 				DD6529D129B354FA0089AD5C /* Post */,
 				DD6529D229B355100089AD5C /* Reels */,
 				DD6529D329B355180089AD5C /* Profile */,
-				DD95F5E529C36389004EF582 /* SearchHistoryModel.xcdatamodeld */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -902,7 +899,6 @@
 				DDE0AFCC29C05D3D00CEFBAE /* PostDetailViewController.swift in Sources */,
 				DD3C547229BEFFF7001B0894 /* SearchHistoryViewController.swift in Sources */,
 				DD4F14E629B9F5F90008849A /* PostViewController.swift in Sources */,
-				DD95F5E729C36389004EF582 /* SearchHistoryModel.xcdatamodeld in Sources */,
 				DD6529BE29B34F2E0089AD5C /* Constant.swift in Sources */,
 				DD126C2129B4C25E00DD2659 /* BirthdayViewController.swift in Sources */,
 				DD32EB4429B5CC1000652B1E /* HomeViewController.swift in Sources */,
@@ -1264,19 +1260,6 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		DD95F5E529C36389004EF582 /* SearchHistoryModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DD95F5E629C36389004EF582 /* SearchHistoryModel.xcdatamodel */,
-			);
-			currentVersion = DD95F5E629C36389004EF582 /* SearchHistoryModel.xcdatamodel */;
-			path = SearchHistoryModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DD76CB3429B2E199002C4857 /* Project object */;
 }
