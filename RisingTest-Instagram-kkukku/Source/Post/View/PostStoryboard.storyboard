@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="1900" y="-35.211267605633807"/>
         </scene>
-        <!--Post-->
+        <!--Navigation Controller-->
         <scene sceneID="58y-1d-aSc">
             <objects>
                 <navigationController storyboardIdentifier="PostNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="2OM-k1-nbL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" id="ScQ-O1-ShX"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus.app" catalog="system" selectedImage="plus.app.fill" id="ScQ-O1-ShX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U52-eH-wdX">
@@ -146,6 +146,8 @@
     </designables>
     <resources>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="rectangle.inset.filled.on.rectangle" catalog="system" width="128" height="98"/>
         <image name="스크린샷 2023-03-09 오전 8.26.44" width="563" height="514"/>
         <systemColor name="systemBackgroundColor">

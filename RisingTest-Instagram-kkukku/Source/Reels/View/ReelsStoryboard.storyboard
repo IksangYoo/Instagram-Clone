@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reels-->
+        <!--Reels View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ReelsVC" id="Y6W-OH-hqX" customClass="ReelsViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <constraint firstItem="sbR-4z-Cya" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-30" id="sTB-wt-aa6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reels" id="Out-sS-oeb"/>
+                    <tabBarItem key="tabBarItem" title="" image="play.square" catalog="system" selectedImage="play.square.fill" id="Out-sS-oeb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="sbR-4z-Cya" id="POe-7e-LRE"/>
@@ -52,6 +52,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.square" catalog="system" width="128" height="114"/>
+        <image name="play.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

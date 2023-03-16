@@ -41,7 +41,6 @@ class HomeViewController: UIViewController {
         let image2 = UIImage(named: "heart")?.withRenderingMode(.alwaysOriginal)
         let image3 = UIImage(named: "dmIcon")?.withRenderingMode(.alwaysOriginal)
         let instaButton = UIBarButtonItem(image: image1, style: .plain, target: self, action: nil)
-        
         navigationItem.leftBarButtonItem = instaButton
         dmButtom.image = image3
         heartButton.image = image2

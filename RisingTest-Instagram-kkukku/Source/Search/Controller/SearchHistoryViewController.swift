@@ -13,9 +13,13 @@ class SearchHistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("search")
+    }
     func setTableView() {
         let nib = UINib(nibName: "SearchHistoryTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "historyCell")

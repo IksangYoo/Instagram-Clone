@@ -327,11 +327,11 @@
             </objects>
             <point key="canvasLocation" x="4249.6183206106871" y="-35.211267605633807"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="CpS-hd-Rvz">
             <objects>
                 <navigationController storyboardIdentifier="profileNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="19o-SS-EaM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="cNI-Z4-KJx"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle" id="cNI-Z4-KJx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="293-65-QmF">
@@ -354,6 +354,8 @@
         <image name="line" width="243" height="25"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="options" width="760" height="1068"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="스크린샷 2023-03-16 오전 10.16.47" width="409" height="231"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

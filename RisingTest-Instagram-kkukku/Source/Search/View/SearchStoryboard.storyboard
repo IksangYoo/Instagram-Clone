@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,7 +59,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="IVy-sY-kPe">
-                                <rect key="frame" x="7" y="115" width="377" height="652"/>
+                                <rect key="frame" x="7" y="114" width="376" height="651"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="e8f-3i-iOf" kind="embed" id="n0I-nK-QZP"/>
@@ -326,11 +327,13 @@
             </objects>
             <point key="canvasLocation" x="2681.679389312977" y="-19.014084507042256"/>
         </scene>
-        <!--Search-->
+        <!--Navigation Controller-->
         <scene sceneID="eYJ-55-esu">
             <objects>
                 <navigationController storyboardIdentifier="SearchNavigationVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0mG-ey-uEb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="zzZ-Uc-iF2"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="zzZ-Uc-iF2">
+                        <imageReference key="selectedImage" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -351,11 +354,11 @@
             <objects>
                 <viewController id="e8f-3i-iOf" customClass="SearchHistoryViewController" customModule="RisingTest_Instagram_kkukku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1T2-Vo-Qa6">
-                        <rect key="frame" x="0.0" y="0.0" width="377" height="652"/>
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="651"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PPh-YB-hq9">
-                                <rect key="frame" x="0.0" y="0.0" width="377" height="652"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="651"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="e8f-3i-iOf" id="iJH-ns-shj"/>
